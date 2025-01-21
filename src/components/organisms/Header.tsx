@@ -2,8 +2,8 @@ import React, { useRef, useEffect } from 'react';
 import NavButton from '../atoms/NavButton';
 import useActiveSection from '../../hooks/useActiveSection';
 type HeaderProps = {
+	scrollToSection: (elementRef: React.RefObject<HTMLElement>) => void;
 	setHeaderHeight: (height: number) => void;
-	headerHeight: number;
 	sectionRefs: {
 		sectionHeroRef: React.RefObject<HTMLElement>;
 		sectionAboutRef: React.RefObject<HTMLElement>;
@@ -16,8 +16,8 @@ type HeaderProps = {
 };
 
 const Header = ({
+	scrollToSection,
 	setHeaderHeight,
-	headerHeight,
 	sectionRefs,
 }: HeaderProps) => {
 	const sectionHeaderRef = useRef<HTMLDivElement>(null);
@@ -35,19 +35,6 @@ const Header = ({
 		window.addEventListener('resize', updateHeaderHeight);
 		return () => window.removeEventListener('resize', updateHeaderHeight);
 	}, []);
-
-	// Change section
-	const scrollToSection = (
-		elementRef: React.RefObject<HTMLElement>
-	): void => {
-		if (elementRef.current) {
-			const elementPosition = elementRef.current.offsetTop - headerHeight;
-			window.scrollTo({
-				top: elementPosition,
-				behavior: 'smooth',
-			});
-		}
-	};
 
 	// Set active button
 	const getButtonActive = (sectionRef: keyof typeof sectionRefs) => {
@@ -70,7 +57,7 @@ const Header = ({
 					isActive={getButtonActive('sectionHeroRef')}
 				/>
 				<NavButton
-					text="About"
+					text="About Me"
 					onClick={() => scrollToSection(sectionRefs.sectionAboutRef)}
 					isActive={getButtonActive('sectionAboutRef')}
 				/>
@@ -89,14 +76,14 @@ const Header = ({
 					isActive={getButtonActive('sectionSkillsRef')}
 				/>
 				<NavButton
-					text="Career"
+					text="Experience"
 					onClick={() =>
 						scrollToSection(sectionRefs.sectionExperienceRef)
 					}
 					isActive={getButtonActive('sectionExperienceRef')}
 				/>
 				<NavButton
-					text="Testimonials"
+					text="What Others Say"
 					onClick={() =>
 						scrollToSection(sectionRefs.sectionTestimonialsRef)
 					}

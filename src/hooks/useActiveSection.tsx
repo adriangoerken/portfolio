@@ -21,7 +21,7 @@ const useActiveSection = (
 				});
 			},
 			{
-				threshold: 0.5, // Trigger when 50% of the section is visible
+				threshold: 0.8, // Trigger when 80% of the section is visible
 			}
 		);
 
