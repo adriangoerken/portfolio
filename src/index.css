@@ -26,12 +26,23 @@ a {
 	@apply text-white;
 }
 
+h1,
+h2,
+h3 {
+	@apply leading-none;
+}
+
 hr {
 	@apply my-6;
 	@apply h-[1px];
 	@apply w-full;
 }
 
+p {
+	@apply leading-relaxed;
+	@apply text-center;
+	@apply md:text-start;
+}
 @media only screen and (min-width: 768px) {
 	/* Custom scroll bar */
 	/* width */

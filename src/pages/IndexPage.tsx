@@ -80,25 +80,35 @@ const IndexPage = () => {
 				/>
 
 				{/* Content sections */}
-				<section ref={sectionHeroRef} style={sectionStyle}>
-					{/* <H1>Nice to meet you! I'm Adrian Goerken</H1> */}
-					{/* Professional phot or illustration */}
-					<img
-						src="src/assets/images/portrait.webp"
-						alt="Portrait of me sitting in front of monitors"
-						className="h-1/6 w-1/6 rounded-full	"
-					/>
-					{/* Brief, impactful introduction */}
-					<p>
-						Hello! I'm Adrian, a full-stack developer crafting
-						modern web solutions. I blend technical expertise with
-						creative problem-solving to build websites that stand
-						out.
-					</p>
-					{/* CTA */}
-					<Button onClick={() => scrollToSection(sectionProjectsRef)}>
-						Explore My Work
-					</Button>
+				<section
+					ref={sectionHeroRef}
+					style={sectionStyle}
+					className="flex flex-col md:flex-row justify-around"
+				>
+					{/* Left Column */}
+					<div className="flex flex-col items-center md:items-start gap-6 md:self-center md:w-1/2">
+						<H1>Nice to meet you! I'm Adrian.</H1>
+						<p>
+							A full-stack developer crafting modern web
+							solutions. I blend technical expertise with creative
+							problem-solving to build websites that stand out.
+						</p>
+						<Button
+							onClick={() => scrollToSection(sectionProjectsRef)}
+							className="w-fit"
+						>
+							Explore My Work
+						</Button>
+					</div>
+
+					{/* Right Column */}
+					<div className="md:s-1/2 md:w-fit flex justify-center mt-8 md:mt-0">
+						<img
+							src="src/assets/images/portrait.webp"
+							alt="Portrait of me sitting in front of monitors"
+							className="h-64 w-64 md:h-80 md:w-80 object-cover rounded-full shadow-lg"
+						/>
+					</div>
 				</section>
 
 				<hr className="my-12" />
@@ -114,25 +124,35 @@ const IndexPage = () => {
 					hobbies, interests, or a brief story) */}
 				</section>
 
+				<hr className="my-12" />
+
 				<section ref={sectionProjectsRef} style={sectionStyle}>
 					<H2>Portfolio</H2>
 					<div className="h-full bg-blue-300">Projects</div>
 				</section>
+
+				<hr className="my-12" />
 
 				<section ref={sectionSkillsRef} style={sectionStyle}>
 					<H2>Skills</H2>
 					<div className="h-full bg-blue-400">Skills</div>
 				</section>
 
+				<hr className="my-12" />
+
 				<section ref={sectionExperienceRef} style={sectionStyle}>
 					<H2>Experience</H2>
 					<div className="h-full bg-blue-500">Experience</div>
 				</section>
 
+				<hr className="my-12" />
+
 				<section ref={sectionTestimonialsRef} style={sectionStyle}>
 					<H2>What Others Say</H2>
 					<div className="h-full bg-blue-600">Testimonials</div>
 				</section>
+
+				<hr className="my-12" />
 
 				<section ref={sectionContactRef} style={sectionStyle}>
 					<H2>Contact</H2>

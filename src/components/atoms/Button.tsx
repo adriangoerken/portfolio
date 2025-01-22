@@ -17,7 +17,7 @@ const Button = ({
 		<button
 			onClick={onClick}
 			disabled={disabled}
-			className={`bg-blue-700 text-white p-2 rounded-full hover:bg-blue-800 transition disabled:opacity-50 w-full ${className}`}
+			className={`bg-blue-700 text-white py-2 px-4 rounded-full hover:bg-blue-800 transition disabled:opacity-50 w-full ${className}`}
 		>
 			{children}
 		</button>
