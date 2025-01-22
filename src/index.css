@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: 'Poppins';
+	src: url('./assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('./assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+body {
+	@apply font-sans;
+}
+
 h1,
 h2,
 a {
@@ -9,8 +27,7 @@ a {
 }
 
 hr {
-	@apply my-4;
-	@apply border-white;
+	@apply my-6;
 	@apply h-[1px];
 	@apply w-full;
 }

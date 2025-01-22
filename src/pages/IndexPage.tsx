@@ -1,7 +1,9 @@
 import { useRef, useState, useEffect } from 'react';
 import Container from '../components/organisms/Container';
 import Header from '../components/organisms/Header';
+import H1 from '../components/atoms/H1';
 import H2 from '../components/atoms/H2';
+import H3 from '../components/atoms/H3';
 import Button from '../components/atoms/Button';
 
 // Projects:
@@ -43,7 +45,7 @@ const IndexPage = () => {
 
 	// Calculate section height by subtracting header height from viewport height
 	const sectionStyle = {
-		minHeight: `calc(100vh - ${headerHeight}px)`,
+		// minHeight: `calc(100vh - ${headerHeight}px)`,
 	};
 
 	// Change section
@@ -79,7 +81,7 @@ const IndexPage = () => {
 
 				{/* Content sections */}
 				<section ref={sectionHeroRef} style={sectionStyle}>
-					<H2>Welcome!</H2>
+					{/* <H1>Nice to meet you! I'm Adrian Goerken</H1> */}
 					{/* Professional phot or illustration */}
 					<img
 						src="src/assets/images/portrait.webp"
@@ -98,6 +100,8 @@ const IndexPage = () => {
 						Explore My Work
 					</Button>
 				</section>
+
+				<hr className="my-12" />
 
 				<section ref={sectionAboutRef} style={sectionStyle}>
 					<H2>About Me</H2>

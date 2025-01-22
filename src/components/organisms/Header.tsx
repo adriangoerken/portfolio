@@ -44,13 +44,17 @@ const Header = ({
 	return (
 		<section
 			ref={sectionHeaderRef}
-			className="flex flex-col md:flex-row items-center justify-between gap-6 py-6 bg-custom-gray text-white sticky top-0 z-999"
+			className="flex flex-col lg:flex-row items-center justify-between gap-6 py-6 bg-custom-gray text-white sticky top-0 z-999"
 		>
-			<div className="flex flex-col md:flex-row items-center gap-2">
-				<span className="text-2xl font-bold">Adrian Goerken</span>
-				<span className="text-lg italic">Web Developer</span>
+			<div className="flex flex-col items-center">
+				<span className="text-2xl font-bold text-nowrap">
+					Adrian Goerken
+				</span>
+				<span className="text-lg italic text-nowrap">
+					Web Developer
+				</span>
 			</div>
-			<nav className="flex flex-col md:flex-row flex-wrap gap-4 justify-center mt-4 md:mt-0 md:justify-start">
+			<nav className="hidden lg:flex flex-col md:flex-row flex-wrap gap-4 justify-center mt-4 md:mt-0 md:justify-start">
 				<NavButton
 					text="Welcome"
 					onClick={() => scrollToSection(sectionRefs.sectionHeroRef)}
