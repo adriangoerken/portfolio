@@ -1,19 +1,11 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
 import Container from '../components/organisms/Container';
 import Header from '../components/organisms/Header';
 import H1 from '../components/atoms/H1';
 import H2 from '../components/atoms/H2';
 import H3 from '../components/atoms/H3';
 import Button from '../components/atoms/Button';
-
-// Projects:
-// 	Showcase your key projects with high-quality images or videos
-// 	Include project titles, descriptions, technologies used, and links to live demos or code repositories
-// 	Use a visually appealing layout, such as a grid or carousel
-
-// Skills:
-// 	List your technical skills, tools, and technologies (e.g., HTML, CSS, JavaScript, React, Node.js)
-// 	Consider using icons or a skill chart to make it visually engaging
+import ProjectCard from '../components/molecules/ProjectCard';
 
 // Experience:
 // 	Highlight your professional experience, internships, or significant freelance work
@@ -111,7 +103,7 @@ const IndexPage = () => {
 					</div>
 				</section>
 
-				<hr className="my-12" />
+				<hr />
 
 				<section ref={sectionAboutRef} style={sectionStyle}>
 					<H2>About Me</H2>
@@ -143,35 +135,46 @@ const IndexPage = () => {
 					</div>
 				</section>
 
-				<hr className="my-12" />
+				<hr />
 
 				<section ref={sectionProjectsRef} style={sectionStyle}>
 					<H2>Portfolio</H2>
-					<div className="h-full bg-blue-300">Projects</div>
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 justify-items-center auto-rows-max">
+						<ProjectCard
+							imageSrc="https://dummyimage.com/250"
+							name="TaskDonify"
+							technologies={['React', 'Tailwind', 'PHP', 'MySQL']}
+							projectLink="https://www.google.com/ncr"
+							codeLink="https://www.google.com/ncr"
+						/>
+					</div>
 				</section>
 
-				<hr className="my-12" />
+				<hr />
 
 				<section ref={sectionSkillsRef} style={sectionStyle}>
+					{/* Skills:
+ 						List your technical skills, tools, and technologies (e.g., HTML, CSS, JavaScript, React, Node.js)
+ 						Consider using icons or a skill chart to make it visually engaging */}
 					<H2>Skills</H2>
 					<div className="h-full bg-blue-400">Skills</div>
 				</section>
 
-				<hr className="my-12" />
+				<hr />
 
 				<section ref={sectionExperienceRef} style={sectionStyle}>
 					<H2>Experience</H2>
 					<div className="h-full bg-blue-500">Experience</div>
 				</section>
 
-				<hr className="my-12" />
+				<hr />
 
 				<section ref={sectionTestimonialsRef} style={sectionStyle}>
 					<H2>What Others Say</H2>
 					<div className="h-full bg-blue-600">Testimonials</div>
 				</section>
 
-				<hr className="my-12" />
+				<hr />
 
 				<section ref={sectionContactRef} style={sectionStyle}>
 					<H2>Contact</H2>

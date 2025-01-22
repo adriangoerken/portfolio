@@ -6,7 +6,7 @@ type H2Props = {
 
 const H2 = ({ children }: H2Props) => {
 	return (
-		<h2 className="text-3xl font-semibold tracking-normal text-center text-white">
+		<h2 className="text-3xl font-semibold tracking-normal text-center text-white mb-2">
 			{children}
 		</h2>
 	);

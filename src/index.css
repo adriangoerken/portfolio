@@ -33,8 +33,10 @@ h3 {
 }
 
 hr {
-	@apply my-6;
-	@apply h-[1px];
+	@apply border-none;
+	@apply my-10;
+	@apply h-[2px];
+	@apply bg-white;
 	@apply w-full;
 }
 
