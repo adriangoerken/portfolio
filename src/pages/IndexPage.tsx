@@ -11,12 +11,6 @@ import { SkillProps } from '../lib/type';
 import H3 from '../components/atoms/H3';
 import ContactCard from '../components/molecules/ContactCard';
 
-// Footer:
-// 	Quick links to the main sections
-// 	Copyright information
-// 	A closing note or a motivational quote
-// 	Feel free to customize this structure to fit your style and content. Let me know if you need help with specific sections or any other advice!
-
 const IndexPage = () => {
 	const [headerHeight, setHeaderHeight] = useState(0);
 	const sectionHeroRef = useRef<HTMLElement>(null);
@@ -298,7 +292,10 @@ const IndexPage = () => {
 				</section>
 
 				<section>
-					<div>Footer</div>
+					{/* Footer:
+					Quick links to the main sections
+					Copyright information
+					A closing note or a motivational quote */}
 				</section>
 			</Container>
 		</section>
