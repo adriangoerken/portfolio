@@ -5,7 +5,7 @@ type ProjectCardProps = {
 	name: string;
 	technologies: string[];
 	projectLink: string;
-	codeLink: string;
+	codeLink?: string;
 };
 
 const ProjectCard = ({
@@ -13,10 +13,10 @@ const ProjectCard = ({
 	name,
 	technologies,
 	projectLink,
-	codeLink,
+	codeLink = 'n/a',
 }: ProjectCardProps) => {
 	return (
-		<div className="flex flex-col justify-between w-[282px] bg-elevation-300 p-4 rounded-xl">
+		<div className="flex flex-col justify-between bg-elevation-300 p-4 rounded-xl">
 			{/* Image, name and technologies */}
 			<div>
 				<img src={imageSrc} alt="Project Thumbnail" className="mb-2" />
@@ -28,13 +28,27 @@ const ProjectCard = ({
 				</div>
 			</div>
 			{/* Links */}
-			<div className="flex gap-6">
-				<a href={projectLink} target="_blank" rel="noopener noreferrer">
+			<div className="flex gap-6 justify-center">
+				<a
+					href={projectLink}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="border-b-2 border-transparent hover:border-white transition-all ease-in-out"
+				>
 					View Project
 				</a>
-				<a href={codeLink} target="_blank" rel="noopener noreferrer">
-					View Code
-				</a>
+				{codeLink !== 'n/a' ? (
+					<a
+						href={codeLink}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="border-b-2 border-transparent hover:border-white transition-all ease-in-out"
+					>
+						View Code
+					</a>
+				) : (
+					''
+				)}
 			</div>
 		</div>
 	);

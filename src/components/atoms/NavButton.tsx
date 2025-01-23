@@ -12,6 +12,7 @@ const NavButton = ({ text, onClick, isActive }: NavButtonProps) => {
 			className={`
                 border-b-2 
                 transition-all
+				ease-in-out
                 ${
 					isActive
 						? 'border-white scale-110'

@@ -3,9 +3,11 @@ import Container from '../components/organisms/Container';
 import Header from '../components/organisms/Header';
 import H1 from '../components/atoms/H1';
 import H2 from '../components/atoms/H2';
-import H3 from '../components/atoms/H3';
 import Button from '../components/atoms/Button';
 import ProjectCard from '../components/molecules/ProjectCard';
+import Skill from '../components/molecules/Skill';
+import Grid from '../components/molecules/Grid';
+import { SkillProps } from '../lib/type';
 
 // Experience:
 // 	Highlight your professional experience, internships, or significant freelance work
@@ -35,10 +37,57 @@ const IndexPage = () => {
 	const sectionTestimonialsRef = useRef<HTMLElement>(null);
 	const sectionContactRef = useRef<HTMLElement>(null);
 
-	// Calculate section height by subtracting header height from viewport height
-	const sectionStyle = {
-		// minHeight: `calc(100vh - ${headerHeight}px)`,
-	};
+	/* 
+	Skill Complexity Weighting:
+		Basic understanding: 25-40%
+		Comfortable in most scenarios: 50-70%
+		Advanced implementation: 70-90%
+		Can architect complex solutions: 90-100%
+	*/
+	const skills: SkillProps[] = [
+		{
+			tech: 'HTML5',
+			startDate: { year: 2017, month: 11 },
+			width: 'w-[100%]',
+		},
+		{
+			tech: 'CSS3',
+			startDate: { year: 2017, month: 11 },
+			width: 'w-[90%]',
+		},
+		{ tech: 'PHP', startDate: { year: 2017, month: 12 }, width: 'w-[70%]' },
+		{
+			tech: 'MySQL',
+			startDate: { year: 2017, month: 12 },
+			width: 'w-[70%]',
+		},
+		{
+			tech: 'JavaScript',
+			startDate: { year: 2018, month: 1 },
+			width: 'w-[80%]',
+		},
+		{
+			tech: 'Oracle PLSQL',
+			startDate: { year: 2021, month: 9 },
+			width: 'w-[60%]',
+		},
+		{ tech: 'Sass', startDate: { year: 2024, month: 1 }, width: 'w-[70%]' },
+		{
+			tech: 'React',
+			startDate: { year: 2024, month: 9 },
+			width: 'w-[40%]',
+		},
+		{
+			tech: 'Tailwind CSS',
+			startDate: { year: 2024, month: 10 },
+			width: 'w-[90%]',
+		},
+		{
+			tech: 'TypeScript',
+			startDate: { year: 2025, month: 1 },
+			width: 'w-[80%]',
+		},
+	];
 
 	// Change section
 	const scrollToSection = (
@@ -74,7 +123,6 @@ const IndexPage = () => {
 				{/* Content sections */}
 				<section
 					ref={sectionHeroRef}
-					style={sectionStyle}
 					className="flex flex-col md:flex-row justify-around"
 				>
 					{/* Left Column */}
@@ -87,7 +135,6 @@ const IndexPage = () => {
 						</p>
 						<Button
 							onClick={() => scrollToSection(sectionProjectsRef)}
-							className="w-fit"
 						>
 							Explore My Work
 						</Button>
@@ -105,10 +152,10 @@ const IndexPage = () => {
 
 				<hr />
 
-				<section ref={sectionAboutRef} style={sectionStyle}>
+				<section ref={sectionAboutRef}>
 					<H2>About Me</H2>
-					<div className="max-w-[960px] mx-auto">
-						<p className="mb-4 text">
+					<div className="max-w-prose justify-self-center">
+						<p className="mb-4">
 							Hi, I'm Adrian Goerken, a Full Stack Web Developer
 							with 5 years of experience. My passion for web
 							development comes from solving complex problems and
@@ -137,46 +184,59 @@ const IndexPage = () => {
 
 				<hr />
 
-				<section ref={sectionProjectsRef} style={sectionStyle}>
+				<section ref={sectionProjectsRef}>
 					<H2>Portfolio</H2>
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 justify-items-center auto-rows-max">
+					<Grid className="justify-items-center auto-rows-max">
 						<ProjectCard
-							imageSrc="https://dummyimage.com/250"
+							imageSrc="https://dummyimage.com/320"
 							name="TaskDonify"
 							technologies={['React', 'Tailwind', 'PHP', 'MySQL']}
 							projectLink="https://www.google.com/ncr"
 							codeLink="https://www.google.com/ncr"
 						/>
-					</div>
+						<ProjectCard
+							imageSrc="https://dummyimage.com/320"
+							name="TaskDonify"
+							technologies={['React', 'Tailwind', 'PHP', 'MySQL']}
+							projectLink="https://www.google.com/ncr"
+							codeLink="https://www.google.com/ncr"
+						/>
+					</Grid>
 				</section>
 
 				<hr />
 
-				<section ref={sectionSkillsRef} style={sectionStyle}>
-					{/* Skills:
- 						List your technical skills, tools, and technologies (e.g., HTML, CSS, JavaScript, React, Node.js)
- 						Consider using icons or a skill chart to make it visually engaging */}
+				<section ref={sectionSkillsRef}>
 					<H2>Skills</H2>
-					<div className="h-full bg-blue-400">Skills</div>
+					<Grid>
+						{skills.map((skill, index) => (
+							<Skill
+								key={index}
+								tech={skill.tech}
+								startDate={skill.startDate}
+								width={skill.width}
+							/>
+						))}
+					</Grid>
 				</section>
 
 				<hr />
 
-				<section ref={sectionExperienceRef} style={sectionStyle}>
+				<section ref={sectionExperienceRef}>
 					<H2>Experience</H2>
 					<div className="h-full bg-blue-500">Experience</div>
 				</section>
 
 				<hr />
 
-				<section ref={sectionTestimonialsRef} style={sectionStyle}>
+				<section ref={sectionTestimonialsRef}>
 					<H2>What Others Say</H2>
 					<div className="h-full bg-blue-600">Testimonials</div>
 				</section>
 
 				<hr />
 
-				<section ref={sectionContactRef} style={sectionStyle}>
+				<section ref={sectionContactRef}>
 					<H2>Contact</H2>
 					<div className="h-full bg-blue-700">Contact</div>
 				</section>
