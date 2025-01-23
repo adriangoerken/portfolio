@@ -86,13 +86,13 @@ const Header = ({
 					}
 					isActive={getButtonActive('sectionExperienceRef')}
 				/>
-				<NavButton
+				{/* <NavButton
 					text="What Others Say"
 					onClick={() =>
 						scrollToSection(sectionRefs.sectionTestimonialsRef)
 					}
-					isActive={getButtonActive('sectionTestimonialsRef')}
-				/>
+					isActive={getButtonActive('sectionTestimonialsRef')}					
+				/> */}
 				<NavButton
 					text="Contact"
 					onClick={() =>

@@ -9,14 +9,7 @@ import Skill from '../components/molecules/Skill';
 import Grid from '../components/molecules/Grid';
 import { SkillProps } from '../lib/type';
 import H3 from '../components/atoms/H3';
-
-// Testimonials:
-// 	Include quotes or feedback from clients, colleagues, or mentors
-// 	Add names and positions (with permission) to add credibility
-
-// Contact:
-// 	A contact form for easy inquiries
-// 	Your email address and links to your social media profiles (e.g., LinkedIn, GitHub, Twitter)
+import ContactCard from '../components/molecules/ContactCard';
 
 // Footer:
 // 	Quick links to the main sections
@@ -259,16 +252,49 @@ const IndexPage = () => {
 
 				<hr />
 
-				<section ref={sectionTestimonialsRef}>
-					<H2>What Others Say</H2>
-					<div className="h-full bg-blue-600">Testimonials</div>
-				</section>
+				{/* <section ref={sectionTestimonialsRef}>
+					<H2>What Others Say</H2> */}
+				{/* Testimonials:
+					Include quotes or feedback from clients, colleagues, or mentors
+					Add names and positions (with permission) to add credibility */}
+				{/* </section> */}
 
-				<hr />
+				{/* <hr/> */}
 
 				<section ref={sectionContactRef}>
 					<H2>Contact</H2>
-					<div className="h-full bg-blue-700">Contact</div>
+					<Grid>
+						<ContactCard
+							header="Email"
+							link="mailto:adrian.goerken@proton.me"
+							text="adrian.goerken@proton.me"
+						/>
+						<ContactCard
+							header="Phone"
+							link="tel:+4915203304956"
+							text="+49 152 03304956"
+						/>
+						<ContactCard
+							header="GitHub"
+							link="https://github.com/adriangoerken"
+							text="@adriangoerken"
+						/>
+						<ContactCard
+							header="Xing"
+							link="https://www.xing.com/profile/Adrian_Goerken"
+							text="Adrian Goerken"
+						/>
+						<ContactCard
+							header="Bluesky"
+							link="https://bsky.app/profile/adriangoerken.bsky.social"
+							text="@adriangoerken.bsky.social"
+						/>
+						<ContactCard
+							header="Mastodon"
+							link="https://mastodon.social/@adrian_goerken"
+							text="@adrian_goerken"
+						/>
+					</Grid>
 				</section>
 
 				<section>
