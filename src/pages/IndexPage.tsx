@@ -8,10 +8,7 @@ import ProjectCard from '../components/molecules/ProjectCard';
 import Skill from '../components/molecules/Skill';
 import Grid from '../components/molecules/Grid';
 import { SkillProps } from '../lib/type';
-
-// Experience:
-// 	Highlight your professional experience, internships, or significant freelance work
-// 	Include job titles, company names, dates, and a brief description of your responsibilities and achievements
+import H3 from '../components/atoms/H3';
 
 // Testimonials:
 // 	Include quotes or feedback from clients, colleagues, or mentors
@@ -224,7 +221,40 @@ const IndexPage = () => {
 
 				<section ref={sectionExperienceRef}>
 					<H2>Experience</H2>
-					<div className="h-full bg-blue-500">Experience</div>
+					{/* 
+						Experience:
+						Highlight your professional experience, internships, or significant freelance work
+						Include job titles, company names, dates, and a brief description of your responsibilities and achievements
+					*/}
+					<div>
+						<H3>
+							PHP Developer | KBU Logistik AG | Sep 2021 - Dec
+							2024
+						</H3>
+
+						<div className="text-center md:text-start flex flex-col gap-2 sm:gap-1">
+							<span>
+								- Developed a web application for warehouse
+								management system to optimize worker navigation
+								and inventory tracking.
+							</span>
+							<span>
+								- Implemented feature improvements allowing more
+								efficient menu entry creation with reduced code
+								duplication.
+							</span>
+							<span>
+								- Utilized PHP, JavaScript, Oracle PL/SQL, HTML,
+								and CSS to build and enhance web application
+								functionality.
+							</span>
+							<span>
+								- Collaborated with small team to iteratively
+								develop and maintain logistics software
+								solution.
+							</span>
+						</div>
+					</div>
 				</section>
 
 				<hr />
