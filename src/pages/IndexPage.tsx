@@ -18,12 +18,6 @@ const IndexPage = () => {
 	const sectionExperienceRef = useRef<HTMLElement>(null);
 	const sectionTestimonialsRef = useRef<HTMLElement>(null);
 	const sectionContactRef = useRef<HTMLElement>(null);
-	/* TODO: 		
-		2. Make Imprint
-		3. Make Privacy Policy
-		4. Implement logic for translation without cookie part
-		5. Create json files for en and de
-	 */
 
 	// Change section
 	const scrollToSection = (

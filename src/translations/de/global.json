@@ -1,7 +1,75 @@
 {
+	"Header": {
+		"subTitle": "Webentwickler",
+		"links": {
+			"linkWelcome": "Willkommen",
+			"linkAboutMe": "Über mich",
+			"linkPortfolio": "Portfolio",
+			"linkSkills": "Fähigkeiten",
+			"linkExperience": "Erfahrung",
+			"linkTestimonials": "Was andere sagen",
+			"linkContact": "Kontakt"
+		}
+	},
+	"HeroSection": {
+		"title": "Schön, dich kennenzulernen! Ich bin<1> Adrian.</1>",
+		"message": "Ein Full-Stack-Entwickler, der moderne Weblösungen erstellt. Ich kombiniere technisches Know-how mit kreativem Problemlösen, um Websites zu entwickeln, die herausstechen.",
+		"btnCTA": "Meine Arbeit entdecken",
+		"imgAlt": "Ein Porträt von Adrian Goerken"
+	},
+	"AboutMeSection": {
+		"title": "Über mich",
+		"paragraphOne": "Hallo, ich bin Adrian Goerken, ein Full-Stack-Webentwickler mit 7 Jahren Erfahrung. Meine Leidenschaft für Webentwicklung kommt von der Lösung komplexer Probleme und der Schaffung wirkungsvoller Lösungen, die einen Unterschied im Leben der Menschen machen.",
+		"paragraphTwo": "Nach umfangreicher Erfahrung in der Entwicklung von Lagerverwaltungssystemen bin ich ins Freelancing gewechselt, wo ich maßgeschneiderte Weblösungen entwickle. Mein technisches Werkzeug umfasst React, TypeScript und Tailwind CSS für die Erstellung von responsiven Benutzeroberflächen, während ich serverseitige Vorgänge mit PHP und MySQL bearbeite und sichere Authentifizierungen mit JWTs implementiere.",
+		"paragraphThree": "Wenn ich nicht programmiere, findet man mich auf dem Fußballplatz, beim Verfolgen von Fußballspielen oder mit einem guten Buch. Ich glaube, dass Interessen außerhalb der Technik helfen, neue Perspektiven für die Problemlösung in der Entwicklung zu gewinnen."
+	},
+	"ProjectsSection": {
+		"title": "Portfolio",
+		"ProjectCard": {
+			"btnProject": "Projekt ansehen",
+			"btnCode": "Code ansehen"
+		}
+	},
+	"SkillsSection": {
+		"title": "Fähigkeiten",
+		"Skill": {
+			"year_zero": "<1 Jahr",
+			"year_one": "{{count}} Jahr",
+			"year_other": "{{count}} Jahre"
+		}
+	},
+	"ExperienceSection": {
+		"title": "Erfahrung",
+		"items": {
+			"itemOne": {
+				"title": "PHP-Entwickler | KBU Logistik AG | Sep 2021 - Dez 2024",
+				"list": {
+					"listItemOne": "- Entwicklung einer Webanwendung für ein Lagerverwaltungssystem zur Optimierung der Navigation und Bestandsverfolgung.",
+					"listItemTwo": "- Implementierung von Feature-Verbesserungen, die effizientere Menüeinträge mit reduzierter Code-Duplikation ermöglichen.",
+					"listItemThree": "- Nutzung von PHP, JavaScript, Oracle PL/SQL, HTML und CSS zur Erstellung und Verbesserung der Funktionalität der Webanwendung.",
+					"listItemFour": "- Zusammenarbeit mit einem kleinen Team zur iterativen Entwicklung und Wartung der Logistiksoftwarelösung."
+				}
+			}
+		}
+	},
+	"TestimonialsSection": {
+		"title": "Was andere sagen"
+	},
+	"ContactSection": {
+		"title": "Kontakt",
+		"phone": "Telefon"
+	},
+	"Footer": {
+		"copyright": " Alle Rechte vorbehalten.",
+		"links": {
+			"linkHome": "Startseite",
+			"linkImprint": "Impressum",
+			"linkPrivacy": "Datenschutzerklärung"
+		}
+	},
 	"ImprintPage": {
 		"headerTitle": "Impressum",
-		"introText": "Dieses Impressum wird gemäß § 5 des deutschen Telemediengesetzes (TMG) und anderen anwendbaren Gesetzen bereitgestellt.",
+		"introText": "Dieses Impressum wird gemäß § 5 des deutschen Telemediengesetzes (TMG) und anderer geltender Gesetze bereitgestellt.",
 		"section1": {
 			"title": "1. Anbieter",
 			"description": {
@@ -18,11 +86,42 @@
 		},
 		"section3": {
 			"title": "3. Kontakt",
-			"description": "Wenn Sie Fragen zu diesem Impressum oder den bereitgestellten Informationen haben, kontaktieren Sie mich gerne unter:",
+			"description": "Wenn Sie Fragen zu diesem Impressum oder den bereitgestellten Informationen haben, können Sie mich gerne kontaktieren unter:",
 			"contactInfo": {
 				"email": "adrian.goerken@proton.me",
 				"phone": "+49 152 03304956"
 			}
+		}
+	},
+	"PrivacyPolicyPage": {
+		"headerTitle": "Datenschutzerklärung",
+		"introText": "Bei Adrian Goerken ('ich', 'mein', 'mir') setze ich mich für den Schutz Ihrer Privatsphäre und die Gewährleistung eines sicheren Online-Erlebnisses ein. Diese Datenschutzerklärung beschreibt, wie ich Ihre persönlichen Daten gemäß der Datenschutz-Grundverordnung (DSGVO) (EU) 2016/679 und den deutschen Datenschutzgesetzen sammle, verwende und schütze.",
+		"section1": {
+			"title": "1. Welche Informationen ich sammle",
+			"description": "Keine Datensammlung:",
+			"list": {
+				"personalInfo": "Es werden keine persönlichen Informationen gesammelt.",
+				"cookies": "Es werden keine Cookies verwendet.",
+				"tracking": "Es werden keine Tracking-Technologien implementiert."
+			}
+		},
+		"section2": {
+			"title": "2. Hosting der Website",
+			"description": "Die Website kann standardmäßige Serverprotokolle für technische Zwecke generieren, die keine personenbezogenen Daten enthalten."
+		},
+		"section3": {
+			"title": "3. Kontakt",
+			"description": "Wenn Sie Fragen oder Bedenken zu dieser Datenschutzerklärung oder meinen Datenpraktiken haben, kontaktieren Sie mich bitte unter:",
+			"contactInfo": {
+				"companyName": "Adrian Goerken",
+				"address": "Wollgrasweg 3, 26676 Barßel, Deutschland",
+				"email": "adrian.goerken@proton.me",
+				"phone": "+49 152 03304956"
+			}
+		},
+		"section4": {
+			"title": "4. Rechtliche Einhaltung",
+			"description": "Diese Website entspricht der DSGVO, der EU- und den deutschen Datenschutzbestimmungen, indem keine personenbezogenen Daten gesammelt werden."
 		}
 	}
 }

@@ -1,7 +1,9 @@
 import H3 from '../atoms/H3';
 import { StartDate, SkillProps } from '../../lib/type';
+import { useTranslation } from 'react-i18next';
 
 const Skill = ({ tech, startDate, width }: SkillProps) => {
+	const [t] = useTranslation('global');
 	const getExperienceYears = (startDate: StartDate) => {
 		const currentDate = new Date();
 		const startYear = startDate.year;
@@ -11,18 +13,18 @@ const Skill = ({ tech, startDate, width }: SkillProps) => {
 		const months = currentDate.getMonth() + 1 - startMonth; // getMonth() returns 0-11
 
 		let totalYears = years;
-		let totalMonths = months;
 
 		if (months < 0) {
 			totalYears -= 1;
-			totalMonths += 12;
 		}
 
-		if (totalYears < 1) {
-			return '<1 Year';
+		if (totalYears === 0) {
+			return t('SkillsSection.Skill.year_zero');
 		}
 
-		return `${totalYears} Year${totalYears > 1 ? 's' : ''}`;
+		return `${t('SkillsSection.Skill.year', {
+			count: totalYears === 0 ? 1 : totalYears,
+		})}`;
 	};
 
 	const experience = getExperienceYears(startDate);

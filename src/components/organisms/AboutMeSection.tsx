@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import H2 from '../atoms/H2';
 
 type AboutMeSectionProps = {
@@ -9,31 +10,15 @@ A summary of your skills and expertise
 A personal touch (e.g., hobbies, interests, or a brief story)
 */
 const AboutMeSection = ({ sectionAboutRef }: AboutMeSectionProps) => {
+	const [t] = useTranslation('global');
+
 	return (
 		<section ref={sectionAboutRef}>
-			<H2>About Me</H2>
+			<H2>{t('AboutMeSection.title')}</H2>
 			<div className="max-w-prose justify-self-center">
-				<p className="mb-4">
-					Hi, I'm Adrian Goerken, a Full Stack Web Developer with 5
-					years of experience. My passion for web development comes
-					from solving complex problems and creating impactful
-					solutions that make a difference in people's lives.
-				</p>
-				<p className="mb-4">
-					After gaining extensive experience developing warehouse
-					management systems, I've transitioned to freelancing, where
-					I build custom web solutions. My technical toolkit includes
-					React, TypeScript, and Tailwind CSS for creating responsive
-					user interfaces, while I handle server-side operations with
-					PHP and MySQL, implementing secure authentication through
-					JWTs.
-				</p>
-				<p>
-					When I'm not coding, you'll find me on the soccer field,
-					following football matches, or diving into a good book. I
-					believe maintaining interests outside of tech helps bring
-					fresh perspectives to problem-solving in development.
-				</p>
+				<p className="mb-4">{t('AboutMeSection.paragraphOne')}</p>
+				<p className="mb-4">{t('AboutMeSection.paragraphTwo')}</p>
+				<p>{t('AboutMeSection.paragraphThree')}</p>
 			</div>
 		</section>
 	);

@@ -1,6 +1,7 @@
 import H2 from '../atoms/H2';
 import Grid from '../molecules/Grid';
 import ContactCard from '../molecules/ContactCard';
+import { useTranslation } from 'react-i18next';
 
 type ContactSectionProps = {
 	sectionContactRef: React.RefObject<HTMLElement>;
@@ -11,9 +12,11 @@ A contact form for easy inquiries
 Your email address and links to your social media profiles (e.g., LinkedIn, GitHub, Twitter)
 */
 const ContactSection = ({ sectionContactRef }: ContactSectionProps) => {
+	const [t] = useTranslation('global');
+
 	return (
 		<section ref={sectionContactRef}>
-			<H2>Contact</H2>
+			<H2>{t('ContactSection.title')}</H2>
 			<Grid>
 				<ContactCard
 					header="Email"
@@ -21,7 +24,7 @@ const ContactSection = ({ sectionContactRef }: ContactSectionProps) => {
 					text="adrian.goerken@proton.me"
 				/>
 				<ContactCard
-					header="Phone"
+					header={t('ContactSection.phone')}
 					link="tel:+4915203304956"
 					text="+49 152 03304956"
 				/>

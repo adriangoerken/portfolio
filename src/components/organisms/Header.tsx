@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import NavButton from '../atoms/NavButton';
 import useActiveSection from '../../hooks/useActiveSection';
+import { useTranslation } from 'react-i18next';
 
 type HeaderProps = {
 	scrollToSection: (elementRef: React.RefObject<HTMLElement>) => void;
@@ -21,6 +22,7 @@ const Header = ({
 	setHeaderHeight,
 	sectionRefs,
 }: HeaderProps) => {
+	const [t] = useTranslation('global');
 	const sectionHeaderRef = useRef<HTMLDivElement>(null);
 	const activeSection = useActiveSection(sectionRefs);
 
@@ -52,50 +54,50 @@ const Header = ({
 					Adrian Goerken
 				</span>
 				<span className="text-lg italic text-nowrap">
-					Web Developer
+					{t('Header.subTitle')}
 				</span>
 			</div>
 			<nav className="hidden lg:flex flex-col md:flex-row flex-wrap gap-4 justify-center mt-4 md:mt-0 md:justify-start">
 				<NavButton
-					text="Welcome"
+					text={t('Header.links.linkWelcome')}
 					onClick={() => scrollToSection(sectionRefs.sectionHeroRef)}
 					isActive={getButtonActive('sectionHeroRef')}
 				/>
 				<NavButton
-					text="About Me"
+					text={t('Header.links.linkAboutMe')}
 					onClick={() => scrollToSection(sectionRefs.sectionAboutRef)}
 					isActive={getButtonActive('sectionAboutRef')}
 				/>
 				<NavButton
-					text="Portfolio"
+					text={t('Header.links.linkPortfolio')}
 					onClick={() =>
 						scrollToSection(sectionRefs.sectionProjectsRef)
 					}
 					isActive={getButtonActive('sectionProjectsRef')}
 				/>
 				<NavButton
-					text="Skills"
+					text={t('Header.links.linkSkills')}
 					onClick={() =>
 						scrollToSection(sectionRefs.sectionSkillsRef)
 					}
 					isActive={getButtonActive('sectionSkillsRef')}
 				/>
 				<NavButton
-					text="Experience"
+					text={t('Header.links.linkExperience')}
 					onClick={() =>
 						scrollToSection(sectionRefs.sectionExperienceRef)
 					}
 					isActive={getButtonActive('sectionExperienceRef')}
 				/>
 				{/* <NavButton
-					text="What Others Say"
+					text={t('Header.links.linkTestimonials')}
 					onClick={() =>
 						scrollToSection(sectionRefs.sectionTestimonialsRef)
 					}
 					isActive={getButtonActive('sectionTestimonialsRef')}					
 				/> */}
 				<NavButton
-					text="Contact"
+					text={t('Header.links.linkContact')}
 					onClick={() =>
 						scrollToSection(sectionRefs.sectionContactRef)
 					}

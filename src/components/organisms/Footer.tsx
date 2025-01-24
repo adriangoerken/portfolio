@@ -1,8 +1,20 @@
+import { useTranslation } from 'react-i18next';
 import Container from './Container';
 import { Link } from 'react-router-dom';
+import { getLanguage } from '../../utils/utils';
+import { useState } from 'react';
 
 const Footer = () => {
+	const [t, i18n] = useTranslation('global');
 	const year = new Date().getFullYear();
+	const [currentLang, setCurrentLang] = useState(
+		getLanguage().substring(0, 2)
+	);
+
+	const handleChangeLanguage = (lang: string) => {
+		i18n.changeLanguage(lang);
+		setCurrentLang(lang);
+	};
 
 	return (
 		<footer className="bg-elevation-300 text-white py-8">
@@ -13,7 +25,7 @@ const Footer = () => {
 							Adrian Goerken
 						</h3>
 						<p className="opacity-75">
-							&copy; {year}, All rights reserved.
+							&copy; {year}, {t('Footer.copyright')}
 						</p>
 					</div>
 					<div className="flex justify-center gap-6 text-center">
@@ -21,23 +33,42 @@ const Footer = () => {
 							to="/"
 							className="hover:text-blue-700 transition-colors"
 						>
-							Home
+							{t('Footer.links.linkHome')}
 						</Link>
 						<Link
 							to="/imprint"
 							className="hover:text-blue-700 transition-colors"
 						>
-							Imprint
+							{t('Footer.links.linkImprint')}
 						</Link>
 						<Link
 							to="/privacy-policy"
 							className="hover:text-blue-700 transition-colors"
 						>
-							Privacy Policy
+							{t('Footer.links.linkPrivacy')}
 						</Link>
 					</div>
-					<div className="text-right opacity-60 hidden md:block">
-						Web Developer Portfolio
+					<div className="flex gap-2 justify-self-center md:justify-self-end">
+						{['de', 'en'].map((lang, index, arr) => (
+							<>
+								<span
+									key={lang}
+									onClick={() => handleChangeLanguage(lang)}
+									className={`border-b-2 border-b-transparent text-lg cursor-pointer text-white hover:scale-110 hover:border-b-white ${
+										currentLang === lang
+											? 'font-bold border-b-white'
+											: ''
+									}`}
+								>
+									{lang.toUpperCase()}
+								</span>
+								{index < arr.length - 1 && (
+									<span className="text-xl text-white">
+										|
+									</span>
+								)}
+							</>
+						))}
 					</div>
 				</div>
 			</Container>

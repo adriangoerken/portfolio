@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 type TestimonialsSectionProps = {
 	sectionTestimonialsRef: React.RefObject<HTMLElement>;
 };
@@ -9,9 +11,11 @@ Add names and positions (with permission) to add credibility
 const TestimonialsSection = ({
 	sectionTestimonialsRef,
 }: TestimonialsSectionProps) => {
+	const [t] = useTranslation('global');
+
 	return (
 		// <section ref={sectionTestimonialsRef}>
-		// 	<H2>What Others Say</H2>
+		// 	<H2>{t('TestimonialsSection.title')}</H2>
 		// </section>
 		<></>
 	);

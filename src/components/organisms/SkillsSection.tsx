@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { SkillProps } from '../../lib/type';
 import H2 from '../atoms/H2';
 import Grid from '../molecules/Grid';
@@ -12,6 +13,7 @@ List your technical skills, tools, and technologies (e.g., HTML, CSS, JavaScript
 Consider using icons or a skill chart to make it visually engaging
 */
 const SkillsSection = ({ sectionSkillsRef }: SkillsSectionProps) => {
+	const [t] = useTranslation('global');
 	/* 
 	Skill Complexity Weighting:
 		Basic understanding: 25-40%
@@ -46,7 +48,11 @@ const SkillsSection = ({ sectionSkillsRef }: SkillsSectionProps) => {
 			startDate: { year: 2021, month: 9 },
 			width: 'w-[60%]',
 		},
-		{ tech: 'Sass', startDate: { year: 2024, month: 1 }, width: 'w-[70%]' },
+		{
+			tech: 'Sass',
+			startDate: { year: 2024, month: 10 },
+			width: 'w-[70%]',
+		},
 		{
 			tech: 'React',
 			startDate: { year: 2024, month: 9 },
@@ -66,7 +72,7 @@ const SkillsSection = ({ sectionSkillsRef }: SkillsSectionProps) => {
 
 	return (
 		<section ref={sectionSkillsRef}>
-			<H2>Skills</H2>
+			<H2>{t('SkillsSection.title')}</H2>
 			<Grid>
 				{skills.map((skill, index) => (
 					<Skill

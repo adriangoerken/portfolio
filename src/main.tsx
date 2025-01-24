@@ -6,9 +6,9 @@ import i18next from 'i18next';
 import { I18nextProvider } from 'react-i18next';
 import global_en from './translations/en/global.json';
 import global_de from './translations/de/global.json';
-import { initLanguage } from './utils/utils.ts';
+import { getLanguage } from './utils/utils.ts';
 
-const initialLanguage = initLanguage().substring(0, 2);
+const initialLanguage = getLanguage().substring(0, 2);
 
 i18next.init({
 	interpolation: {

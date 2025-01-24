@@ -1,10 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import H3 from '../atoms/H3';
 
 type ProjectCardProps = {
 	imageSrc: string;
 	name: string;
 	technologies: string[];
-	projectLink: string;
+	projectLink?: string;
 	codeLink?: string;
 };
 
@@ -12,9 +13,11 @@ const ProjectCard = ({
 	imageSrc,
 	name,
 	technologies,
-	projectLink,
+	projectLink = 'n/a',
 	codeLink = 'n/a',
 }: ProjectCardProps) => {
+	const [t] = useTranslation('global');
+
 	return (
 		<div className="flex flex-col justify-between bg-elevation-300 p-4 rounded-xl">
 			{/* Image, name and technologies */}
@@ -28,15 +31,19 @@ const ProjectCard = ({
 				</div>
 			</div>
 			{/* Links */}
-			<div className="flex gap-6 justify-center">
-				<a
-					href={projectLink}
-					target="_blank"
-					rel="noopener noreferrer"
-					className="border-b-2 border-transparent hover:border-white transition-all ease-in-out"
-				>
-					View Project
-				</a>
+			<div className="flex gap-6">
+				{projectLink !== 'n/a' ? (
+					<a
+						href={projectLink}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="border-b-2 border-transparent hover:border-white transition-all ease-in-out"
+					>
+						{t('ProjectsSection.ProjectCard.btnProject')}
+					</a>
+				) : (
+					''
+				)}
 				{codeLink !== 'n/a' ? (
 					<a
 						href={codeLink}
@@ -44,7 +51,7 @@ const ProjectCard = ({
 						rel="noopener noreferrer"
 						className="border-b-2 border-transparent hover:border-white transition-all ease-in-out"
 					>
-						View Code
+						{t('ProjectsSection.ProjectCard.btnCode')}
 					</a>
 				) : (
 					''

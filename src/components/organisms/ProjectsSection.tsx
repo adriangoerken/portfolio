@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import H2 from '../atoms/H2';
 import Grid from '../molecules/Grid';
 import ProjectCard from '../molecules/ProjectCard';
@@ -11,15 +12,16 @@ Include project titles, descriptions, technologies used, and links to live demos
 Use a visually appealing layout, such as a grid or carousel
 */
 const ProjectsSection = ({ sectionProjectsRef }: ProjectsSectionProps) => {
+	const [t] = useTranslation('global');
+
 	return (
 		<section ref={sectionProjectsRef}>
-			<H2>Portfolio</H2>
+			<H2>{t('ProjectsSection.title')}</H2>
 			<Grid className="justify-items-center auto-rows-max">
 				<ProjectCard
 					imageSrc="https://dummyimage.com/320"
-					name="TaskDonify"
-					technologies={['React', 'Tailwind', 'PHP', 'MySQL']}
-					projectLink="https://www.google.com/ncr"
+					name="Portfolio"
+					technologies={['React', 'Tailwind', 'JavaScript', 'CSS']}
 					codeLink="https://www.google.com/ncr"
 				/>
 				<ProjectCard

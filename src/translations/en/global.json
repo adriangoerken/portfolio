@@ -1,4 +1,72 @@
 {
+	"Header": {
+		"subTitle": "Web Developer",
+		"links": {
+			"linkWelcome": "Welcome",
+			"linkAboutMe": "About Me",
+			"linkPortfolio": "Portfolio",
+			"linkSkills": "Skills",
+			"linkExperience": "Experience",
+			"linkTestimonials": "What Others Say",
+			"linkContact": "Contact"
+		}
+	},
+	"HeroSection": {
+		"title": "Nice to meet you! I'm<1> Adrian.</1>",
+		"message": "A full-stack developer crafting modern web solutions. I blend technical expertise with creative problem-solving to build websites that stand out.",
+		"btnCTA": "Explore My Work",
+		"imgAlt": "A Portrait of Adrian Goerken"
+	},
+	"AboutMeSection": {
+		"title": "About Me",
+		"paragraphOne": "Hi, I'm Adrian Goerken, a Full Stack Web Developer with 7 years of experience. My passion for web development comes from solving complex problems and creating impactful solutions that make a difference in people's lives.",
+		"paragraphTwo": "After gaining extensive experience developing warehouse management systems, I've transitioned to freelancing, where I build custom web solutions. My technical toolkit includes React, TypeScript, and Tailwind CSS for creating responsive user interfaces, while I handle server-side operations with PHP and MySQL, implementing secure authentication through JWTs.",
+		"paragraphThree": "When I'm not coding, you'll find me on the soccer field, following football matches, or diving into a good book. I believe maintaining interests outside of tech helps bring fresh perspectives to problem-solving in development."
+	},
+	"ProjectsSection": {
+		"title": "Portfolio",
+		"ProjectCard": {
+			"btnProject": "View Project",
+			"btnCode": "View Code"
+		}
+	},
+	"SkillsSection": {
+		"title": "Skills",
+		"Skill": {
+			"year_zero": "<1 Year",
+			"year_one": "{{count}} Year",
+			"year_other": "{{count}} Years"
+		}
+	},
+	"ExperienceSection": {
+		"title": "Experience",
+		"items": {
+			"itemOne": {
+				"title": "PHP Developer | KBU Logistik AG | Sep 2021 - Dec 2024",
+				"list": {
+					"listItemOne": "- Developed a web application for warehouse management system to optimize worker navigation and inventory tracking.",
+					"listItemTwo": "- Implemented feature improvements allowing more efficient menu entry creation with reduced code duplication.",
+					"listItemThree": "- Utilized PHP, JavaScript, Oracle PL/SQL, HTML, and CSS to build and enhance web application functionality.",
+					"listItemFour": "- Collaborated with small team to iteratively develop and maintain logistics software solution."
+				}
+			}
+		}
+	},
+	"TestimonialsSection": {
+		"title": "What Others Say"
+	},
+	"ContactSection": {
+		"title": "Contact",
+		"phone": "Phone"
+	},
+	"Footer": {
+		"copyright": " All rights reserved.",
+		"links": {
+			"linkHome": "Home",
+			"linkImprint": "Imprint",
+			"linkPrivacy": "Privacy Policy"
+		}
+	},
 	"ImprintPage": {
 		"headerTitle": "Imprint",
 		"introText": "This imprint is provided in accordance with Section 5 of the German Telemedia Act (TMG) and other applicable laws.",

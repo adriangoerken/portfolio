@@ -1,5 +1,5 @@
-import H1 from '../atoms/H1';
 import Button from '../atoms/Button';
+import { Trans, useTranslation } from 'react-i18next';
 
 type HeroSectionProps = {
 	sectionHeroRef: React.RefObject<HTMLElement>;
@@ -16,6 +16,8 @@ const HeroSection = ({
 	sectionProjectsRef,
 	scrollToSection,
 }: HeroSectionProps) => {
+	const [t] = useTranslation('global');
+
 	return (
 		<section
 			ref={sectionHeroRef}
@@ -23,14 +25,15 @@ const HeroSection = ({
 		>
 			{/* Left Column */}
 			<div className="flex flex-col items-center md:items-start gap-6 md:self-center md:w-1/2">
-				<H1>Nice to meet you! I'm Adrian.</H1>
-				<p>
-					A full-stack developer crafting modern web solutions. I
-					blend technical expertise with creative problem-solving to
-					build websites that stand out.
-				</p>
+				<h1 className="text-[40px] md:text-[50px] lg:text-[60px] font-bold tracking-tight text-center md:text-start">
+					<Trans i18nKey="HeroSection.title">
+						Nice to meet you! I'm
+						<span className="text-blue-700"> Adrian.</span>
+					</Trans>
+				</h1>
+				<p>{t('HeroSection.message')}</p>
 				<Button onClick={() => scrollToSection(sectionProjectsRef)}>
-					Explore My Work
+					{t('HeroSection.btnCTA')}
 				</Button>
 			</div>
 
@@ -38,7 +41,7 @@ const HeroSection = ({
 			<div className="md:s-1/2 md:w-fit flex justify-center mt-8 md:mt-0">
 				<img
 					src="src/assets/images/portrait.webp"
-					alt="Portrait of me sitting in front of monitors"
+					alt={t('HeroSection.imgAlt')}
 					className="h-64 w-64 md:h-80 md:w-80 object-cover rounded-full shadow-lg"
 				/>
 			</div>

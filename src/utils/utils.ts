@@ -3,7 +3,7 @@ interface ExtendedNavigator extends Navigator {
 	browserLanguage?: string;
 }
 
-export const initLanguage = () => {
+export const getLanguage = () => {
 	const extendedNavigator = navigator as ExtendedNavigator;
 	return (
 		extendedNavigator.language ||
