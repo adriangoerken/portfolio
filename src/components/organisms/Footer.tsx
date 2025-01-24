@@ -1,3 +1,4 @@
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Container from './Container';
 import { Link } from 'react-router-dom';
@@ -50,7 +51,7 @@ const Footer = () => {
 					</div>
 					<div className="flex gap-2 justify-self-center md:justify-self-end">
 						{['de', 'en'].map((lang, index, arr) => (
-							<>
+							<React.Fragment key={lang}>
 								<span
 									key={lang}
 									onClick={() => handleChangeLanguage(lang)}
@@ -67,7 +68,7 @@ const Footer = () => {
 										|
 									</span>
 								)}
-							</>
+							</React.Fragment>
 						))}
 					</div>
 				</div>
