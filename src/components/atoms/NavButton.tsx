@@ -7,6 +7,8 @@ type NavButtonProps = {
 };
 
 const NavButton = ({ text, onClick, isActive }: NavButtonProps) => {
+	isActive = false;
+
 	return (
 		<button
 			className={`

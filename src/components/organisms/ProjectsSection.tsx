@@ -1,0 +1,37 @@
+import H2 from '../atoms/H2';
+import Grid from '../molecules/Grid';
+import ProjectCard from '../molecules/ProjectCard';
+
+type ProjectsSectionProps = {
+	sectionProjectsRef: React.RefObject<HTMLElement>;
+};
+/*
+Showcase your key projects with high-quality images or videos
+Include project titles, descriptions, technologies used, and links to live demos or code repositories
+Use a visually appealing layout, such as a grid or carousel
+*/
+const ProjectsSection = ({ sectionProjectsRef }: ProjectsSectionProps) => {
+	return (
+		<section ref={sectionProjectsRef}>
+			<H2>Portfolio</H2>
+			<Grid className="justify-items-center auto-rows-max">
+				<ProjectCard
+					imageSrc="https://dummyimage.com/320"
+					name="TaskDonify"
+					technologies={['React', 'Tailwind', 'PHP', 'MySQL']}
+					projectLink="https://www.google.com/ncr"
+					codeLink="https://www.google.com/ncr"
+				/>
+				<ProjectCard
+					imageSrc="https://dummyimage.com/320"
+					name="TaskDonify"
+					technologies={['React', 'Tailwind', 'PHP', 'MySQL']}
+					projectLink="https://www.google.com/ncr"
+					codeLink="https://www.google.com/ncr"
+				/>
+			</Grid>
+		</section>
+	);
+};
+
+export default ProjectsSection;

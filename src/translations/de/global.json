@@ -1,0 +1,28 @@
+{
+	"ImprintPage": {
+		"headerTitle": "Impressum",
+		"introText": "Dieses Impressum wird gemäß § 5 des deutschen Telemediengesetzes (TMG) und anderen anwendbaren Gesetzen bereitgestellt.",
+		"section1": {
+			"title": "1. Anbieter",
+			"description": {
+				"companyName": "Adrian Goerken",
+				"address": "Wollgrasweg 3, 26676 Barßel, Deutschland",
+				"email": "adrian.goerken@proton.me",
+				"phone": "+49 152 03304956",
+				"website": "adriangoerken.de"
+			}
+		},
+		"section2": {
+			"title": "2. Haftungsausschluss",
+			"description": "Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."
+		},
+		"section3": {
+			"title": "3. Kontakt",
+			"description": "Wenn Sie Fragen zu diesem Impressum oder den bereitgestellten Informationen haben, kontaktieren Sie mich gerne unter:",
+			"contactInfo": {
+				"email": "adrian.goerken@proton.me",
+				"phone": "+49 152 03304956"
+			}
+		}
+	}
+}

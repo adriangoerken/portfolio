@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import NavButton from '../atoms/NavButton';
 import useActiveSection from '../../hooks/useActiveSection';
+
 type HeaderProps = {
 	scrollToSection: (elementRef: React.RefObject<HTMLElement>) => void;
 	setHeaderHeight: (height: number) => void;

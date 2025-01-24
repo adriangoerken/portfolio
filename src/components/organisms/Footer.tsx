@@ -18,6 +18,12 @@ const Footer = () => {
 					</div>
 					<div className="flex justify-center gap-6 text-center">
 						<Link
+							to="/"
+							className="hover:text-blue-700 transition-colors"
+						>
+							Home
+						</Link>
+						<Link
 							to="/imprint"
 							className="hover:text-blue-700 transition-colors"
 						>
