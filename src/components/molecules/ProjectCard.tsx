@@ -19,14 +19,16 @@ const ProjectCard = ({
 	const [t] = useTranslation('global');
 
 	return (
-		<div className="flex flex-col justify-between bg-elevation-300 p-4 rounded-xl">
+		<div className="flex flex-col justify-between h-full bg-elevation-300 p-4 rounded-xl">
 			{/* Image, name and technologies */}
 			<div>
 				<img src={imageSrc} alt="Project Thumbnail" className="mb-2" />
 				<H3>{name}</H3>
-				<div className="flex flex-wrap gap-2 mb-4">
+				<div className="flex flex-wrap gap-2 max-w-80 mb-4">
 					{technologies.map((tech, index) => (
-						<span key={index}>{tech}</span>
+						<span key={index} className="whitespace-nowrap">
+							{tech}
+						</span>
 					))}
 				</div>
 			</div>

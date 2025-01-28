@@ -31,14 +31,18 @@ const HeroSection = ({
 						<span className="text-blue-700"> Adrian.</span>
 					</Trans>
 				</h1>
-				<p>{t('HeroSection.message')}</p>
+				<div className="flex flex-col gap-3">
+					<p>{t('HeroSection.messageOne')}</p>
+					<p>{t('HeroSection.messageTwo')}</p>
+					<p className="italic">{t('HeroSection.messageThree')}</p>
+				</div>
 				<Button onClick={() => scrollToSection(sectionProjectsRef)}>
 					{t('HeroSection.btnCTA')}
 				</Button>
 			</div>
 
 			{/* Right Column */}
-			<div className="md:s-1/2 md:w-fit flex justify-center mt-8 md:mt-0">
+			<div className="md:s-1/2 md:w-fit flex justify-center items-center mt-8 md:mt-0">
 				<img
 					src="src/assets/images/portrait.webp"
 					alt={t('HeroSection.imgAlt')}

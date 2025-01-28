@@ -3,7 +3,6 @@
 		"subTitle": "Webentwickler",
 		"links": {
 			"linkWelcome": "Willkommen",
-			"linkAboutMe": "Über mich",
 			"linkPortfolio": "Portfolio",
 			"linkSkills": "Fähigkeiten",
 			"linkExperience": "Erfahrung",
@@ -13,15 +12,11 @@
 	},
 	"HeroSection": {
 		"title": "Schön, dich kennenzulernen! Ich bin<1> Adrian.</1>",
-		"message": "Ein Full-Stack-Entwickler, der moderne Weblösungen erstellt. Ich kombiniere technisches Know-how mit kreativem Problemlösen, um Websites zu entwickeln, die herausstechen.",
+		"messageOne": "Ein Full-Stack Entwickler mit 7 Jahren Erfahrung, spezialisiert auf maßgeschneiderte Weblösungen. Ich verwandle komplexe Herausforderungen in elegante, benutzerfreundliche Anwendungen.",
+		"messageTwo": "Von Lagerverwaltungssystemen bis hin zu modernen Webanwendungen entwickle ich responsive Benutzeroberflächen mit React und TypeScript, während ich robuste Backend-Funktionalität mit PHP und MySQL gewährleiste.",
+		"messageThree": "Wenn ich nicht programmiere, findet man mich auf dem Fußballplatz oder in ein gutes Buch vertieft — das bringt frische Perspektiven in jedes Projekt.",
 		"btnCTA": "Meine Arbeit entdecken",
 		"imgAlt": "Ein Porträt von Adrian Goerken"
-	},
-	"AboutMeSection": {
-		"title": "Über mich",
-		"paragraphOne": "Hallo, ich bin Adrian Goerken, ein Full-Stack-Webentwickler mit 7 Jahren Erfahrung. Meine Leidenschaft für Webentwicklung kommt von der Lösung komplexer Probleme und der Schaffung wirkungsvoller Lösungen, die einen Unterschied im Leben der Menschen machen.",
-		"paragraphTwo": "Nach umfangreicher Erfahrung in der Entwicklung von Lagerverwaltungssystemen bin ich ins Freelancing gewechselt, wo ich maßgeschneiderte Weblösungen entwickle. Mein technisches Werkzeug umfasst React, TypeScript und Tailwind CSS für die Erstellung von responsiven Benutzeroberflächen, während ich serverseitige Vorgänge mit PHP und MySQL bearbeite und sichere Authentifizierungen mit JWTs implementiere.",
-		"paragraphThree": "Wenn ich nicht programmiere, findet man mich auf dem Fußballplatz, beim Verfolgen von Fußballspielen oder mit einem guten Buch. Ich glaube, dass Interessen außerhalb der Technik helfen, neue Perspektiven für die Problemlösung in der Entwicklung zu gewinnen."
 	},
 	"ProjectsSection": {
 		"title": "Portfolio",

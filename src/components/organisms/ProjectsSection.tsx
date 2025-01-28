@@ -21,13 +21,20 @@ const ProjectsSection = ({ sectionProjectsRef }: ProjectsSectionProps) => {
 				<ProjectCard
 					imageSrc="https://dummyimage.com/320"
 					name="Portfolio"
-					technologies={['React', 'Tailwind', 'JavaScript', 'CSS']}
+					technologies={['React', 'Tailwind', 'TypeScript', 'CSS']}
 					codeLink="https://www.google.com/ncr"
 				/>
 				<ProjectCard
 					imageSrc="https://dummyimage.com/320"
 					name="TaskDonify"
-					technologies={['React', 'Tailwind', 'PHP', 'MySQL']}
+					technologies={[
+						'React',
+						'Tailwind',
+						'JavaScript',
+						'PHP',
+						'MySQL',
+						'CSS',
+					]}
 					projectLink="https://www.google.com/ncr"
 					codeLink="https://www.google.com/ncr"
 				/>

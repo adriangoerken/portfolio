@@ -8,7 +8,6 @@ type HeaderProps = {
 	setHeaderHeight: (height: number) => void;
 	sectionRefs: {
 		sectionHeroRef: React.RefObject<HTMLElement>;
-		sectionAboutRef: React.RefObject<HTMLElement>;
 		sectionProjectsRef: React.RefObject<HTMLElement>;
 		sectionSkillsRef: React.RefObject<HTMLElement>;
 		sectionExperienceRef: React.RefObject<HTMLElement>;
@@ -64,11 +63,6 @@ const Header = ({
 					isActive={getButtonActive('sectionHeroRef')}
 				/>
 				<NavButton
-					text={t('Header.links.linkAboutMe')}
-					onClick={() => scrollToSection(sectionRefs.sectionAboutRef)}
-					isActive={getButtonActive('sectionAboutRef')}
-				/>
-				<NavButton
 					text={t('Header.links.linkPortfolio')}
 					onClick={() =>
 						scrollToSection(sectionRefs.sectionProjectsRef)
@@ -82,13 +76,13 @@ const Header = ({
 					}
 					isActive={getButtonActive('sectionSkillsRef')}
 				/>
-				<NavButton
+				{/* <NavButton
 					text={t('Header.links.linkExperience')}
 					onClick={() =>
 						scrollToSection(sectionRefs.sectionExperienceRef)
 					}
 					isActive={getButtonActive('sectionExperienceRef')}
-				/>
+				/> */}
 				{/* <NavButton
 					text={t('Header.links.linkTestimonials')}
 					onClick={() =>

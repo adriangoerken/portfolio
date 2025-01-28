@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 import Container from '../components/organisms/Container';
 import Header from '../components/organisms/Header';
 import HeroSection from '../components/organisms/HeroSection';
-import AboutMeSection from '../components/organisms/AboutMeSection';
 import ProjectsSection from '../components/organisms/ProjectsSection';
 import SkillsSection from '../components/organisms/SkillsSection';
 import ExperienceSection from '../components/organisms/ExperienceSection';
@@ -12,7 +11,6 @@ import ContactSection from '../components/organisms/ContactSection';
 const IndexPage = () => {
 	const [headerHeight, setHeaderHeight] = useState(0);
 	const sectionHeroRef = useRef<HTMLElement>(null);
-	const sectionAboutRef = useRef<HTMLElement>(null);
 	const sectionProjectsRef = useRef<HTMLElement>(null);
 	const sectionSkillsRef = useRef<HTMLElement>(null);
 	const sectionExperienceRef = useRef<HTMLElement>(null);
@@ -31,7 +29,13 @@ const IndexPage = () => {
 			});
 		}
 	};
-
+	/* TODO: 
+	1. Deutsche übersetzungen anpassen.
+	2. About Me anpassen, ggf. visuelle Elemente
+	3. Vielleicht auch nochmal Experience
+	4. SEO optimierung
+	5. Title und Favicon
+*/
 	return (
 		<section>
 			<Container className="pt-0">
@@ -41,7 +45,6 @@ const IndexPage = () => {
 					setHeaderHeight={setHeaderHeight}
 					sectionRefs={{
 						sectionHeroRef,
-						sectionAboutRef,
 						sectionProjectsRef,
 						sectionSkillsRef,
 						sectionExperienceRef,
@@ -57,20 +60,18 @@ const IndexPage = () => {
 					scrollToSection={scrollToSection}
 				/>
 				<hr />
-				<AboutMeSection sectionAboutRef={sectionAboutRef} />
-				<hr />
 				<ProjectsSection sectionProjectsRef={sectionProjectsRef} />
 				<hr />
 				<SkillsSection sectionSkillsRef={sectionSkillsRef} />
-				<hr />
-				<ExperienceSection
+				{/* <hr /> */}
+				{/* <ExperienceSection
 					sectionExperienceRef={sectionExperienceRef}
-				/>
-				<hr />
+				/> */}
+				{/* <hr />
 				<TestimonialsSection
 					sectionTestimonialsRef={sectionTestimonialsRef}
-				/>
-				{/* <hr/> */}
+				/> */}
+				<hr />
 				<ContactSection sectionContactRef={sectionContactRef} />
 			</Container>
 		</section>

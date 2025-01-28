@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import H2 from '../atoms/H2';
 
 type TestimonialsSectionProps = {
 	sectionTestimonialsRef: React.RefObject<HTMLElement>;
@@ -14,10 +15,9 @@ const TestimonialsSection = ({
 	const [t] = useTranslation('global');
 
 	return (
-		// <section ref={sectionTestimonialsRef}>
-		// 	<H2>{t('TestimonialsSection.title')}</H2>
-		// </section>
-		<></>
+		<section ref={sectionTestimonialsRef}>
+			<H2>{t('TestimonialsSection.title')}</H2>
+		</section>
 	);
 };
 
