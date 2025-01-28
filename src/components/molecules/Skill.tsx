@@ -13,7 +13,7 @@ const Skill = ({ tech, startDate, width }: SkillProps) => {
 			<img
 				src={`src/assets/images/web_icons/${tech}.png`}
 				alt={`${tech} Logo`}
-				className="w-[40px] h-[40px] rounded-xl shrink-0"
+				className="w-[40px] h-[40px]"
 			/>
 			<div className="w-full">
 				<div className="flex items-center justify-between mb-2">

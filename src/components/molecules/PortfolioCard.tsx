@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import H3 from '../atoms/H3';
 import Card from '../atoms/Card';
 
-type ProjectCardProps = {
+type PortfolioCardProps = {
 	imageSrc: string;
 	name: string;
 	technologies: string[];
@@ -10,13 +10,13 @@ type ProjectCardProps = {
 	codeLink?: string;
 };
 
-const ProjectCard = ({
+const PortfolioCard = ({
 	imageSrc,
 	name,
 	technologies,
 	projectLink = 'n/a',
 	codeLink = 'n/a',
-}: ProjectCardProps) => {
+}: PortfolioCardProps) => {
 	const [t] = useTranslation('global');
 
 	return (
@@ -25,9 +25,14 @@ const ProjectCard = ({
 			<div>
 				<img src={imageSrc} alt="Project Thumbnail" className="mb-2" />
 				<H3>{name}</H3>
-				<div className="flex flex-wrap gap-2 max-w-80 mb-4">
+				<div className="flex flex-wrap max-w-80 mb-4">
 					{technologies.map((tech, index) => (
-						<span key={index} className="whitespace-nowrap">
+						<span
+							key={index}
+							className={`whitespace-nowrap ${
+								index !== technologies.length - 1 ? 'mr-2' : ''
+							}`}
+						>
 							{tech}
 						</span>
 					))}
@@ -42,7 +47,7 @@ const ProjectCard = ({
 						rel="noopener noreferrer"
 						className="border-b-2 border-transparent hover:border-white transition-all ease-in-out"
 					>
-						{t('PortfolioSection.ProjectCard.btnProject')}
+						{t('PortfolioSection.PortfolioCard.btnProject')}
 					</a>
 				) : (
 					''
@@ -54,7 +59,7 @@ const ProjectCard = ({
 						rel="noopener noreferrer"
 						className="border-b-2 border-transparent hover:border-white transition-all ease-in-out"
 					>
-						{t('PortfolioSection.ProjectCard.btnCode')}
+						{t('PortfolioSection.PortfolioCard.btnCode')}
 					</a>
 				) : (
 					''
@@ -64,4 +69,4 @@ const ProjectCard = ({
 	);
 };
 
-export default ProjectCard;
+export default PortfolioCard;

@@ -12,6 +12,9 @@ export default {
 				'elevation-200': '#1E1E1E',
 				'elevation-300': '#1F1F1F',
 			},
+			objectPosition: {
+				'custom-top': '50% 30%',
+			},
 		},
 	},
 	plugins: [],

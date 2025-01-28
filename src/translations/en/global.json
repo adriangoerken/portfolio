@@ -11,16 +11,20 @@
 		}
 	},
 	"HeroSection": {
-		"title": "Nice to meet you! I'm<1> Adrian.</1>",
+		"title": {
+			"greeting": "Nice to meet you!",
+			"intro": "I'm",
+			"name": " Adrian."
+		},
 		"messageOne": "A full-stack developer with 7 years of experience, specializing in custom web solutions. I transform complex challenges into elegant, user-friendly applications.",
-		"messageTwo": "From warehouse management systems to modern web applications, I craft responsive interfaces with React and TypeScript, while ensuring robust backend functionality with PHP and MySQL.",
-		"messageThree": "When I'm not coding, you'll find me on the soccer field or diving into a good book — bringing fresh perspectives to every project.",
+		"messageTwo": "From concept to deployment, I develop modern web applications using React and TypeScript on the frontend, paired with PHP and MySQL backend solutions.",
+		"messageThree": "Outside of coding, I enjoy soccer and reading — maintaining a healthy balance between technical and creative pursuits.",
 		"btnCTA": "Explore My Work",
 		"imgAlt": "A Portrait of Adrian Goerken"
 	},
 	"PortfolioSection": {
 		"title": "Portfolio",
-		"ProjectCard": {
+		"PortfolioCard": {
 			"btnProject": "View Project",
 			"btnCode": "View Code"
 		}

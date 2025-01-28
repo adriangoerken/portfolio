@@ -12,6 +12,47 @@ A professional photo or a creative illustration of yourself
 A brief, impactful introduction (e.g., “Hi, I'm [Your Name], a passionate web developer specializing in creating dynamic and responsive websites.”)
 Call to Action (e.g., “Explore My Work” button)
 */
+// const HeroSection = ({
+// 	sectionHeroRef,
+// 	sectionProjectsRef,
+// 	scrollToSection,
+// }: HeroSectionProps) => {
+// 	const [t] = useTranslation('global');
+
+// 	return (
+// 		<section
+// 			ref={sectionHeroRef}
+// 			className="flex flex-col md:flex-row justify-around"
+// 		>
+// 			{/* Left Column */}
+// 			<div className="flex flex-col items-center md:items-start gap-6 md:self-center md:w-1/2">
+// 				<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center md:text-start">
+// 					<Trans i18nKey="HeroSection.title">
+// 						Nice to meet you! I'm
+// 						<span className="text-blue-700"> Adrian.</span>
+// 					</Trans>
+// 				</h1>
+// 				<div className="flex flex-col gap-3">
+// 					<p>{t('HeroSection.messageOne')}</p>
+// 					<p>{t('HeroSection.messageTwo')}</p>
+// 					<p className="italic">{t('HeroSection.messageThree')}</p>
+// 				</div>
+// 				<Button onClick={() => scrollToSection(sectionProjectsRef)}>
+// 					{t('HeroSection.btnCTA')}
+// 				</Button>
+// 			</div>
+
+// 			{/* Right Column */}
+// 			<div className="md:s-1/2 flex justify-center items-center mt-8 md:mt-0">
+// 				<img
+// 					src="src/assets/images/portrait.jpg"
+// 					alt={t('HeroSection.imgAlt')}
+// 					className="h-80 lg:h-96 w-80 lg:w-96 object-cover rounded-full object-custom-top"
+// 				/>
+// 			</div>
+// 		</section>
+// 	);
+// };
 const HeroSection = ({
 	sectionHeroRef,
 	sectionProjectsRef,
@@ -22,15 +63,21 @@ const HeroSection = ({
 	return (
 		<section
 			ref={sectionHeroRef}
-			className="flex flex-col md:flex-row justify-around"
+			className="max-w-[1488px] mx-auto px-4 flex flex-col md:flex-row justify-between" // Changed justify-around to justify-between
 		>
 			{/* Left Column */}
-			<div className="flex flex-col items-center md:items-start gap-6 md:self-center md:w-1/2">
-				<h1 className="text-[40px] md:text-[50px] lg:text-[60px] font-bold tracking-tight text-center md:text-start">
-					<Trans i18nKey="HeroSection.title">
-						Nice to meet you! I'm
-						<span className="text-blue-700"> Adrian.</span>
-					</Trans>
+			<div className="flex flex-col items-center md:items-start gap-6 md:self-center md:w-[744px]">
+				{/* Explicit width */}
+				<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center md:text-start">
+					<span className="inline-block">
+						{t('HeroSection.title.greeting')}
+					</span>
+					<span className="inline-block">
+						{t('HeroSection.title.intro')}
+						<span className="text-blue-700">
+							{t('HeroSection.title.name')}
+						</span>
+					</span>
 				</h1>
 				<div className="flex flex-col gap-3">
 					<p>{t('HeroSection.messageOne')}</p>
@@ -43,11 +90,13 @@ const HeroSection = ({
 			</div>
 
 			{/* Right Column */}
-			<div className="md:s-1/2 flex justify-center items-center mt-8 md:mt-0">
+			<div className="md:w-[384px] flex justify-center items-center mt-8 md:mt-0">
+				{' '}
+				{/* Explicit width */}
 				<img
-					src="src/assets/images/portrait.webp"
+					src="src/assets/images/portrait.jpg"
 					alt={t('HeroSection.imgAlt')}
-					className="h-80 lg:h-96 w-80 lg:w-96 object-cover rounded-full shadow-lg"
+					className="h-80 lg:h-96 w-80 lg:w-96 object-cover rounded-full object-custom-top"
 				/>
 			</div>
 		</section>

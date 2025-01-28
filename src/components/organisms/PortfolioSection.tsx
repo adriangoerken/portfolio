@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import H2 from '../atoms/H2';
 import Grid from '../atoms/Grid';
-import ProjectCard from '../molecules/ProjectCard';
+import PortfolioCard from '../molecules/PortfolioCard';
 
 type PortfolioSectionProps = {
 	sectionProjectsRef: React.RefObject<HTMLElement>;
@@ -19,13 +19,13 @@ const PortfolioSection = ({ sectionProjectsRef }: PortfolioSectionProps) => {
 		<section ref={sectionProjectsRef}>
 			<H2>{t('PortfolioSection.title')}</H2>
 			<Grid className="justify-items-center auto-rows-max">
-				<ProjectCard
+				<PortfolioCard
 					imageSrc="https://dummyimage.com/320"
 					name="Portfolio"
 					technologies={['React', 'Tailwind', 'TypeScript', 'CSS']}
 					codeLink="https://github.com/adriangoerken/portfolio"
 				/>
-				<ProjectCard
+				<PortfolioCard
 					imageSrc="https://dummyimage.com/320"
 					name="TaskDonify"
 					technologies={[
