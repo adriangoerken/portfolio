@@ -1,16 +1,19 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Container from './Container';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { getLanguage } from '../../utils/utils';
 import { useState } from 'react';
 
 const Footer = () => {
 	const [t, i18n] = useTranslation('global');
-	const year = new Date().getFullYear();
 	const [currentLang, setCurrentLang] = useState(
 		getLanguage().substring(0, 2)
 	);
+
+	const year = new Date().getFullYear();
+	const location = useLocation();
+	const currentPath = location.pathname;
 
 	const handleChangeLanguage = (lang: string) => {
 		i18n.changeLanguage(lang);
@@ -30,12 +33,16 @@ const Footer = () => {
 						</p>
 					</div>
 					<div className="flex justify-center gap-6 text-center">
-						<Link
-							to="/"
-							className="hover:text-blue-700 transition-colors"
-						>
-							{t('Footer.links.linkHome')}
-						</Link>
+						{currentPath !== '/' ? (
+							<Link
+								to="/"
+								className="hover:text-blue-700 transition-colors"
+							>
+								{t('Footer.links.linkHome')}
+							</Link>
+						) : (
+							''
+						)}
 						<Link
 							to="/imprint"
 							className="hover:text-blue-700 transition-colors"

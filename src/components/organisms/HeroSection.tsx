@@ -42,11 +42,11 @@ const HeroSection = ({
 			</div>
 
 			{/* Right Column */}
-			<div className="md:s-1/2 md:w-fit flex justify-center items-center mt-8 md:mt-0">
+			<div className="md:s-1/2 flex justify-center items-center mt-8 md:mt-0">
 				<img
 					src="src/assets/images/portrait.webp"
 					alt={t('HeroSection.imgAlt')}
-					className="h-64 w-64 md:h-80 md:w-80 object-cover rounded-full shadow-lg"
+					className="h-80 lg:h-96 w-80 lg:w-96 object-cover rounded-full shadow-lg"
 				/>
 			</div>
 		</section>
