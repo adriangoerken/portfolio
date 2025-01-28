@@ -13,31 +13,17 @@ Include project titles, descriptions, technologies used, and links to live demos
 Use a visually appealing layout, such as a grid or carousel
 */
 const PortfolioSection = ({ sectionProjectsRef }: PortfolioSectionProps) => {
-	const [t] = useTranslation('global');
+	const [t, i18n] = useTranslation('global');
 
 	return (
 		<section ref={sectionProjectsRef}>
 			<H2>{t('PortfolioSection.title')}</H2>
 			<Grid className="justify-items-center auto-rows-max">
 				<PortfolioCard
-					imageSrc="https://dummyimage.com/320"
+					imageSrc={`src/assets/images/portfolio_thumbnails/${i18n.language}/thumbnail_portfolio.png`}
 					name="Portfolio"
 					technologies={['React', 'Tailwind', 'TypeScript', 'CSS']}
 					codeLink="https://github.com/adriangoerken/portfolio"
-				/>
-				<PortfolioCard
-					imageSrc="https://dummyimage.com/320"
-					name="TaskDonify"
-					technologies={[
-						'React',
-						'Tailwind',
-						'JavaScript',
-						'PHP',
-						'MySQL',
-						'CSS',
-					]}
-					projectLink="https://www.google.com/ncr"
-					codeLink="https://www.google.com/ncr"
 				/>
 			</Grid>
 		</section>

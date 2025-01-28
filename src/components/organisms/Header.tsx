@@ -48,7 +48,7 @@ const Header = ({
 	return (
 		<section
 			ref={sectionHeaderRef}
-			className="flex flex-col lg:flex-row items-center justify-between gap-6 py-6 bg-custom-gray text-white sticky top-0 z-999"
+			className="flex flex-col lg:flex-row items-center justify-between gap-6 py-6 bg-custom-gray text-white sticky top-0 z-50"
 		>
 			<div className="flex flex-col items-center">
 				<span className="text-2xl font-bold text-nowrap">

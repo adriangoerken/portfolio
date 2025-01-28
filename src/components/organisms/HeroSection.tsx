@@ -90,13 +90,6 @@ const HeroSection = ({
 			</div>
 
 			{/* Right Column */}
-			{/* <div className="flex justify-center items-center mt-8 md:mt-0">				
-				<img
-					src="src/assets/images/portrait.jpg"
-					alt={t('HeroSection.imgAlt')}
-					className="h-80 lg:h-96 w-80 lg:w-96 object-cover rounded-full object-custom-top"
-				/>
-			</div> */}
 			<div className="flex justify-center items-center mt-8 md:mt-0">
 				<div className="relative h-80 w-80 lg:h-96 lg:w-96">
 					<img

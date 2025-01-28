@@ -29,10 +29,7 @@ const IndexPage = () => {
 			});
 		}
 	};
-	/* TODO: 	
-	4. SEO optimierung
-	5. Title und Favicon
-*/
+
 	return (
 		<section>
 			<Container className="pt-0">
