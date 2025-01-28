@@ -43,6 +43,8 @@ const Header = ({
 		return sectionRef === activeSection;
 	};
 
+	document.title = `Adrian Goerken | ${t('Header.subTitle')}`;
+
 	return (
 		<section
 			ref={sectionHeaderRef}

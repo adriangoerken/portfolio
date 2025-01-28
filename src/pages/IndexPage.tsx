@@ -29,8 +29,7 @@ const IndexPage = () => {
 			});
 		}
 	};
-	/* TODO: 
-	1. Deutsche übersetzungen anpassen.	
+	/* TODO: 	
 	4. SEO optimierung
 	5. Title und Favicon
 */

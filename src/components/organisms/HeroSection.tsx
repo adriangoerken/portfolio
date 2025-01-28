@@ -66,7 +66,7 @@ const HeroSection = ({
 			className="max-w-[1488px] mx-auto px-4 flex flex-col md:flex-row justify-between" // Changed justify-around to justify-between
 		>
 			{/* Left Column */}
-			<div className="flex flex-col items-center md:items-start gap-6 md:self-center md:w-[744px]">
+			<div className="flex flex-col items-center md:items-start gap-6 md:self-center md:w-[744px] mr-4">
 				{/* Explicit width */}
 				<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center md:text-start">
 					<span className="inline-block">
@@ -90,14 +90,21 @@ const HeroSection = ({
 			</div>
 
 			{/* Right Column */}
-			<div className="md:w-[384px] flex justify-center items-center mt-8 md:mt-0">
-				{' '}
-				{/* Explicit width */}
+			{/* <div className="flex justify-center items-center mt-8 md:mt-0">				
 				<img
 					src="src/assets/images/portrait.jpg"
 					alt={t('HeroSection.imgAlt')}
 					className="h-80 lg:h-96 w-80 lg:w-96 object-cover rounded-full object-custom-top"
 				/>
+			</div> */}
+			<div className="flex justify-center items-center mt-8 md:mt-0">
+				<div className="relative h-80 w-80 lg:h-96 lg:w-96">
+					<img
+						src="src/assets/images/portrait.jpg"
+						alt={t('HeroSection.imgAlt')}
+						className="object-cover object-custom-top rounded-full h-full w-full"
+					/>
+				</div>
 			</div>
 		</section>
 	);

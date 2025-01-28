@@ -79,11 +79,11 @@ p {
 
 	/* Handle */
 	::-webkit-scrollbar-thumb {
-		background: #4b5563; /* Tailwind's bg-gray-600 */
+		background: #1f1f1f; /* Tailwind's bg-gray-600 */
 	}
 
 	/* Handle on hover */
 	::-webkit-scrollbar-thumb:hover {
-		background: #6b7280; /* Tailwind's bg-gray-500 */
+		background: #1d1d1d; /* Tailwind's bg-gray-500 */
 	}
 }
