@@ -6,6 +6,7 @@ type HeroSectionProps = {
 	sectionProjectsRef: React.RefObject<HTMLElement>;
 	scrollToSection: (elementRef: React.RefObject<HTMLElement>) => void;
 };
+
 /*
 A professional photo or a creative illustration of yourself
 A brief, impactful introduction (e.g., “Hi, I'm [Your Name], a passionate web developer specializing in creating dynamic and responsive websites.”)

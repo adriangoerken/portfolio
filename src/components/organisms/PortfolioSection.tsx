@@ -3,26 +3,27 @@ import H2 from '../atoms/H2';
 import Grid from '../atoms/Grid';
 import ProjectCard from '../molecules/ProjectCard';
 
-type ProjectsSectionProps = {
+type PortfolioSectionProps = {
 	sectionProjectsRef: React.RefObject<HTMLElement>;
 };
+
 /*
 Showcase your key projects with high-quality images or videos
 Include project titles, descriptions, technologies used, and links to live demos or code repositories
 Use a visually appealing layout, such as a grid or carousel
 */
-const ProjectsSection = ({ sectionProjectsRef }: ProjectsSectionProps) => {
+const PortfolioSection = ({ sectionProjectsRef }: PortfolioSectionProps) => {
 	const [t] = useTranslation('global');
 
 	return (
 		<section ref={sectionProjectsRef}>
-			<H2>{t('ProjectsSection.title')}</H2>
+			<H2>{t('PortfolioSection.title')}</H2>
 			<Grid className="justify-items-center auto-rows-max">
 				<ProjectCard
 					imageSrc="https://dummyimage.com/320"
 					name="Portfolio"
 					technologies={['React', 'Tailwind', 'TypeScript', 'CSS']}
-					codeLink="https://www.google.com/ncr"
+					codeLink="https://github.com/adriangoerken/portfolio"
 				/>
 				<ProjectCard
 					imageSrc="https://dummyimage.com/320"
@@ -43,4 +44,4 @@ const ProjectsSection = ({ sectionProjectsRef }: ProjectsSectionProps) => {
 	);
 };
 
-export default ProjectsSection;
+export default PortfolioSection;

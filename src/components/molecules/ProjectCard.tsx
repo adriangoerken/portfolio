@@ -42,7 +42,7 @@ const ProjectCard = ({
 						rel="noopener noreferrer"
 						className="border-b-2 border-transparent hover:border-white transition-all ease-in-out"
 					>
-						{t('ProjectsSection.ProjectCard.btnProject')}
+						{t('PortfolioSection.ProjectCard.btnProject')}
 					</a>
 				) : (
 					''
@@ -54,7 +54,7 @@ const ProjectCard = ({
 						rel="noopener noreferrer"
 						className="border-b-2 border-transparent hover:border-white transition-all ease-in-out"
 					>
-						{t('ProjectsSection.ProjectCard.btnCode')}
+						{t('PortfolioSection.ProjectCard.btnCode')}
 					</a>
 				) : (
 					''

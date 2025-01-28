@@ -18,7 +18,7 @@
 		"btnCTA": "Meine Arbeit entdecken",
 		"imgAlt": "Ein Porträt von Adrian Goerken"
 	},
-	"ProjectsSection": {
+	"PortfolioSection": {
 		"title": "Portfolio",
 		"ProjectCard": {
 			"btnProject": "Projekt ansehen",

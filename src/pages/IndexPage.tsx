@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import Container from '../components/atoms/Container';
 import Header from '../components/organisms/Header';
 import HeroSection from '../components/organisms/HeroSection';
-import ProjectsSection from '../components/organisms/ProjectsSection';
+import PortfolioSection from '../components/organisms/PortfolioSection';
 import SkillsSection from '../components/organisms/SkillsSection';
 import ExperienceSection from '../components/organisms/ExperienceSection';
 import TestimonialsSection from '../components/organisms/TestimonialsSection';
@@ -58,7 +58,7 @@ const IndexPage = () => {
 					scrollToSection={scrollToSection}
 				/>
 				<hr />
-				<ProjectsSection sectionProjectsRef={sectionProjectsRef} />
+				<PortfolioSection sectionProjectsRef={sectionProjectsRef} />
 				<hr />
 				<SkillsSection sectionSkillsRef={sectionSkillsRef} />
 				{/* <hr /> */}
