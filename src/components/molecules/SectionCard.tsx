@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import H2 from '../atoms/H2';
+import Card from '../atoms/Card';
 
 type SectionCardProps = {
 	title: string;
@@ -8,10 +9,10 @@ type SectionCardProps = {
 
 const SectionCard = ({ title, children }: SectionCardProps) => {
 	return (
-		<div className="bg-elevation-300 p-5 rounded-lg">
+		<Card>
 			<H2 className="text-start">{title}</H2>
 			{children}
-		</div>
+		</Card>
 	);
 };
 

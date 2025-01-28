@@ -1,5 +1,5 @@
 import SectionCard from '../components/molecules/SectionCard';
-import Container from '../components/organisms/Container';
+import Container from '../components/atoms/Container';
 import { useTranslation } from 'react-i18next';
 
 const ImprintPage = () => {

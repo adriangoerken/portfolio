@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import H3 from '../atoms/H3';
+import Card from '../atoms/Card';
 
 type ProjectCardProps = {
 	imageSrc: string;
@@ -19,7 +20,7 @@ const ProjectCard = ({
 	const [t] = useTranslation('global');
 
 	return (
-		<div className="flex flex-col justify-between h-full bg-elevation-300 p-4 rounded-xl">
+		<Card className="flex flex-col justify-between h-full">
 			{/* Image, name and technologies */}
 			<div>
 				<img src={imageSrc} alt="Project Thumbnail" className="mb-2" />
@@ -59,7 +60,7 @@ const ProjectCard = ({
 					''
 				)}
 			</div>
-		</div>
+		</Card>
 	);
 };
 

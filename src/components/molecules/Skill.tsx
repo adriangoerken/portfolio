@@ -1,43 +1,22 @@
 import H3 from '../atoms/H3';
-import { StartDate, SkillProps } from '../../lib/type';
+import { SkillProps } from '../../lib/type';
 import { useTranslation } from 'react-i18next';
+import { getExperienceYears } from '../../utils/utils';
+import Card from '../atoms/Card';
 
 const Skill = ({ tech, startDate, width }: SkillProps) => {
 	const [t] = useTranslation('global');
-	const getExperienceYears = (startDate: StartDate) => {
-		const currentDate = new Date();
-		const startYear = startDate.year;
-		const startMonth = startDate.month;
-
-		const years = currentDate.getFullYear() - startYear;
-		const months = currentDate.getMonth() + 1 - startMonth; // getMonth() returns 0-11
-
-		let totalYears = years;
-
-		if (months < 0) {
-			totalYears -= 1;
-		}
-
-		if (totalYears === 0) {
-			return t('SkillsSection.Skill.year_zero');
-		}
-
-		return `${t('SkillsSection.Skill.year', {
-			count: totalYears === 0 ? 1 : totalYears,
-		})}`;
-	};
-
-	const experience = getExperienceYears(startDate);
+	const experience = getExperienceYears(startDate, t);
 
 	return (
-		<div className="flex gap-2 items-center">
+		<Card className="w-full flex gap-4 items-center">
 			<img
 				src={`src/assets/images/web_icons/${tech}.png`}
 				alt={`${tech} Logo`}
-				className="w-[50px] h-[50px] bg-elevation-300 rounded-xl"
+				className="w-[40px] h-[40px] rounded-xl shrink-0"
 			/>
-			<div>
-				<div className="flex items-center justify-between w-[200px]">
+			<div className="w-full">
+				<div className="flex items-center justify-between mb-2">
 					<H3>{tech}</H3>
 					<span>{experience}</span>
 				</div>
@@ -47,7 +26,7 @@ const Skill = ({ tech, startDate, width }: SkillProps) => {
 					></div>
 				</div>
 			</div>
-		</div>
+		</Card>
 	);
 };
 

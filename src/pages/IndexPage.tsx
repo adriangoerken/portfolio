@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import Container from '../components/organisms/Container';
+import Container from '../components/atoms/Container';
 import Header from '../components/organisms/Header';
 import HeroSection from '../components/organisms/HeroSection';
 import ProjectsSection from '../components/organisms/ProjectsSection';
@@ -30,9 +30,7 @@ const IndexPage = () => {
 		}
 	};
 	/* TODO: 
-	1. Deutsche übersetzungen anpassen.
-	2. About Me anpassen, ggf. visuelle Elemente
-	3. Vielleicht auch nochmal Experience
+	1. Deutsche übersetzungen anpassen.	
 	4. SEO optimierung
 	5. Title und Favicon
 */

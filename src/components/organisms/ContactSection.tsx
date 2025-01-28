@@ -1,5 +1,5 @@
 import H2 from '../atoms/H2';
-import Grid from '../molecules/Grid';
+import Grid from '../atoms/Grid';
 import ContactCard from '../molecules/ContactCard';
 import { useTranslation } from 'react-i18next';
 

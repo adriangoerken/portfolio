@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { SkillProps } from '../../lib/type';
 import H2 from '../atoms/H2';
-import Grid from '../molecules/Grid';
+import Grid from '../atoms/Grid';
 import Skill from '../molecules/Skill';
 
 type SkillsSectionProps = {

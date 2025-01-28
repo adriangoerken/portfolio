@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import H2 from '../atoms/H2';
-import Grid from '../molecules/Grid';
+import Grid from '../atoms/Grid';
 import ProjectCard from '../molecules/ProjectCard';
 
 type ProjectsSectionProps = {
