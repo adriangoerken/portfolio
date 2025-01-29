@@ -4,8 +4,6 @@ import Header from '../components/organisms/Header';
 import HeroSection from '../components/organisms/HeroSection';
 import PortfolioSection from '../components/organisms/PortfolioSection';
 import SkillsSection from '../components/organisms/SkillsSection';
-import ExperienceSection from '../components/organisms/ExperienceSection';
-import TestimonialsSection from '../components/organisms/TestimonialsSection';
 import ContactSection from '../components/organisms/ContactSection';
 
 const IndexPage = () => {
@@ -57,14 +55,6 @@ const IndexPage = () => {
 				<PortfolioSection sectionProjectsRef={sectionProjectsRef} />
 				<hr />
 				<SkillsSection sectionSkillsRef={sectionSkillsRef} />
-				{/* <hr /> */}
-				{/* <ExperienceSection
-					sectionExperienceRef={sectionExperienceRef}
-				/> */}
-				{/* <hr />
-				<TestimonialsSection
-					sectionTestimonialsRef={sectionTestimonialsRef}
-				/> */}
 				<hr />
 				<ContactSection sectionContactRef={sectionContactRef} />
 			</Container>

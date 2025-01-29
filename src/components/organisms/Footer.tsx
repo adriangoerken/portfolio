@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Container from '../atoms/Container';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { getLanguage } from '../../utils/utils';
 import { useState } from 'react';
 import FooterLink from '../atoms/FooterLink';

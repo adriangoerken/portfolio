@@ -78,20 +78,6 @@ const Header = ({
 					}
 					isActive={getButtonActive('sectionSkillsRef')}
 				/>
-				{/* <NavButton
-					text={t('Header.links.linkExperience')}
-					onClick={() =>
-						scrollToSection(sectionRefs.sectionExperienceRef)
-					}
-					isActive={getButtonActive('sectionExperienceRef')}
-				/> */}
-				{/* <NavButton
-					text={t('Header.links.linkTestimonials')}
-					onClick={() =>
-						scrollToSection(sectionRefs.sectionTestimonialsRef)
-					}
-					isActive={getButtonActive('sectionTestimonialsRef')}					
-				/> */}
 				<NavButton
 					text={t('Header.links.linkContact')}
 					onClick={() =>
