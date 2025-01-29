@@ -4,6 +4,7 @@ import Container from '../atoms/Container';
 import { Link, useLocation } from 'react-router-dom';
 import { getLanguage } from '../../utils/utils';
 import { useState } from 'react';
+import FooterLink from '../atoms/FooterLink';
 
 const Footer = () => {
 	const [t, i18n] = useTranslation('global');
@@ -34,27 +35,21 @@ const Footer = () => {
 					</div>
 					<div className="flex justify-center gap-6 text-center">
 						{currentPath !== '/' ? (
-							<Link
+							<FooterLink
 								to="/"
-								className="hover:text-blue-700 transition-colors"
-							>
-								{t('Footer.links.linkHome')}
-							</Link>
+								text={t('Footer.links.linkHome')}
+							/>
 						) : (
 							''
 						)}
-						<Link
+						<FooterLink
 							to="/imprint"
-							className="hover:text-blue-700 transition-colors"
-						>
-							{t('Footer.links.linkImprint')}
-						</Link>
-						<Link
+							text={t('Footer.links.linkImprint')}
+						/>
+						<FooterLink
 							to="/privacy-policy"
-							className="hover:text-blue-700 transition-colors"
-						>
-							{t('Footer.links.linkPrivacy')}
-						</Link>
+							text={t('Footer.links.linkPrivacy')}
+						/>
 					</div>
 					<div className="flex gap-2 justify-self-center md:justify-self-end">
 						{['de', 'en'].map((lang, index, arr) => (
@@ -62,7 +57,7 @@ const Footer = () => {
 								<span
 									key={lang}
 									onClick={() => handleChangeLanguage(lang)}
-									className={`border-b-2 border-b-transparent text-lg cursor-pointer text-white hover:scale-110 hover:border-b-white ${
+									className={`border-b-2 border-b-transparent text-lg cursor-pointer text-white hover:border-b-white ${
 										currentLang === lang
 											? 'font-bold border-b-white'
 											: ''
