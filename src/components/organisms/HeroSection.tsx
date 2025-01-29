@@ -23,7 +23,7 @@ const HeroSection = ({
 	return (
 		<section
 			ref={sectionHeroRef}
-			className="max-w-[1488px] mx-auto px-4 flex flex-col md:flex-row justify-between" // Changed justify-around to justify-between
+			className="max-w-[1488px] mx-auto flex flex-col md:flex-row justify-between" // Changed justify-around to justify-between
 		>
 			{/* Left Column */}
 			<div className="flex flex-col items-center md:items-start gap-6 md:self-center md:w-[744px] mr-4">
