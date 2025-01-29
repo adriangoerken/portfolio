@@ -20,7 +20,7 @@ const PortfolioSection = ({ sectionProjectsRef }: PortfolioSectionProps) => {
 			<H2>{t('PortfolioSection.title')}</H2>
 			<Grid className="justify-items-center auto-rows-max">
 				<PortfolioCard
-					imageSrc={`src/assets/images/portfolio_thumbnails/${i18n.language}/thumbnail_portfolio.png`}
+					imageSrc={`/images/portfolio_thumbnails/${i18n.language}/thumbnail_portfolio.png`}
 					name="Portfolio"
 					technologies={['React', 'Tailwind', 'TypeScript', 'CSS']}
 					codeLink="https://github.com/adriangoerken/portfolio"

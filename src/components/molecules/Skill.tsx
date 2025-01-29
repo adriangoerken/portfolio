@@ -11,7 +11,7 @@ const Skill = ({ tech, startDate, width }: SkillProps) => {
 	return (
 		<Card className="w-full flex gap-4 items-center">
 			<img
-				src={`src/assets/images/web_icons/${tech}.png`}
+				src={`/images/web_icons/${tech}.png`}
 				alt={`${tech} Logo`}
 				className="w-[40px] h-[40px]"
 			/>

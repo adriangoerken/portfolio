@@ -53,7 +53,7 @@ const HeroSection = ({
 			<div className="flex justify-center items-center mt-8 md:mt-0">
 				<div className="relative h-80 w-80 lg:h-96 lg:w-96">
 					<img
-						src="src/assets/images/portrait.jpg"
+						src="/images/portrait.jpg"
 						alt={t('HeroSection.imgAlt')}
 						className="object-cover object-custom-top rounded-full h-full w-full"
 					/>
