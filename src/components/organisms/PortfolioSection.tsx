@@ -25,6 +25,20 @@ const PortfolioSection = ({ sectionProjectsRef }: PortfolioSectionProps) => {
 					technologies={['React', 'Tailwind', 'TypeScript', 'CSS']}
 					codeLink="https://github.com/adriangoerken/portfolio"
 				/>
+				<PortfolioCard
+					imageSrc={`/images/portfolio_thumbnails/${i18n.language}/thumbnail_taskdoneify.png`}
+					name="TaskDoneify"
+					technologies={[
+						'React',
+						'Tailwind',
+						'JavaScript',
+						'PHP',
+						'MySQL',
+						'CSS',
+					]}
+					projectLink="https://taskdoneify.pages.dev"
+					codeLink="https://github.com/adriangoerken/todo-list-app"
+				/>
 			</Grid>
 		</section>
 	);
