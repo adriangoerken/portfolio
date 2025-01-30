@@ -40,8 +40,8 @@ const ContactSection = ({ sectionContactRef }: ContactSectionProps) => {
 				/>
 				<ContactCard
 					header="Bluesky"
-					link="https://bsky.app/profile/adriangoerken.bsky.social"
-					text="@adriangoerken.bsky.social"
+					link="https://bsky.app/profile/adriangoerken.de"
+					text="@adriangoerken.de"
 				/>
 				<ContactCard
 					header="Mastodon"
