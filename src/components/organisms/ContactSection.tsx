@@ -20,8 +20,8 @@ const ContactSection = ({ sectionContactRef }: ContactSectionProps) => {
 			<Grid>
 				<ContactCard
 					header="Email"
-					link="mailto:adrian.goerken@proton.me"
-					text="adrian.goerken@proton.me"
+					link="mailto:kontakt@adriangoerken.de"
+					text="kontakt@adriangoerken.de"
 				/>
 				<ContactCard
 					header={t('ContactSection.phone')}

@@ -20,7 +20,7 @@ const PortfolioCard = ({
 	const [t] = useTranslation('global');
 
 	return (
-		<Card className="flex flex-col justify-between h-full">
+		<Card className="flex flex-col justify-between h-full max-w-[352px]">
 			{/* Image, name and technologies */}
 			<div>
 				<img src={imageSrc} alt="Project Thumbnail" className="mb-2" />

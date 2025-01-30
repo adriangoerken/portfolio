@@ -29,11 +29,12 @@ const Footer = () => {
 						<h3 className="text-2xl font-bold mb-2 tracking-wider">
 							Adrian Goerken
 						</h3>
-						<p className="opacity-75">
+						<p>
 							&copy; {year}, {t('Footer.copyright')}
 						</p>
 					</div>
-					<div className="flex justify-center gap-6 text-center">
+					<div className="flex flex-col md:flex-row flex-wrap gap-x-4 gap-y-2 md:gap-y-0 text-center flex-1 justify-center">
+						{/* <div className="flex justify-center gap-6 text-center"> */}
 						{currentPath !== '/' ? (
 							<FooterLink
 								to="/"
@@ -59,7 +60,7 @@ const Footer = () => {
 									onClick={() => handleChangeLanguage(lang)}
 									className={`border-b-2 border-b-transparent text-lg cursor-pointer text-white hover:border-b-white ${
 										currentLang === lang
-											? 'font-bold border-b-white'
+											? 'border-b-white'
 											: ''
 									}`}
 								>

@@ -9,7 +9,7 @@ const FooterLink = ({ to, text }: FooterLinkProps) => {
 	return (
 		<Link
 			to={to}
-			className="border-b-2 border-transparent hover:border-white transition-all ease-in-out"
+			className="hover:underline md:hover:no-underline md:border-b-2 border-transparent hover:border-white transition-all ease-in-out"
 		>
 			{text}
 		</Link>
