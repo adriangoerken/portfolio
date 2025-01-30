@@ -122,5 +122,9 @@
 			"title": "4. Rechtliche Einhaltung",
 			"description": "Diese Website entspricht der DSGVO, der EU- und den deutschen Datenschutzbestimmungen, indem keine personenbezogenen Daten gesammelt werden."
 		}
+	},
+	"NotFoundPage": {
+		"message": "404 Nicht gefunden",
+		"btnBack": "Zurück"
 	}
 }

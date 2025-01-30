@@ -122,5 +122,9 @@
 			"title": "4. Legal Compliance",
 			"description": "This website complies with GDPR, EU, and German data protection regulations by not collecting personal data."
 		}
+	},
+	"NotFoundPage": {
+		"message": "404 Not Found",
+		"btnBack": "Go Back"
 	}
 }
