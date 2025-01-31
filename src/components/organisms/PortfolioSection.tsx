@@ -39,6 +39,13 @@ const PortfolioSection = ({ sectionProjectsRef }: PortfolioSectionProps) => {
 					projectLink="https://taskdoneify.pages.dev"
 					codeLink="https://github.com/adriangoerken/todo-list-app"
 				/>
+				<PortfolioCard
+					imageSrc={`/images/portfolio_thumbnails/${i18n.language}/thumbnail_imagetools.png`}
+					name="ImageTools"
+					technologies={['React', 'Tailwind', 'TypeScript', 'CSS']}
+					projectLink="https://imagetoolsag.pages.dev"
+					codeLink="https://github.com/adriangoerken/image-tools"
+				/>
 			</Grid>
 		</section>
 	);
