@@ -3,6 +3,8 @@ import { SkillProps } from '../../lib/type';
 import H2 from '../atoms/H2';
 import Grid from '../atoms/Grid';
 import Skill from '../molecules/Skill';
+import { motion } from 'framer-motion';
+import { fadeInUp } from '../../utils/utils';
 
 type SkillsSectionProps = {
 	sectionSkillsRef: React.RefObject<HTMLElement>;
@@ -72,7 +74,15 @@ const SkillsSection = ({ sectionSkillsRef }: SkillsSectionProps) => {
 
 	return (
 		<section ref={sectionSkillsRef}>
-			<H2>{t('SkillsSection.title')}</H2>
+			<motion.div
+				variants={fadeInUp}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+			>
+				<H2>{t('SkillsSection.title')}</H2>
+			</motion.div>
+
 			<Grid>
 				{skills.map((skill, index) => (
 					<Skill

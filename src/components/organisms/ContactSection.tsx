@@ -2,6 +2,8 @@ import H2 from '../atoms/H2';
 import Grid from '../atoms/Grid';
 import ContactCard from '../molecules/ContactCard';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { fadeInUp } from '../../utils/utils';
 
 type ContactSectionProps = {
 	sectionContactRef: React.RefObject<HTMLElement>;
@@ -16,7 +18,15 @@ const ContactSection = ({ sectionContactRef }: ContactSectionProps) => {
 
 	return (
 		<section ref={sectionContactRef}>
-			<H2>{t('ContactSection.title')}</H2>
+			<motion.div
+				variants={fadeInUp}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+			>
+				<H2>{t('ContactSection.title')}</H2>
+			</motion.div>
+
 			<Grid>
 				<ContactCard
 					header="Email"

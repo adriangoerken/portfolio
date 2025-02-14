@@ -2,6 +2,8 @@ import { useTranslation } from 'react-i18next';
 import H2 from '../atoms/H2';
 import Grid from '../atoms/Grid';
 import PortfolioCard from '../molecules/PortfolioCard';
+import { motion } from 'framer-motion';
+import { fadeInUp } from '../../utils/utils';
 
 type PortfolioSectionProps = {
 	sectionProjectsRef: React.RefObject<HTMLElement>;
@@ -17,7 +19,14 @@ const PortfolioSection = ({ sectionProjectsRef }: PortfolioSectionProps) => {
 
 	return (
 		<section ref={sectionProjectsRef}>
-			<H2>{t('PortfolioSection.title')}</H2>
+			<motion.div
+				variants={fadeInUp}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+			>
+				<H2>{t('PortfolioSection.title')}</H2>
+			</motion.div>
 			<Grid className="justify-items-center auto-rows-max">
 				<PortfolioCard
 					imageSrc={`/images/portfolio_thumbnails/${i18n.language}/thumbnail_portfolio.png`}

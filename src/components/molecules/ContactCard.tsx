@@ -1,6 +1,6 @@
 import { ValidLink } from '../../lib/type';
-import Card from '../atoms/Card';
 import H3 from '../atoms/H3';
+import AnimatedCard from './AnimatedCard';
 
 type ContactCardProps = {
 	header: string;
@@ -10,17 +10,16 @@ type ContactCardProps = {
 
 const ContactCard = ({ header, link, text }: ContactCardProps) => {
 	return (
-		<a
+		<AnimatedCard
+			as="a"
 			href={link}
 			target="_blank"
 			rel="noopener noreferrer"
 			className="text-center md:text-start hover:opacity-70 transition-colors ease-in-out w-full"
 		>
-			<Card>
-				<H3>{header}</H3>
-				{text}
-			</Card>
-		</a>
+			<H3>{header}</H3>
+			{text}
+		</AnimatedCard>
 	);
 };
 
