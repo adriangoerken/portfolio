@@ -119,7 +119,21 @@
 			}
 		},
 		"section4": {
-			"title": "4. Rechtliche Einhaltung",
+			"title": "4. Bildhosting über Imgur",
+			"description": "Diese Website verwendet Imgur.com als Drittanbieterdienst zum Hosten und Bereitstellen von Bildern. Wenn Sie Seiten mit Bildern auf dieser Website aufrufen:",
+			"list": {
+				"purpose": "Werden Bilder von Imgur-Servern geladen, was für die Anzeige der visuellen Inhalte dieser Website erforderlich ist.",
+				"dataTransfer": "Können Ihre IP-Adresse und grundlegende Browser-Informationen an Server von Imgur in den Vereinigten Staaten übermittelt werden. Diese Datenübertragung ist für die technische Bereitstellung der Bilder auf Ihrem Gerät erforderlich.",
+				"imgurPrivacy": {
+					"imgurPrivacy1": "Imgur verarbeitet diese technischen Daten gemäß ihrer Datenschutzerklärung, die Sie unter ",
+					"imgurPrivacy2": "https://imgur.com/privacy",
+					"imgurPrivacy3": " einsehen können. Sie haben geeignete Garantien für internationale Datenübermittlungen implementiert.",
+					"ariaLabel": "Imgur Datenschutzerklärung (öffnet in neuem Tab)"
+				}
+			}
+		},
+		"section5": {
+			"title": "5. Rechtliche Einhaltung",
 			"description": "Diese Website entspricht der DSGVO, der EU- und den deutschen Datenschutzbestimmungen, indem keine personenbezogenen Daten gesammelt werden."
 		}
 	},

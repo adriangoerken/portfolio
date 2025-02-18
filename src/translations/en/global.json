@@ -119,7 +119,21 @@
 			}
 		},
 		"section4": {
-			"title": "4. Legal Compliance",
+			"title": "4. Image Hosting via Imgur",
+			"description": "This website uses Imgur.com as a third-party service to host and deliver images. When you view pages containing images on this website:",
+			"list": {
+				"purpose": "Images are loaded from Imgur's servers, which is necessary to display the visual content of this website.",
+				"dataTransfer": "Your IP address and basic browser information may be transmitted to Imgur's servers located in the United States when loading images. This data transfer is necessary for technical delivery of the images to your device.",
+				"imgurPrivacy": {
+					"imgurPrivacy1": "Imgur processes this technical data according to their privacy policy, which you can review at ",
+					"imgurPrivacy2": "https://imgur.com/privacy.",
+					"imgurPrivacy3": " They have implemented appropriate safeguards for international data transfers.",
+					"ariaLabel": "Imgur Privacy Policy (opens in new tab)"
+				}
+			}
+		},
+		"section5": {
+			"title": "5. Legal Compliance",
 			"description": "This website complies with GDPR, EU, and German data protection regulations by not collecting personal data."
 		}
 	},

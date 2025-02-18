@@ -7,6 +7,7 @@ import {
 	fadeInUp,
 	staggerChildren,
 } from '../../utils/animationUtils';
+import ImageLoader from '../atoms/ImageLoader';
 
 type HeroSectionProps = {
 	sectionHeroRef: React.RefObject<HTMLElement>;
@@ -94,10 +95,7 @@ const HeroSection = ({
 					whileHover={{ scale: 1.02 }}
 					transition={{ type: 'spring', bounce: 0.4 }}
 				>
-					<motion.img
-						initial={{ opacity: 0, scale: 0.8 }}
-						animate={{ opacity: 1, scale: 1 }}
-						transition={{ duration: 0.6 }}
+					<ImageLoader
 						src={Images.portrait}
 						alt={t('HeroSection.imgAlt')}
 						className="object-cover object-custom-top rounded-full h-full w-full"

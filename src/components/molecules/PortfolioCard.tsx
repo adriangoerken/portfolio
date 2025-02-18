@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import H3 from '../atoms/H3';
 import AnimatedCard from './AnimatedCard';
+import ImageLoader from '../atoms/ImageLoader';
 
 type PortfolioCardProps = {
 	imageSrc: string;
@@ -25,14 +26,15 @@ const PortfolioCard = ({
 			<div className="flex flex-col justify-between h-full max-w-[352px]">
 				{/* Image, name and technologies */}
 				<div>
-					<motion.img
-						src={imageSrc}
-						alt="Project Thumbnail"
-						className="mb-2"
-						initial={{ scale: 1 }}
+					<motion.div
 						whileHover={{ scale: 1.02 }}
 						transition={{ duration: 0.2 }}
-					/>
+					>
+						<ImageLoader
+							src={imageSrc}
+							alt={`${name} project thumbnail`}
+						/>
+					</motion.div>
 					<H3>{name}</H3>
 					<div className="flex flex-wrap max-w-80 mb-4">
 						{technologies.map((tech, index) => (

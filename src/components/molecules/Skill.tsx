@@ -5,6 +5,7 @@ import { getExperienceYears } from '../../utils/utils';
 
 import AnimatedCard from './AnimatedCard';
 import { TechIcons } from '../../config/imgUrls';
+import ImageLoader from '../atoms/ImageLoader';
 
 const Skill = ({ tech, startDate, width }: SkillProps) => {
 	const [t] = useTranslation('global');
@@ -17,7 +18,7 @@ const Skill = ({ tech, startDate, width }: SkillProps) => {
 	return (
 		<AnimatedCard className="w-full">
 			<div className="w-full flex gap-4 items-center">
-				<img
+				<ImageLoader
 					src={TechIcons[techKey]}
 					alt={`${tech} Logo`}
 					className="w-[40px] h-[40px]"

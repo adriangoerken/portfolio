@@ -15,6 +15,9 @@ export default {
 			objectPosition: {
 				'custom-top': '50% 30%',
 			},
+			borderRadius: {
+				inherit: 'inherit',
+			},
 		},
 	},
 	plugins: [],

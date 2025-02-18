@@ -79,7 +79,48 @@ const PrivacyPolicyPage = () => {
 
 					{/* Section 4 */}
 					<SectionCard title={t('PrivacyPolicyPage.section4.title')}>
-						<p>{t('PrivacyPolicyPage.section4.description')}</p>
+						<p className="mb-4">
+							{t('PrivacyPolicyPage.section4.description')}
+						</p>
+						<ul className="list-disc pl-6 space-y-2">
+							<li>
+								{t('PrivacyPolicyPage.section4.list.purpose')}
+							</li>
+							<li>
+								{t(
+									'PrivacyPolicyPage.section4.list.dataTransfer'
+								)}
+							</li>
+							<li>
+								<span>
+									{t(
+										'PrivacyPolicyPage.section4.list.imgurPrivacy.imgurPrivacy1'
+									)}
+								</span>
+								<a
+									href="https://imgur.com/privacy"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="underline"
+									aria-label={t(
+										'PrivacyPolicyPage.section4.list.imgurPrivacy.ariaLabel'
+									)}
+								>
+									{t(
+										'PrivacyPolicyPage.section4.list.imgurPrivacy.imgurPrivacy2'
+									)}
+								</a>
+								<span>
+									{t(
+										'PrivacyPolicyPage.section4.list.imgurPrivacy.imgurPrivacy3'
+									)}
+								</span>
+							</li>
+						</ul>
+					</SectionCard>
+					{/* Section 5 */}
+					<SectionCard title={t('PrivacyPolicyPage.section5.title')}>
+						<p>{t('PrivacyPolicyPage.section5.description')}</p>
 					</SectionCard>
 				</div>
 			</Container>
