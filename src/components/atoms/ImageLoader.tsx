@@ -12,7 +12,7 @@ const ImageLoader = ({ src, alt, className = '' }: ImageLoaderProps) => {
 	return (
 		<div className={`relative ${className}`}>
 			{isLoading && (
-				<div className="absolute inset-0 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-inherit" />
+				<div className="absolute inset-0 animate-pulse bg-elevation-300 rounded-inherit" />
 			)}
 			<img
 				src={src}

@@ -13,7 +13,6 @@ const Skill = ({ tech, startDate, width }: SkillProps) => {
 
 	// Convert tech name to lowercase and ensure it's a valid key
 	const techKey = tech.toLowerCase().split(' ')[0] as keyof typeof TechIcons;
-	console.log(techKey);
 
 	return (
 		<AnimatedCard className="w-full">
