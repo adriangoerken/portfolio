@@ -3,7 +3,7 @@ import Grid from '../atoms/Grid';
 import ContactCard from '../molecules/ContactCard';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { fadeInUp } from '../../utils/utils';
+import { fadeInUp } from '../../utils/animationUtils';
 
 type ContactSectionProps = {
 	sectionContactRef: React.RefObject<HTMLElement>;

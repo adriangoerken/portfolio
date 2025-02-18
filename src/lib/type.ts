@@ -18,3 +18,31 @@ export type ValidLink =
 	| `http${'s' | ''}://${string}`
 	| `mailto:${string}`
 	| `tel:${string}`;
+
+// For img urls
+export type ImageUrls = {
+	portrait: string;
+};
+
+export type TechIconsType = {
+	css3: string;
+	html5: string;
+	javascript: string;
+	mysql: string;
+	oracle: string;
+	php: string;
+	react: string;
+	sass: string;
+	tailwind: string;
+	typescript: string;
+};
+
+export type SupportedLanguages = 'en' | 'de';
+
+export type ProjectThumbnailsType = {
+	[K in SupportedLanguages]: {
+		tools: string;
+		portfolio: string;
+		tasks: string;
+	};
+};

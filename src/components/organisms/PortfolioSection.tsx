@@ -3,7 +3,9 @@ import H2 from '../atoms/H2';
 import Grid from '../atoms/Grid';
 import PortfolioCard from '../molecules/PortfolioCard';
 import { motion } from 'framer-motion';
-import { fadeInUp } from '../../utils/utils';
+import { fadeInUp } from '../../utils/animationUtils';
+import { ProjectThumbnails } from '../../config/imgUrls';
+import { getSupportedLanguage } from '../../utils/utils';
 
 type PortfolioSectionProps = {
 	sectionProjectsRef: React.RefObject<HTMLElement>;
@@ -29,13 +31,19 @@ const PortfolioSection = ({ sectionProjectsRef }: PortfolioSectionProps) => {
 			</motion.div>
 			<Grid className="justify-items-center auto-rows-max">
 				<PortfolioCard
-					imageSrc={`/images/portfolio_thumbnails/${i18n.language}/thumbnail_portfolio.png`}
+					imageSrc={
+						ProjectThumbnails[getSupportedLanguage(i18n.language)]
+							.portfolio
+					}
 					name="Portfolio"
 					technologies={['React', 'Tailwind', 'TypeScript', 'CSS']}
 					codeLink="https://github.com/adriangoerken/portfolio"
 				/>
 				<PortfolioCard
-					imageSrc={`/images/portfolio_thumbnails/${i18n.language}/thumbnail_taskdoneify.png`}
+					imageSrc={
+						ProjectThumbnails[getSupportedLanguage(i18n.language)]
+							.tasks
+					}
 					name="TaskDoneify"
 					technologies={[
 						'React',
@@ -49,7 +57,10 @@ const PortfolioSection = ({ sectionProjectsRef }: PortfolioSectionProps) => {
 					codeLink="https://github.com/adriangoerken/todo-list-app"
 				/>
 				<PortfolioCard
-					imageSrc={`/images/portfolio_thumbnails/${i18n.language}/thumbnail_imagetools.png`}
+					imageSrc={
+						ProjectThumbnails[getSupportedLanguage(i18n.language)]
+							.tools
+					}
 					name="ImageTools"
 					technologies={['React', 'Tailwind', 'TypeScript', 'CSS']}
 					projectLink="https://imagetoolsag.pages.dev"

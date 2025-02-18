@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { cardVariants } from '../../utils/utils';
+import { cardVariants } from '../../utils/animationUtils';
 import Card from '../atoms/Card';
 import { ReactNode } from 'react';
 

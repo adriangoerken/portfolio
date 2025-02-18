@@ -1,7 +1,12 @@
 import Button from '../atoms/Button';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { fadeInScale, fadeInUp, staggerChildren } from '../../utils/utils';
+import { Images } from '../../config/imgUrls';
+import {
+	fadeInScale,
+	fadeInUp,
+	staggerChildren,
+} from '../../utils/animationUtils';
 
 type HeroSectionProps = {
 	sectionHeroRef: React.RefObject<HTMLElement>;
@@ -93,7 +98,7 @@ const HeroSection = ({
 						initial={{ opacity: 0, scale: 0.8 }}
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 0.6 }}
-						src="/images/portrait.jpg"
+						src={Images.portrait}
 						alt={t('HeroSection.imgAlt')}
 						className="object-cover object-custom-top rounded-full h-full w-full"
 					/>

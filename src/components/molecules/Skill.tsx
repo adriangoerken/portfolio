@@ -4,16 +4,21 @@ import { useTranslation } from 'react-i18next';
 import { getExperienceYears } from '../../utils/utils';
 
 import AnimatedCard from './AnimatedCard';
+import { TechIcons } from '../../config/imgUrls';
 
 const Skill = ({ tech, startDate, width }: SkillProps) => {
 	const [t] = useTranslation('global');
 	const experience = getExperienceYears(startDate, t);
 
+	// Convert tech name to lowercase and ensure it's a valid key
+	const techKey = tech.toLowerCase().split(' ')[0] as keyof typeof TechIcons;
+	console.log(techKey);
+
 	return (
 		<AnimatedCard className="w-full">
 			<div className="w-full flex gap-4 items-center">
 				<img
-					src={`/images/web_icons/${tech}.png`}
+					src={TechIcons[techKey]}
 					alt={`${tech} Logo`}
 					className="w-[40px] h-[40px]"
 				/>

@@ -4,7 +4,7 @@ import H2 from '../atoms/H2';
 import Grid from '../atoms/Grid';
 import Skill from '../molecules/Skill';
 import { motion } from 'framer-motion';
-import { fadeInUp } from '../../utils/utils';
+import { fadeInUp } from '../../utils/animationUtils';
 
 type SkillsSectionProps = {
 	sectionSkillsRef: React.RefObject<HTMLElement>;
