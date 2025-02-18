@@ -21,7 +21,7 @@ const PortfolioCard = ({
 	const [t] = useTranslation('global');
 
 	return (
-		<AnimatedCard className="w-full h-full">
+		<AnimatedCard className="w-full h-full max-w-[352px]">
 			<div className="flex flex-col justify-between h-full max-w-[352px]">
 				{/* Image, name and technologies */}
 				<div>
