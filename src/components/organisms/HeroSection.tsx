@@ -56,6 +56,7 @@ const HeroSection = ({
 						>
 							{t('HeroSection.title.name')}
 						</motion.span>
+						.
 					</motion.span>
 				</motion.h1>
 

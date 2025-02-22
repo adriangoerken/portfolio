@@ -14,7 +14,7 @@
 		"title": {
 			"greeting": "Schön dich kennenzulernen!",
 			"intro": "Ich bin",
-			"name": " Adrian."
+			"name": " Adrian"
 		},
 		"messageOne": "Ein Full-Stack Entwickler mit 7 Jahren Erfahrung, spezialisiert auf maßgeschneiderte Weblösungen. Ich verwandle komplexe Herausforderungen in elegante, benutzerfreundliche Anwendungen.",
 		"messageTwo": "Von der Konzeption bis zum Deployment entwickle ich moderne Webanwendungen mit React und TypeScript im Frontend, kombiniert mit PHP und MySQL Backend-Lösungen.",
