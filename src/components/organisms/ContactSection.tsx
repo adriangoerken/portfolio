@@ -44,6 +44,11 @@ const ContactSection = ({ sectionContactRef }: ContactSectionProps) => {
 					text="@adriangoerken"
 				/>
 				<ContactCard
+					header="LinkedIn"
+					link="https://www.linkedin.com/in/adrian-goerken-202064353"
+					text="Adrian Goerken"
+				/>
+				<ContactCard
 					header="Xing"
 					link="https://www.xing.com/profile/Adrian_Goerken"
 					text="Adrian Goerken"
