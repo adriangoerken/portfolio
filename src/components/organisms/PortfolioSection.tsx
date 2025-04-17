@@ -5,6 +5,7 @@ import PortfolioCard from '../molecules/PortfolioCard';
 import { motion } from 'framer-motion';
 import { fadeInUp } from '../../utils/animationUtils';
 import { ProjectThumbnails } from '../../config/imgUrls';
+import { projects } from '../../config/projects';
 import { getSupportedLanguage } from '../../utils/utils';
 
 type PortfolioSectionProps = {
@@ -30,42 +31,23 @@ const PortfolioSection = ({ sectionProjectsRef }: PortfolioSectionProps) => {
 				<H2>{t('PortfolioSection.title')}</H2>
 			</motion.div>
 			<Grid className="justify-items-center auto-rows-max">
-				<PortfolioCard
-					imageSrc={
-						ProjectThumbnails[getSupportedLanguage(i18n.language)]
-							.portfolio
-					}
-					name="Portfolio"
-					technologies={['React', 'Tailwind', 'TypeScript', 'CSS']}
-					codeLink="https://github.com/adriangoerken/portfolio"
-				/>
-				<PortfolioCard
-					imageSrc={
-						ProjectThumbnails[getSupportedLanguage(i18n.language)]
-							.tasks
-					}
-					name="TaskDoneify"
-					technologies={[
-						'React',
-						'Tailwind',
-						'JavaScript',
-						'PHP',
-						'MySQL',
-						'CSS',
-					]}
-					projectLink="https://taskdoneify.pages.dev"
-					codeLink="https://github.com/adriangoerken/todo-list-app"
-				/>
-				<PortfolioCard
-					imageSrc={
-						ProjectThumbnails[getSupportedLanguage(i18n.language)]
-							.tools
-					}
-					name="ImageTools"
-					technologies={['React', 'Tailwind', 'TypeScript', 'CSS']}
-					projectLink="https://imagetoolsag.pages.dev"
-					codeLink="https://github.com/adriangoerken/image-tools"
-				/>
+				{projects
+					.sort((a, b) => +a.isDemo - +b.isDemo)
+					.map((project) => (
+						<PortfolioCard
+							key={project.name}
+							imageSrc={
+								ProjectThumbnails[
+									getSupportedLanguage(i18n.language)
+								][project.imageSrcKey]
+							}
+							name={project.name}
+							technologies={project.technologies}
+							projectLink={project.projectLink}
+							codeLink={project.codeLink}
+							isDemo={project.isDemo}
+						/>
+					))}
 			</Grid>
 		</section>
 	);

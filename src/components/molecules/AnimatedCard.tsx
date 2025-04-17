@@ -8,6 +8,7 @@ type AnimatedCardProps = {
 	className?: string;
 	onClick?: () => void;
 	as?: 'div' | 'a';
+	label?: string | null;
 	href?: string;
 	target?: string;
 	rel?: string;
@@ -18,6 +19,7 @@ const AnimatedCard = ({
 	className = '',
 	onClick,
 	as = 'div',
+	label = null,
 	...props
 }: AnimatedCardProps) => {
 	const Component = motion[as];
@@ -34,7 +36,9 @@ const AnimatedCard = ({
 			onClick={onClick}
 			{...props}
 		>
-			<Card className="h-full">{children}</Card>
+			<Card label={label} className="h-full">
+				{children}
+			</Card>
 		</Component>
 	);
 };

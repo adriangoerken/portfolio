@@ -10,6 +10,7 @@ type PortfolioCardProps = {
 	technologies: string[];
 	projectLink?: string;
 	codeLink?: string;
+	isDemo?: boolean;
 };
 
 const PortfolioCard = ({
@@ -18,11 +19,15 @@ const PortfolioCard = ({
 	technologies,
 	projectLink = 'n/a',
 	codeLink = 'n/a',
+	isDemo = false,
 }: PortfolioCardProps) => {
 	const [t] = useTranslation('global');
 
 	return (
-		<AnimatedCard className="w-full h-full max-w-[352px]">
+		<AnimatedCard
+			label={isDemo ? 'Demo' : null}
+			className="w-full h-full max-w-[352px]"
+		>
 			<div className="flex flex-col justify-between h-full max-w-[352px]">
 				{/* Image, name and technologies */}
 				<div>
