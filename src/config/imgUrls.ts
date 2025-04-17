@@ -23,10 +23,12 @@ export const ProjectThumbnails: ProjectThumbnailsType = {
 		tools: `${IMGUR_BASE_URL}/myZNjjD.png`,
 		portfolio: `${IMGUR_BASE_URL}/TdzPyVB.png`,
 		tasks: `${IMGUR_BASE_URL}/cXTP92a.png`,
+		restaurant: `${IMGUR_BASE_URL}/KA1DcDK.png`,
 	},
 	de: {
 		tools: `${IMGUR_BASE_URL}/LpmZsAZ.png`,
 		portfolio: `${IMGUR_BASE_URL}/NGMwu9V.png`,
 		tasks: `${IMGUR_BASE_URL}/GXzVlIA.png`,
+		restaurant: `${IMGUR_BASE_URL}/KA1DcDK.png`,
 	},
 };

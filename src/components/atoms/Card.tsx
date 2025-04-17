@@ -14,7 +14,7 @@ const Card = ({ children, label = null, className = '' }: CardProps) => {
 			}`}
 		>
 			{label && (
-				<span className="absolute top-0 right-0 z-50 bg-blue-700 text-white font-bold px-2 py-1 rounded-tr-xl rounded-bl-xl shadow-lg">
+				<span className="absolute top-0 right-0 z-10 bg-blue-700 text-white font-bold px-2 py-1 rounded-tr-xl rounded-bl-xl shadow-lg">
 					{label}
 				</span>
 			)}

@@ -40,4 +40,12 @@ export const projects: Project[] = [
 		isDemo: true,
 		imageSrcKey: 'tools',
 	},
+	{
+		name: 'Umami Nights',
+		technologies: ['React', 'Tailwind', 'TypeScript'],
+		projectLink: 'https://umaminights.pages.dev',
+		codeLink: 'https://github.com/adriangoerken/restaurant-site',
+		isDemo: true,
+		imageSrcKey: 'restaurant',
+	},
 ];

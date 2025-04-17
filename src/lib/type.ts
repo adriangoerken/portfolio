@@ -44,5 +44,6 @@ export type ProjectThumbnailsType = {
 		tools: string;
 		portfolio: string;
 		tasks: string;
+		restaurant: string;
 	};
 };
