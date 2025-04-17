@@ -30,21 +30,20 @@ const IndexPage = () => {
 
 	return (
 		<section>
+			{/* Header */}
+			<Header
+				scrollToSection={scrollToSection}
+				setHeaderHeight={setHeaderHeight}
+				sectionRefs={{
+					sectionHeroRef,
+					sectionProjectsRef,
+					sectionSkillsRef,
+					sectionExperienceRef,
+					sectionTestimonialsRef,
+					sectionContactRef,
+				}}
+			/>
 			<Container className="pt-0">
-				{/* Header */}
-				<Header
-					scrollToSection={scrollToSection}
-					setHeaderHeight={setHeaderHeight}
-					sectionRefs={{
-						sectionHeroRef,
-						sectionProjectsRef,
-						sectionSkillsRef,
-						sectionExperienceRef,
-						sectionTestimonialsRef,
-						sectionContactRef,
-					}}
-				/>
-
 				{/* Content sections */}
 				<HeroSection
 					sectionHeroRef={sectionHeroRef}

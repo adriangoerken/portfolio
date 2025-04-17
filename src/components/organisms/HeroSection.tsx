@@ -93,7 +93,6 @@ const HeroSection = ({
 			>
 				<motion.div
 					className="relative h-80 w-80 lg:h-96 lg:w-96"
-					whileHover={{ scale: 1.02 }}
 					transition={{ type: 'spring', bounce: 0.4 }}
 				>
 					<ImageLoader
