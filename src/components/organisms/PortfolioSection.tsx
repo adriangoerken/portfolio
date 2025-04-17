@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import H2 from '../atoms/H2';
 import Grid from '../atoms/Grid';
@@ -19,6 +20,11 @@ Use a visually appealing layout, such as a grid or carousel
 */
 const PortfolioSection = ({ sectionProjectsRef }: PortfolioSectionProps) => {
 	const [t, i18n] = useTranslation('global');
+	const [showDemos, setShowDemos] = useState(true);
+
+	const filteredProjects = projects
+		.filter((project) => showDemos || !project.isDemo)
+		.sort((a, b) => +a.isDemo - +b.isDemo);
 
 	return (
 		<section ref={sectionProjectsRef}>
@@ -30,24 +36,37 @@ const PortfolioSection = ({ sectionProjectsRef }: PortfolioSectionProps) => {
 			>
 				<H2>{t('PortfolioSection.title')}</H2>
 			</motion.div>
+			<div className="flex items-center justify-center gap-2 mb-4">
+				<input
+					type="checkbox"
+					id="showDemos"
+					checked={showDemos}
+					onChange={(e) => setShowDemos(e.target.checked)}
+					className="w-4 h-4 accent-blue-700 hover:cursor-pointer"
+				/>
+				<label
+					htmlFor="showDemos"
+					className="text-white hover:cursor-pointer"
+				>
+					{t('PortfolioSection.showDemos')}
+				</label>
+			</div>
 			<Grid className="justify-items-center auto-rows-max">
-				{projects
-					.sort((a, b) => +a.isDemo - +b.isDemo)
-					.map((project) => (
-						<PortfolioCard
-							key={project.name}
-							imageSrc={
-								ProjectThumbnails[
-									getSupportedLanguage(i18n.language)
-								][project.imageSrcKey]
-							}
-							name={project.name}
-							technologies={project.technologies}
-							projectLink={project.projectLink}
-							codeLink={project.codeLink}
-							isDemo={project.isDemo}
-						/>
-					))}
+				{filteredProjects.map((project) => (
+					<PortfolioCard
+						key={project.name}
+						imageSrc={
+							ProjectThumbnails[
+								getSupportedLanguage(i18n.language)
+							][project.imageSrcKey]
+						}
+						name={project.name}
+						technologies={project.technologies}
+						projectLink={project.projectLink}
+						codeLink={project.codeLink}
+						isDemo={project.isDemo}
+					/>
+				))}
 			</Grid>
 		</section>
 	);

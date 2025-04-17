@@ -24,6 +24,7 @@
 	},
 	"PortfolioSection": {
 		"title": "Portfolio",
+		"showDemos": "Demo Projekte anzeigen",
 		"PortfolioCard": {
 			"btnProject": "Zum Projekt",
 			"btnCode": "Zum Code"
