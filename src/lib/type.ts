@@ -35,6 +35,7 @@ export type TechIconsType = {
 	sass: string;
 	tailwind: string;
 	typescript: string;
+	vue: string;
 };
 
 export type SupportedLanguages = 'en' | 'de';

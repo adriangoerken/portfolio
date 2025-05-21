@@ -16,6 +16,7 @@ export const TechIcons: TechIconsType = {
 	sass: `${IMGUR_BASE_URL}/TQFf6AV.png`,
 	tailwind: `${IMGUR_BASE_URL}/pbU40uy.png`,
 	typescript: `${IMGUR_BASE_URL}/CwoWAHF.png`,
+	vue: `${IMGUR_BASE_URL}/Zt6ebWp.png`,
 };
 
 export const ProjectThumbnails: ProjectThumbnailsType = {

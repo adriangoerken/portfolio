@@ -70,6 +70,11 @@ const SkillsSection = ({ sectionSkillsRef }: SkillsSectionProps) => {
 			startDate: { year: 2025, month: 1 },
 			width: 'w-[80%]',
 		},
+		{
+			tech: 'Vue',
+			startDate: { year: 2025, month: 5 },
+			width: 'w-[30%]',
+		},
 	];
 
 	return (
