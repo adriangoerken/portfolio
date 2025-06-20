@@ -1,22 +1,22 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
-import App from './App.tsx';
 import i18next from 'i18next';
 import { I18nextProvider } from 'react-i18next';
+import { BrowserRouter } from 'react-router-dom';
+
+import './index.css';
+
+import App from './App.tsx';
+import { getLanguage } from './utils/utils.ts';
 import global_en from './translations/en/global.json';
 import global_de from './translations/de/global.json';
-import { getLanguage } from './utils/utils.ts';
 
 const initialLanguage = getLanguage().substring(0, 2);
 
 i18next.init({
-	interpolation: {
-		escapeValue: false, // React already escapes values
-	},
 	lng: initialLanguage,
 	fallbackLng: 'en',
-	ns: ['global'], // namespace
+	ns: ['global'],
 	defaultNS: 'global',
 	resources: {
 		en: {
@@ -33,7 +33,9 @@ if (rootElement) {
 	createRoot(rootElement).render(
 		<StrictMode>
 			<I18nextProvider i18n={i18next}>
-				<App />
+				<BrowserRouter>
+					<App />
+				</BrowserRouter>
 			</I18nextProvider>
 		</StrictMode>
 	);
