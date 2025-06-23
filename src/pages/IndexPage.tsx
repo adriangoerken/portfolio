@@ -1,15 +1,16 @@
+import AnimatedSectionWrapper from '../components/layout/AnimatedSectionWrapper';
 import HeroSection from '../components/sections/HeroSection';
+import SummarySection from '../components/sections/SummarySection';
 
 const IndexPage = () => {
 	return (
 		<>
-			<HeroSection />
-			{/* 
-				2. Professional Summary Section:
-				3-4 sentence professional statement highlighting your key strengths
-				Focus on outcomes and business value ("I build solutions that..." rather than just "I use technologies...")
-				Include keywords relevant to job descriptions you're targeting
-				*/}
+			<AnimatedSectionWrapper id="hero">
+				<HeroSection />
+			</AnimatedSectionWrapper>
+			<AnimatedSectionWrapper id="summary" bgColor="elevation-100">
+				<SummarySection />
+			</AnimatedSectionWrapper>
 			{/* 
 				3. Experience Section:
 				For each role:

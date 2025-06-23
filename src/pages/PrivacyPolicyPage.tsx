@@ -1,4 +1,4 @@
-import Container from '../components/Container';
+import Container from '../components/layout/Container';
 import { t } from 'i18next';
 
 const PrivacyPolicyPage = () => {
