@@ -1,7 +1,7 @@
 import AnimatedSectionWrapper from '../components/layout/AnimatedSectionWrapper';
-import ExperienceSection from '../components/sections/ExperienceSection';
 import HeroSection from '../components/sections/HeroSection';
 import SummarySection from '../components/sections/SummarySection';
+import ExperienceSection from '../components/sections/ExperienceSection';
 
 const IndexPage = () => {
 	return (
