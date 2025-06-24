@@ -1,4 +1,5 @@
 import AnimatedSectionWrapper from '../components/layout/AnimatedSectionWrapper';
+import ExperienceSection from '../components/sections/ExperienceSection';
 import HeroSection from '../components/sections/HeroSection';
 import SummarySection from '../components/sections/SummarySection';
 
@@ -11,15 +12,9 @@ const IndexPage = () => {
 			<AnimatedSectionWrapper id="summary" bgColor="elevation-100">
 				<SummarySection />
 			</AnimatedSectionWrapper>
-			{/* 
-				3. Experience Section:
-				For each role:
-					Clear timeline
-					Company and position
-					Quantifiable achievements (metrics, percentages, outcomes)
-					Technologies utilized
-				Consider a visual timeline format
-				 */}
+			<AnimatedSectionWrapper id="experience">
+				<ExperienceSection />
+			</AnimatedSectionWrapper>
 			{/* 
 				4. Skills Section:
 				Group skills by category (Frontend, Backend, DevOps, etc.)
