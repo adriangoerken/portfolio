@@ -2,6 +2,7 @@ import AnimatedSectionWrapper from '../components/layout/AnimatedSectionWrapper'
 import HeroSection from '../components/sections/HeroSection';
 import SummarySection from '../components/sections/SummarySection';
 import ExperienceSection from '../components/sections/ExperienceSection';
+import SkillsSection from '../components/sections/SkillsSection';
 
 const IndexPage = () => {
 	return (
@@ -15,12 +16,10 @@ const IndexPage = () => {
 			<AnimatedSectionWrapper id="experience">
 				<ExperienceSection />
 			</AnimatedSectionWrapper>
-			{/* 
-				4. Skills Section:
-				Group skills by category (Frontend, Backend, DevOps, etc.)
-				Consider replacing progress bars with skill tags/badges with experience years
-				Add context about how you've applied key skills
-				*/}
+			<AnimatedSectionWrapper id="skills" bgColor="elevation-100">
+				<SkillsSection />
+			</AnimatedSectionWrapper>
+
 			{/* 
 				5. Projects Section:
 				Select 3-4 of your most impressive projects

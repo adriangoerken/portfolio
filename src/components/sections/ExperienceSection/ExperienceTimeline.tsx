@@ -21,7 +21,6 @@ const ExperienceTimeline = () => {
 				'PL/SQL',
 				'HTML',
 				'CSS',
-				'SCSS',
 			],
 		},
 		{
