@@ -4,6 +4,7 @@ import SummarySection from '../components/sections/SummarySection';
 import ExperienceSection from '../components/sections/ExperienceSection';
 import SkillsSection from '../components/sections/SkillsSection';
 import ProjectsSection from '../components/sections/ProjectsSections';
+import ContactSection from '../components/sections/ContactSection';
 
 const IndexPage = () => {
 	return (
@@ -23,13 +24,10 @@ const IndexPage = () => {
 			<AnimatedSectionWrapper id="projects">
 				<ProjectsSection />
 			</AnimatedSectionWrapper>
+			<AnimatedSectionWrapper id="contact" bgColor="elevation-100">
+				<ContactSection />
+			</AnimatedSectionWrapper>
 
-			{/* 
-				6. Contact Section 
-				Keep your current contact information
-				Consider adding a simple contact form
-				Highlight preferred contact method
-				*/}
 			{/* 
 				Responsive design: Ensure perfect viewing on mobile devices as many recruiters check portfolios on phones
 				

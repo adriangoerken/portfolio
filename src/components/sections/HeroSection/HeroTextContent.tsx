@@ -22,11 +22,12 @@ const HeroTextContent = () => {
 
 			{/* CTA Buttons */}
 			<div className="flex flex-wrap gap-4 justify-center md:justify-start">
-				<Button href="#projects" variant="primary">
+				<Button as="link" href="#projects" variant="primary">
 					Projekte
 					<span className="text-sm">→</span>
 				</Button>
 				<Button
+					as="link"
 					href="/adrian_goerken_lebenslauf.pdf"
 					variant="secondary"
 					target="_blank"
