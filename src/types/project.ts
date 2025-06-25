@@ -6,7 +6,7 @@ export type Project = {
 	contribution: string;
 	technologies: string[];
 	outcomes: string;
-	imageUrl?: string;
+	imageUrl: string;
 	demoUrl?: string;
 	repoUrl?: string;
 	isDemo: boolean;
