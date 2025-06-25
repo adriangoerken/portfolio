@@ -3,6 +3,7 @@ import HeroSection from '../components/sections/HeroSection';
 import SummarySection from '../components/sections/SummarySection';
 import ExperienceSection from '../components/sections/ExperienceSection';
 import SkillsSection from '../components/sections/SkillsSection';
+import ProjectsSection from '../components/sections/ProjectsSections';
 
 const IndexPage = () => {
 	return (
@@ -19,18 +20,10 @@ const IndexPage = () => {
 			<AnimatedSectionWrapper id="skills" bgColor="elevation-100">
 				<SkillsSection />
 			</AnimatedSectionWrapper>
+			<AnimatedSectionWrapper id="projects">
+				<ProjectsSection />
+			</AnimatedSectionWrapper>
 
-			{/* 
-				5. Projects Section:
-				Select 3-4 of your most impressive projects
-				For each project, highlight:
-				Problem solved
-				Your specific contribution
-				Technologies used
-				Outcomes/results
-				Screenshot/demo
-				Make links to live demos and code repositories prominent
-				 */}
 			{/* 
 				6. Contact Section 
 				Keep your current contact information
