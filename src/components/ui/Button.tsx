@@ -18,6 +18,7 @@ type ButtonAsLinkProps = ButtonBaseProps & {
 	href: string;
 	download?: string;
 	target?: string;
+	onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void; // Add onClick for links
 };
 
 type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps;
@@ -43,6 +44,7 @@ const Button = (props: ButtonProps) => {
 				href={props.href}
 				target={props.target}
 				download={props.download}
+				onClick={props.onClick} // Pass the onClick handler
 				className={combinedClasses}
 			>
 				{children}

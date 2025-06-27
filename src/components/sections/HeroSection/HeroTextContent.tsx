@@ -1,7 +1,10 @@
 import Button from '../../ui/Button';
 import { FaDownload } from 'react-icons/fa';
+import { useScrollToSection } from '../../../hooks/useScrollToSection';
 
 const HeroTextContent = () => {
+	const { scrollToSection } = useScrollToSection();
+
 	return (
 		<div className="w-full md:w-3/5 text-center md:text-left">
 			<span className="inline-block px-4 py-2 bg-blue-900 text-blue-200 rounded-full text-sm font-medium mb-4">
@@ -22,7 +25,12 @@ const HeroTextContent = () => {
 
 			{/* CTA Buttons */}
 			<div className="flex flex-wrap gap-4 justify-center md:justify-start">
-				<Button as="link" href="#projects" variant="primary">
+				<Button
+					as="link"
+					href="#projects"
+					variant="primary"
+					onClick={(e) => scrollToSection(e, 'projects')}
+				>
 					Projekte
 					<span className="text-sm">→</span>
 				</Button>

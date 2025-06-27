@@ -76,7 +76,7 @@ p {
 
 	/* Handle */
 	::-webkit-scrollbar-thumb {
-		background: #1f1f1f; /* Tailwind's bg-gray-600 */
+		background: #1d1d1d;
 	}
 
 	/* Handle on hover */
