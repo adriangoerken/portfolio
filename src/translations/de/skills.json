@@ -1,0 +1,19 @@
+{
+	"heading": "Fähigkeiten",
+	"description": "Im Laufe meiner Karriere habe ich ein breites Spektrum an Technologien gemeistert und setze diese ein, um skalierbare und wartbare Weblösungen zu entwickeln.",
+	"categories": {
+		"frontend": {
+			"name": "Frontend",
+			"description": "Entwicklung moderner, responsiver Benutzeroberflächen mit Fokus auf Zugänglichkeit und optimaler Benutzererfahrung."
+		},
+		"backend": {
+			"name": "Backend",
+			"description": "Erstellung robuster Server-Logik und APIs zur Unterstützung komplexer Webanwendungen."
+		},
+		"databases": {
+			"name": "Datenbanken",
+			"description": "Design und Optimierung von Datenbankstrukturen für effiziente Datenspeicherung und -abruf."
+		}
+	},
+	"toolsHeading": "Methoden & Tools"
+}

@@ -1,0 +1,18 @@
+{
+	"heading": "Summary",
+	"summaryText": "As a Frontend Developer, I transform complex requirements into intuitive, accessible web applications. With solid expertise in React, TypeScript and modern CSS frameworks, I develop scalable solutions that delight users and achieve business goals.",
+	"summaryHighlights": {
+		"1": {
+			"title": "Problem Solver",
+			"description": "Creative solutions for complex challenges"
+		},
+		"2": {
+			"title": "Technical Expert",
+			"description": "Modern technologies for optimal results"
+		},
+		"3": {
+			"title": "User-Focused",
+			"description": "Accessible and intuitive user experiences"
+		}
+	}
+}

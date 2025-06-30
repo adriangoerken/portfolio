@@ -1,3 +1,5 @@
+import { t } from 'i18next';
+
 type ProjectImageProps = {
 	imageUrl: string;
 	title: string;
@@ -10,7 +12,7 @@ const ProjectImage = ({ imageUrl, title, isDemo }: ProjectImageProps) => {
 			{
 				<img
 					src={imageUrl}
-					alt={`Screenshot des Projekts: ${title}`}
+					alt={`${t('projects:projectImage.alt')} ${title}`}
 					className="w-full h-full object-cover"
 				/>
 			}
@@ -18,7 +20,7 @@ const ProjectImage = ({ imageUrl, title, isDemo }: ProjectImageProps) => {
 			{/* Demo Badge */}
 			{isDemo && (
 				<div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-					Demo
+					{t('projects:projectImage.badge')}
 				</div>
 			)}
 		</div>

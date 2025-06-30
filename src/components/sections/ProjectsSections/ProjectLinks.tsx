@@ -1,4 +1,5 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { t } from 'i18next';
 
 type ProjectLinksProps = {
 	repoUrl?: string;
@@ -16,7 +17,7 @@ const ProjectLinks = ({ repoUrl, demoUrl }: ProjectLinksProps) => {
 					className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-md transition-colors"
 				>
 					<FaGithub />
-					Code
+					{t('projects:projectLinks.code')}
 				</a>
 			)}
 			{demoUrl && (
@@ -27,7 +28,7 @@ const ProjectLinks = ({ repoUrl, demoUrl }: ProjectLinksProps) => {
 					className="flex items-center gap-2 px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-md transition-colors"
 				>
 					<FaExternalLinkAlt />
-					Live Demo
+					{t('projects:projectLinks.demo')}
 				</a>
 			)}
 		</div>

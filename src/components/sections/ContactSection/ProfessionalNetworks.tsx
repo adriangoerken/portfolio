@@ -1,4 +1,5 @@
 import { NetworkContact } from '../../../types/contact';
+import { t } from 'i18next';
 
 type ProfessionalNetworksProps = {
 	professionalNetworks: NetworkContact[];
@@ -10,7 +11,9 @@ const ProfessionalNetworks = ({
 	return (
 		<div>
 			<h4 className="text-lg font-medium mb-3 text-blue-400">
-				Berufliche Netzwerke
+				{t(
+					'contact:subSections.contactInfo.professionalNetworks.heading'
+				)}
 			</h4>
 			<div className="space-y-3">
 				{professionalNetworks.map((network, index) => (

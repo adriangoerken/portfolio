@@ -1,4 +1,5 @@
 import { Experience } from '../../../types/experience';
+import { t } from 'i18next';
 import TimelineItem from '../../ui/TimelineItem';
 
 const ExperienceTimeline = () => {
@@ -6,13 +7,13 @@ const ExperienceTimeline = () => {
 		{
 			id: 1,
 			period: '09/2021 – 11/2024',
-			title: 'Fullstack Webentwickler',
-			company: 'KBU Logistik AG',
-			location: 'Bremen',
+			title: t('experience:experiences.1.title'),
+			company: t('experience:experiences.1.company'),
+			location: t('experience:experiences.1.location'),
 			achievements: [
-				'Entwicklung einer webbasierten Anwendung auf Handterminals zur Navigation und Auftragsabwicklung im Lager, integriert mit der firmeneigenen Lagerverwaltungssoftware',
-				'Entwicklung von webbasierten Dashboards zur Echtzeit-Visualisierung von Lagerdaten',
-				'Entwicklung von Datenbankanwendungen in PLSQL/Oracle für das Backend',
+				t('experience:experiences.1.achievements.1'),
+				t('experience:experiences.1.achievements.2'),
+				t('experience:experiences.1.achievements.3'),
 			],
 			technologies: [
 				'JavaScript',
@@ -26,25 +27,25 @@ const ExperienceTimeline = () => {
 		{
 			id: 2,
 			period: '06/2021 – 06/2021',
-			title: 'Praktikum als Junior PHP-Entwickler',
-			company: 'EARSandEYES',
-			location: 'Hamburg',
+			title: t('experience:experiences.2.title'),
+			company: t('experience:experiences.2.company'),
+			location: t('experience:experiences.2.location'),
 			achievements: [
-				'Programmierung eines Beispielblogs mit PHP, HTML, JavaScript und CSS',
-				'Lösen verschiedener Programmieraufgaben in PHP zur Vertiefung meiner Kenntnisse und zur Verbesserung meiner Problemlösungsfähigkeiten',
+				t('experience:experiences.2.achievements.1'),
+				t('experience:experiences.2.achievements.2'),
 			],
 			technologies: ['PHP', 'HTML', 'CSS', 'JavaScript'],
 		},
 		{
 			id: 3,
 			period: '08/2018 – 06/2021',
-			title: 'Ausbildung zum Fachinformatiker für Anwendungsentwicklung',
-			company: 'Theodor-Schäfer-Berufsbildungswerk',
-			location: 'Husum',
+			title: t('experience:experiences.3.title'),
+			company: t('experience:experiences.3.company'),
+			location: t('experience:experiences.3.location'),
 			achievements: [
-				'Erwerb fundierter Kenntnisse in HTML, CSS, PHP, JavaScript und relationalen Datenbanken wie MySQL',
-				'Erwerb grundlegender Kenntnisse in agiler Softwareentwicklung nach SCRUM',
-				'Abschlussnote: 2,3',
+				t('experience:experiences.3.achievements.1'),
+				t('experience:experiences.3.achievements.2'),
+				t('experience:experiences.3.achievements.3'),
 			],
 			technologies: [
 				'HTML',

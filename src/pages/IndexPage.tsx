@@ -29,8 +29,7 @@ const IndexPage = () => {
 			</AnimatedSectionWrapper>
 
 			{/* 				
-				TODO: Privcacy Policy Page and Imprint Page.
-				TODO: Translation for all sections.				
+				TODO: Privcacy Policy Page and Imprint Page.				
 				TODO: Refactor (break down large components into smaller ones, comments, spaces between min-sections etc.).
 				Responsive design: Ensure perfect viewing on mobile devices as many recruiters check portfolios on phones
 				

@@ -1,29 +1,27 @@
 import { getSkillsByCategory } from '../../../config/skillsData';
 import { FaCode, FaServer, FaDatabase } from 'react-icons/fa';
 import SectionHeading from '../../ui/SectionHeading';
+import { t } from 'i18next';
 import SkillCategory from './SkillCategory';
 import Tools from './Tools';
 
 const SkillsSection = () => {
 	const skillCategories = [
 		{
-			title: 'Frontend',
-			description:
-				'Entwicklung moderner, responsiver Benutzeroberflächen mit Fokus auf Zugänglichkeit und optimaler Benutzererfahrung.',
+			title: t('skills:categories.frontend.name'),
+			description: t('skills:categories.frontend.description'),
 			skills: getSkillsByCategory().frontend,
 			icon: <FaCode />,
 		},
 		{
-			title: 'Backend',
-			description:
-				'Erstellung robuster Server-Logik und APIs zur Unterstützung komplexer Webanwendungen.',
+			title: t('skills:categories.backend.name'),
+			description: t('skills:categories.backend.description'),
 			skills: getSkillsByCategory().backend,
 			icon: <FaServer />,
 		},
 		{
-			title: 'Datenbanken',
-			description:
-				'Design und Optimierung von Datenbankstrukturen für effiziente Datenspeicherung und -abruf.',
+			title: t('skills:categories.databases.name'),
+			description: t('skills:categories.databases.description'),
 			skills: getSkillsByCategory().database,
 			icon: <FaDatabase />,
 		},
@@ -31,13 +29,11 @@ const SkillsSection = () => {
 
 	return (
 		<div aria-labelledby="skills-heading">
-			<SectionHeading id="skills-heading">Fähigkeiten</SectionHeading>
+			<SectionHeading id="skills-heading">
+				{t('skills:heading')}
+			</SectionHeading>
 
-			<p className="mb-10 text-center">
-				Im Laufe meiner Karriere habe ich ein breites Spektrum an
-				Technologien gemeistert und setze diese ein, um skalierbare und
-				wartbare Weblösungen zu entwickeln.
-			</p>
+			<p className="mb-10 text-center">{t('skills:description')}</p>
 
 			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 				{skillCategories.map((category) => (

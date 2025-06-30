@@ -1,0 +1,19 @@
+{
+	"heading": "Skills",
+	"description": "Throughout my career, I have mastered a wide spectrum of technologies and use them to develop scalable and maintainable web solutions.",
+	"categories": {
+		"frontend": {
+			"name": "Frontend",
+			"description": "Development of modern, responsive user interfaces with a focus on accessibility and optimal user experience."
+		},
+		"backend": {
+			"name": "Backend",
+			"description": "Creation of robust server logic and APIs to support complex web applications."
+		},
+		"databases": {
+			"name": "Databases",
+			"description": "Design and optimization of database structures for efficient data storage and retrieval."
+		}
+	},
+	"toolsHeading": "Methods & Tools"
+}

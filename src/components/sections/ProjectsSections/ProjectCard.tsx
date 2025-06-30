@@ -1,5 +1,6 @@
 import { Project } from '../../../types/project';
 import { motion } from 'framer-motion';
+import { t } from 'i18next';
 import ProjectImage from './ProjectImage';
 import ProjectDetails from './ProjectDetails';
 import ProjectTechnologies from './ProjectTechnologies';
@@ -20,20 +21,20 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 		>
 			<ProjectImage
 				imageUrl={project.imageUrl}
-				title={project.title}
+				title={t(project.title)}
 				isDemo={project.isDemo}
 			/>
 			{/* Project Content */}
 			<div className="p-6">
 				<h3 className="text-xl font-bold mb-3 text-white">
-					{project.title}
+					{t(project.title)}
 				</h3>
-				<p className="text-gray-300 mb-4">{project.description}</p>
+				<p className="text-gray-300 mb-4">{t(project.description)}</p>
 
 				<ProjectDetails
-					problem={project.problem}
-					contribution={project.contribution}
-					outcomes={project.outcomes}
+					problem={t(project.problem)}
+					contribution={t(project.contribution)}
+					outcomes={t(project.outcomes)}
 				/>
 				<ProjectTechnologies technologies={project.technologies} />
 				<ProjectLinks

@@ -1,0 +1,18 @@
+{
+	"heading": "Profil",
+	"summaryText": "Als Frontend-Entwickler verwandle ich komplexe Anforderungen in intuitive, barrierefreie Webanwendungen. Mit fundierter Expertise in React, TypeScript und modernen CSS-Frameworks entwickle ich skalierbare Lösungen, die Nutzer begeistern und Geschäftsziele erreichen.",
+	"summaryHighlights": {
+		"1": {
+			"title": "Problemlöser",
+			"description": "Kreative Lösungen für komplexe Herausforderungen"
+		},
+		"2": {
+			"title": "Technischer Experte",
+			"description": "Moderne Technologien für optimale Ergebnisse"
+		},
+		"3": {
+			"title": "Nutzerorientiert",
+			"description": "Barrierefreie und intuitive Benutzererfahrungen"
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"heading": "Kontakt",
+	"description": "Ich freue mich über Ihre Kontaktaufnahme und bin offen für neue Herausforderungen. Am schnellsten erreichen Sie mich per E-Mail.",
+	"subSections": {
+		"contactInfo": {
+			"heading": "Kontaktdaten",
+			"primaryContacts": {
+				"email": { "label": "E-Mail" },
+				"phone": { "label": "Telefon" }
+			},
+			"professionalNetworks": {
+				"heading": "Berufliche Netzwerke"
+			},
+			"socialNetworks": {
+				"heading": "Soziale Netzwerke"
+			}
+		},
+		"contactForm": {
+			"heading": "Nachricht senden",
+			"labels": {
+				"name": "Name",
+				"email": "E-Mail",
+				"message": "Nachricht"
+			},
+			"submitButton": "Senden",
+			"disclaimer": "* Dieses Kontaktformular ist aktuell nur ein Designelement und funktioniert noch nicht. Bitte nutzen Sie die angegebenen Kontaktdaten für eine Nachricht.",
+			"disclaimerToast": "Dieses Kontaktformular funktioniert aktuell noch nicht. Bitte die angegebenen Kontaktdaten nutzen."
+		}
+	}
+}

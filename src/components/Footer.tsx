@@ -3,6 +3,7 @@ import Container from './layout/Container';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import SocialLink from './ui/SocialLink';
 import { useScrollToSection } from '../hooks/useScrollToSection';
+import { t } from 'i18next';
 
 const BrandingSection = () => {
 	const { scrollToTop } = useScrollToSection();
@@ -26,13 +27,13 @@ const LinksSection = () => (
 			to="/imprint"
 			className="text-gray-300 hover:text-blue-400 transition-colors"
 		>
-			Impressum
+			{t('footer:links.imprint')}
 		</Link>
 		<Link
 			to="/privacy-policy"
 			className="text-gray-300 hover:text-blue-400 transition-colors"
 		>
-			Datenschutz
+			{t('footer:links.privacyPolicy')}
 		</Link>
 	</div>
 );
@@ -58,7 +59,7 @@ const CopyrightSection = () => {
 	const currentYear = new Date().getFullYear();
 	return (
 		<div className="mt-8 pt-6 border-t border-gray-800 text-center text-gray-400 text-sm">
-			© {currentYear} Adrian Goerken. Alle Rechte vorbehalten.
+			© {currentYear} Adrian Goerken. {t('footer:copyright')}
 		</div>
 	);
 };

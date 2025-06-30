@@ -7,6 +7,7 @@ import {
 } from 'react-icons/fa';
 import { SiMastodon, SiBluesky } from 'react-icons/si';
 import SectionHeading from '../../ui/SectionHeading';
+import { t } from 'i18next';
 import ContactForm from './ContactForm';
 import ContactInfoCard from './ContactInfoCard';
 
@@ -15,14 +16,18 @@ const ContactSection = () => {
 	const primaryContacts = [
 		{
 			icon: <FaEnvelope className="text-blue-500" />,
-			label: 'E-Mail',
+			label: t(
+				'contact:subSections.contactInfo.primaryContacts.email.label'
+			),
 			value: 'adrian.goerken@proton.me',
 			href: 'mailto:adrian.goerken@proton.me',
 			isPrimary: true,
 		},
 		{
 			icon: <FaPhone className="text-green-500" />,
-			label: 'Telefon',
+			label: t(
+				'contact:subSections.contactInfo.primaryContacts.phone.label'
+			),
 			value: '+49 152 0330 4956',
 			href: 'tel:+4915203304956',
 			isPrimary: false,
@@ -69,14 +74,12 @@ const ContactSection = () => {
 
 	return (
 		<div aria-labelledby="contact-heading">
-			<SectionHeading id="contact-heading">Kontakt</SectionHeading>
+			<SectionHeading id="contact-heading">
+				{t('contact:heading')}
+			</SectionHeading>
 
 			<div className="max-w-3xl mx-auto">
-				<p className="text-center mb-10">
-					Ich freue mich über Ihre Kontaktaufnahme und bin offen für
-					neue Herausforderungen. Am schnellsten erreichen Sie mich
-					per E-Mail.
-				</p>
+				<p className="text-center mb-10">{t('contact:description')}</p>
 
 				<div className="grid md:grid-cols-2 gap-8">
 					<ContactInfoCard

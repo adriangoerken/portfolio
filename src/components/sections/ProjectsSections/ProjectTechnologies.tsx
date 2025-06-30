@@ -1,3 +1,5 @@
+import { t } from 'i18next';
+
 type ProjectTechnologiesProps = {
 	technologies: string[];
 };
@@ -6,7 +8,7 @@ const ProjectTechnologies = ({ technologies }: ProjectTechnologiesProps) => {
 	return (
 		<div className="mb-6">
 			<h4 className="text-blue-400 text-sm font-medium mb-2">
-				Technologien:
+				{t('projects:projectTechnologies.heading')}
 			</h4>
 			<div className="flex flex-wrap gap-2">
 				{technologies.map((tech, index) => (

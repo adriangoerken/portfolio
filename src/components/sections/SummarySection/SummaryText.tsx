@@ -1,13 +1,7 @@
+import { t } from 'i18next';
+
 const SummaryText = () => {
-	return (
-		<p className="mb-6">
-			Als Frontend-Entwickler verwandle ich komplexe Anforderungen in
-			intuitive, barrierefreie Webanwendungen. Mit fundierter Expertise in
-			React, TypeScript und modernen CSS-Frameworks entwickle ich
-			skalierbare Lösungen, die Nutzer begeistern und Geschäftsziele
-			erreichen.
-		</p>
-	);
+	return <p className="mb-6">{t('summary:summaryText')}</p>;
 };
 
 export default SummaryText;

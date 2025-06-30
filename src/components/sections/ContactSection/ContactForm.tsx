@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { t } from 'i18next';
 import Textfield from '../../ui/Textfield';
 import Textarea from '../../ui/Textarea';
 import Button from '../../ui/Button';
@@ -13,9 +14,7 @@ const ContactForm = () => {
 			formData.get('message')
 		);
 
-		toast.error(
-			'Dieses Kontaktformular funktioniert aktuell noch nicht. Bitte die angegebenen Kontaktdaten nutzen.'
-		);
+		toast.error(t('contact:subSections.contactForm.disclaimerToast'));
 	};
 
 	return (
@@ -27,21 +26,31 @@ const ContactForm = () => {
 			transition={{ duration: 0.5, delay: 0.2 }}
 		>
 			<h3 className="text-xl font-semibold mb-6 text-white">
-				Nachricht senden
+				{t('contact:subSections.contactForm.heading')}
 			</h3>
 
 			<form action={formAction} className="space-y-4">
-				<Textfield id="name" name="name" label="Name" />
-				<Textfield id="email" name="email" label="E-Mail" />
-				<Textarea id="message" name="message" label="Nachricht" />
+				<Textfield
+					id="name"
+					name="name"
+					label={t('contact:subSections.contactForm.labels.name')}
+				/>
+				<Textfield
+					id="email"
+					name="email"
+					label={t('contact:subSections.contactForm.labels.email')}
+				/>
+				<Textarea
+					id="message"
+					name="message"
+					label={t('contact:subSections.contactForm.labels.message')}
+				/>
 				<Button variant="primary" type="submit" fullWidth={true}>
-					Senden
+					{t('contact:subSections.contactForm.submitButton')}
 				</Button>
 
 				<p className="text-xs text-gray-400 mt-2">
-					* Dieses Kontaktformular ist aktuell nur ein Designelement
-					und funktioniert noch nicht. Bitte nutzen Sie die
-					angegebenen Kontaktdaten für eine Nachricht.
+					{t('contact:subSections.contactForm.disclaimer')}
 				</p>
 			</form>
 		</motion.div>

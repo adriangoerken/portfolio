@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import Button from '../../ui/Button';
 import { FaDownload } from 'react-icons/fa';
 import { useScrollToSection } from '../../../hooks/useScrollToSection';
@@ -8,19 +9,17 @@ const HeroTextContent = () => {
 	return (
 		<div className="w-full md:w-3/5 text-center md:text-left">
 			<span className="inline-block px-4 py-2 bg-blue-900 text-blue-200 rounded-full text-sm font-medium mb-4">
-				#OpenToWork
+				{t('hero:textContent.badge')}
 			</span>
 
 			{/* Headline */}
 			<h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-				Frontend Entwickler mit 7 Jahren Erfahrung
+				{t('hero:textContent.headline')}
 			</h1>
 
 			{/* Value Proposition */}
 			<p className="text-xl text-gray-300 mb-8">
-				Ich übersetze Geschäftsanforderungen in skalierbaren, wartbaren
-				Code. Spezialisiert auf die Reduzierung von Komplexität und die
-				Lieferung von Projekten, die die Erwartungen übertreffen.
+				{t('hero:textContent.valueProposition')}
 			</p>
 
 			{/* CTA Buttons */}
@@ -31,7 +30,7 @@ const HeroTextContent = () => {
 					variant="primary"
 					onClick={(e) => scrollToSection(e, 'projects')}
 				>
-					Projekte
+					{t('hero:textContent.ctaButtons.projects')}
 					<span className="text-sm">→</span>
 				</Button>
 				<Button
@@ -40,7 +39,7 @@ const HeroTextContent = () => {
 					variant="secondary"
 					target="_blank"
 				>
-					Lebenslauf
+					{t('hero:textContent.ctaButtons.downloadResume')}
 					<FaDownload size={16} />
 				</Button>
 			</div>

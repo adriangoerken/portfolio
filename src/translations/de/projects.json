@@ -1,0 +1,29 @@
+{
+	"heading": "Projekte",
+	"description": "Hier sind einige meiner wichtigsten Projekte, die meine Fähigkeiten und Erfahrungen demonstrieren.",
+	"projectImage": {
+		"alt": "Screenshot des Projekts:",
+		"badge": "Demo"
+	},
+	"projectDetails": {
+		"heading1": "Problem:",
+		"heading2": "Beitrag:",
+		"heading3": "Ergebnisse:"
+	},
+	"projectTechnologies": {
+		"heading": "Technologien:"
+	},
+	"projectLinks": {
+		"code": "Code",
+		"demo": "Demo"
+	},
+	"projects": {
+		"1": {
+			"title": "Portfolio Webseite",
+			"description": "Moderne, responsive Portfolio-Webseite entwickelt mit React, TypeScript und Tailwind CSS.",
+			"problem": "Erstellung einer professionellen Online-Präsenz, um meine Fähigkeiten und Projekte effektiv zu präsentieren.",
+			"contribution": "Design und Entwicklung der gesamten Webseite vom Konzept bis zur Bereitstellung mit Fokus auf Leistung und Barrierefreiheit.",
+			"outcomes": "Eine leistungsstarke, barrierefreie Portfolio-Webseite mit Unterstützung für Mehrsprachigkeit und flüssigen Animationen."
+		}
+	}
+}

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { t } from 'i18next';
 import PrimaryContacts from './PrimaryContacts';
 import { NetworkContact, PrimaryContact } from '../../../types/contact';
 import ProfessionalNetworks from './ProfessionalNetworks';
@@ -24,7 +25,7 @@ const ContactInfoCard = ({
 			transition={{ duration: 0.5 }}
 		>
 			<h3 className="text-xl font-semibold mb-6 text-white">
-				Kontaktdaten
+				{t('contact:subSections.contactInfo.heading')}
 			</h3>
 
 			<div className="space-y-8">

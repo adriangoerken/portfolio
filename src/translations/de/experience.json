@@ -1,0 +1,34 @@
+{
+	"heading": "Berufserfahrung",
+	"experiences": {
+		"1": {
+			"title": "Fullstack Webentwickler",
+			"company": "KBU Logistik AG",
+			"location": "Bremen",
+			"achievements": {
+				"1": "Entwicklung einer webbasierten Anwendung auf Handterminals zur Navigation und Auftragsabwicklung im Lager, integriert mit der firmeneigenen Lagerverwaltungssoftware",
+				"2": "Entwicklung von webbasierten Dashboards zur Echtzeit-Visualisierung von Lagerdaten",
+				"3": "Entwicklung von Datenbankanwendungen in PLSQL/Oracle für das Backend"
+			}
+		},
+		"2": {
+			"title": "Praktikum als Junior PHP-Entwickler",
+			"company": "EARSandEYES",
+			"location": "Hamburg",
+			"achievements": {
+				"1": "Programmierung eines Beispielblogs mit PHP, HTML, JavaScript und CSS",
+				"2": "Lösen verschiedener Programmieraufgaben in PHP zur Vertiefung meiner Kenntnisse und zur Verbesserung meiner Problemlösungsfähigkeiten"
+			}
+		},
+		"3": {
+			"title": "Ausbildung zum Fachinformatiker für Anwendungsentwicklung",
+			"company": "Theodor-Schäfer-Berufsbildungswerk",
+			"location": "Husum",
+			"achievements": {
+				"1": "Erwerb fundierter Kenntnisse in HTML, CSS, PHP, JavaScript und relationalen Datenbanken wie MySQL",
+				"2": "Erwerb grundlegender Kenntnisse in agiler Softwareentwicklung nach SCRUM",
+				"3": "Abschlussnote: 2,3"
+			}
+		}
+	}
+}

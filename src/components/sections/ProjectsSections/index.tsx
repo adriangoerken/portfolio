@@ -1,16 +1,16 @@
 import SectionHeading from '../../ui/SectionHeading';
+import { t } from 'i18next';
 import { projects } from '../../../config/projectsData';
 import ProjectCard from './ProjectCard';
 
 const ProjectsSection = () => {
 	return (
 		<div aria-labelledby="projects-heading">
-			<SectionHeading id="projects-heading">Projekte</SectionHeading>
+			<SectionHeading id="projects-heading">
+				{t('projects:heading')}
+			</SectionHeading>
 
-			<p className="mb-10 text-center">
-				Hier sind einige meiner wichtigsten Projekte, die meine
-				Fähigkeiten und Erfahrungen demonstrieren.
-			</p>
+			<p className="mb-10 text-center">{t('projects:description')}</p>
 
 			<div className="grid md:grid-cols-2 gap-8">
 				{projects

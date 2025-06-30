@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { t } from 'i18next';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Container from '../layout/Container';
 import NavBrand from './NavBrand';
@@ -13,12 +14,12 @@ const NavBar = () => {
 	const isHomepage = location.pathname === '/';
 
 	const navLinks = [
-		{ name: '', href: '#hero' },
-		{ name: 'Profil', href: '#summary' },
-		{ name: 'Erfahrung', href: '#experience' },
-		{ name: 'Fähigkeiten', href: '#skills' },
-		{ name: 'Projekte', href: '#projects' },
-		{ name: 'Kontakt', href: '#contact' },
+		{ name: t('navbar:navLinks.home'), href: '#hero' },
+		{ name: t('navbar:navLinks.profile'), href: '#summary' },
+		{ name: t('navbar:navLinks.experience'), href: '#experience' },
+		{ name: t('navbar:navLinks.skills'), href: '#skills' },
+		{ name: t('navbar:navLinks.projects'), href: '#projects' },
+		{ name: t('navbar:navLinks.contact'), href: '#contact' },
 	];
 
 	const { activeSection, handleSmoothScroll } = useActiveSection(
@@ -53,7 +54,11 @@ const NavBar = () => {
 					<button
 						className="md:hidden text-white focus:outline-none"
 						onClick={() => setIsOpen(!isOpen)}
-						aria-label={isOpen ? 'Close menu' : 'Open menu'}
+						aria-label={
+							isOpen
+								? t('navbar:btnMobileCloseAria')
+								: t('navbar:btnMobileCloseAria')
+						}
 					>
 						{isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
 					</button>
