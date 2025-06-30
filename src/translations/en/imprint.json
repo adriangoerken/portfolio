@@ -1,0 +1,25 @@
+{
+	"title": "Imprint",
+	"contactInfo": {
+		"heading": "Information According to German TMG",
+		"address": {
+			"country": "Germany"
+		},
+		"contact": "Contact",
+		"email": "Email",
+		"phone": "Phone"
+	},
+	"liability": {
+		"heading": "Disclaimer",
+		"contentResponsibility": "As service provider, I am responsible for my own content on these pages according to § 7 paragraph 1 TMG. However, according to §§ 8 to 10 TMG, I am not obligated to monitor transmitted or stored information or to investigate circumstances that indicate illegal activity.",
+		"externalLinks": "My responsibility for linked external websites is limited to checking the content for possible legal violations at the time of linking. Should I become aware of any legal violations, I will remove such links immediately."
+	},
+	"copyright": {
+		"heading": "Copyright",
+		"notice": "The content and works created by the site operator on these pages are subject to German copyright law. The duplication, processing, distribution, and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use."
+	},
+	"dataProtectionOfficer": {
+		"heading": "Data Protection Officer",
+		"note": "Given the nature and size of this website, appointing a dedicated data protection officer is not required."
+	}
+}

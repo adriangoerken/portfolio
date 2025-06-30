@@ -1,0 +1,86 @@
+{
+	"title": "Privacy Policy",
+	"intro": {
+		"heading": "Overview",
+		"responsible": "Data Controller: Adrian Goerken, Wollgrasweg 3, 26676 Barßel, Germany",
+		"description": "This Privacy Policy describes how your personal information is collected, used, and shared when you visit adriangoerken.de (the 'Website')."
+	},
+	"dataCollection": {
+		"heading": "Information We Collect",
+		"serverLogs": {
+			"heading": "Server Logs",
+			"description": "When you visit our website, our servers automatically log standard data provided by your web browser. This may include:",
+			"ip": "Your IP address",
+			"date": "Date and time of access",
+			"browser": "Your browser type and version",
+			"os": "Your operating system",
+			"referrer": "The website you came from (referrer URL)",
+			"purpose": "This server log data is collected for the purpose of administering the site, analyzing site usage and improving user experience. We retain this data for up to 14 days."
+		}
+	},
+	"contactForm": {
+		"heading": "Contact Form",
+		"description": "When you use our contact form, we collect the following personal information:",
+		"name": "Your name",
+		"email": "Your email address",
+		"message": "The content of your message",
+		"storage": "This information is transmitted via encrypted connection and stored on our server at Hetzner. We use this information solely to respond to your inquiry.",
+		"deletion": "Your contact information and messages will be stored for as long as necessary to respond to your inquiry and for up to 6 months afterwards for reference purposes, unless legal obligations require a longer retention period."
+	},
+	"github": {
+		"heading": "GitHub",
+		"description": "The source code of this website is stored on GitHub and is deployed automatically when changes are pushed to the main branch. GitHub may collect technical information related to the deployment process but does not process any personal data from website visitors.",
+		"privacyPolicy": "For more information about GitHub's data practices, please see their privacy policy"
+	},
+	"cloudflare": {
+		"heading": "Cloudflare Pages",
+		"description": "This website is hosted on Cloudflare Pages, a hosting platform provided by Cloudflare, Inc. Cloudflare Pages processes your IP address and other connection data necessary to deliver the website content to your browser.",
+		"privacyPolicy": "For more information on how Cloudflare handles your data, please refer to Cloudflare's privacy policy"
+	},
+	"hetzner": {
+		"heading": "Hetzner",
+		"description": "Only the backend systems that process contact form submissions are hosted by Hetzner Online GmbH. Contact form data is stored in data centers within the European Union.",
+		"privacyPolicy": "For more information about Hetzner's data processing practices, please see their privacy policy"
+	},
+	"cookies": {
+		"heading": "Cookies & Local Storage",
+		"description": "This website uses only technically necessary cookies that are essential for the functionality of the site. We use local storage to remember your language preference. No tracking or marketing cookies are used."
+	},
+	"userRights": {
+		"heading": "Your Rights",
+		"description": "Under the General Data Protection Regulation (GDPR), you have the following rights regarding your personal data:",
+		"access": {
+			"heading": "Right of access",
+			"description": "You can request a copy of the personal data we hold about you."
+		},
+		"rectification": {
+			"heading": "Right to rectification",
+			"description": "You can request that we correct any inaccurate or incomplete personal data."
+		},
+		"deletion": {
+			"heading": "Right to erasure",
+			"description": "You can request that we delete your personal data under certain conditions."
+		},
+		"restriction": {
+			"heading": "Right to restrict processing",
+			"description": "You can request that we restrict the processing of your personal data under certain conditions."
+		},
+		"objection": {
+			"heading": "Right to object",
+			"description": "You can object to our processing of your personal data under certain conditions."
+		},
+		"portability": {
+			"heading": "Right to data portability",
+			"description": "You can request that we transfer your personal data to another organization or directly to you."
+		}
+	},
+	"changes": {
+		"heading": "Changes to this Privacy Policy",
+		"description": "We may update this privacy policy from time to time in order to reflect changes to our practices or for other operational, legal, or regulatory reasons. The current version will always be available on this website."
+	},
+	"contact": {
+		"heading": "Contact",
+		"description": "If you have any questions about this Privacy Policy or our data practices, please contact us:"
+	},
+	"lastUpdated": "Last Updated"
+}

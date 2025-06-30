@@ -26,6 +26,10 @@ import contact_en from './translations/en/contact.json';
 import contact_de from './translations/de/contact.json';
 import footer_en from './translations/en/footer.json';
 import footer_de from './translations/de/footer.json';
+import imprint_en from './translations/en/imprint.json';
+import imprint_de from './translations/de/imprint.json';
+import privacypolicy_en from './translations/en/privacypolicy.json';
+import privacypolicy_de from './translations/de/privacypolicy.json';
 
 const initialLanguage = getLanguage().substring(0, 2);
 
@@ -44,6 +48,8 @@ i18next.init({
 			projects: projects_en,
 			contact: contact_en,
 			footer: footer_en,
+			imprint: imprint_en,
+			privacypolicy: privacypolicy_en,
 		},
 		de: {
 			global: global_de,
@@ -55,6 +61,8 @@ i18next.init({
 			projects: projects_de,
 			contact: contact_de,
 			footer: footer_de,
+			imprint: imprint_de,
+			privacypolicy: privacypolicy_de,
 		},
 	},
 });

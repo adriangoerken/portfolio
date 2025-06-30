@@ -1,0 +1,86 @@
+{
+	"title": "Datenschutzerklärung",
+	"intro": {
+		"heading": "Übersicht",
+		"responsible": "Verantwortlicher für die Datenverarbeitung: Adrian Goerken, Wollgrasweg 3, 26676 Barßel, Deutschland",
+		"description": "Diese Datenschutzerklärung beschreibt, wie Ihre personenbezogenen Daten erfasst, verwendet und weitergegeben werden, wenn Sie adriangoerken.de (die 'Website') besuchen."
+	},
+	"dataCollection": {
+		"heading": "Informationen, die wir sammeln",
+		"serverLogs": {
+			"heading": "Serverprotokolle",
+			"description": "Wenn Sie unsere Website besuchen, protokollieren unsere Server automatisch Standarddaten, die von Ihrem Webbrowser bereitgestellt werden. Dies kann Folgendes umfassen:",
+			"ip": "Ihre IP-Adresse",
+			"date": "Datum und Uhrzeit des Zugriffs",
+			"browser": "Ihr Browsertyp und -version",
+			"os": "Ihr Betriebssystem",
+			"referrer": "Die Website, von der Sie kamen (Referrer-URL)",
+			"purpose": "Diese Serverprotokolldaten werden zum Zweck der Administration der Website, zur Analyse der Websitenutzung und zur Verbesserung der Benutzererfahrung erhoben. Wir bewahren diese Daten bis zu 14 Tage lang auf."
+		}
+	},
+	"contactForm": {
+		"heading": "Kontaktformular",
+		"description": "Wenn Sie unser Kontaktformular nutzen, erheben wir folgende personenbezogene Daten:",
+		"name": "Ihren Namen",
+		"email": "Ihre E-Mail-Adresse",
+		"message": "Den Inhalt Ihrer Nachricht",
+		"storage": "Diese Informationen werden über eine verschlüsselte Verbindung übertragen und auf unserem Server bei Hetzner gespeichert. Wir verwenden diese Informationen ausschließlich, um auf Ihre Anfrage zu antworten.",
+		"deletion": "Ihre Kontaktinformationen und Nachrichten werden so lange gespeichert, wie es für die Beantwortung Ihrer Anfrage erforderlich ist und bis zu 6 Monate danach zu Referenzzwecken, es sei denn, gesetzliche Verpflichtungen erfordern eine längere Aufbewahrungsfrist."
+	},
+	"github": {
+		"heading": "GitHub",
+		"description": "Der Quellcode dieser Website wird auf GitHub gespeichert und automatisch bereitgestellt, wenn Änderungen an den Hauptzweig übertragen werden. GitHub kann technische Informationen im Zusammenhang mit dem Bereitstellungsprozess sammeln, verarbeitet jedoch keine personenbezogenen Daten von Website-Besuchern.",
+		"privacyPolicy": "Weitere Informationen zu den Datenpraktiken von GitHub finden Sie in deren Datenschutzrichtlinie"
+	},
+	"cloudflare": {
+		"heading": "Cloudflare Pages",
+		"description": "Diese Website wird auf Cloudflare Pages gehostet, einer Hosting-Plattform von Cloudflare, Inc. Cloudflare Pages verarbeitet Ihre IP-Adresse und andere Verbindungsdaten, die erforderlich sind, um den Website-Inhalt an Ihren Browser zu übermitteln.",
+		"privacyPolicy": "Weitere Informationen zur Verarbeitung Ihrer Daten durch Cloudflare finden Sie in der Datenschutzrichtlinie von Cloudflare"
+	},
+	"hetzner": {
+		"heading": "Hetzner",
+		"description": "Nur die Backend-Systeme zur Verarbeitung der Kontaktformular-Übermittlungen werden von der Hetzner Online GmbH gehostet. Die Daten aus Kontaktformularen werden in Rechenzentren innerhalb der Europäischen Union gespeichert.",
+		"privacyPolicy": "Weitere Informationen über die Datenverarbeitungspraktiken von Hetzner finden Sie in deren Datenschutzerklärung"
+	},
+	"cookies": {
+		"heading": "Cookies & lokaler Speicher",
+		"description": "Diese Website verwendet nur technisch notwendige Cookies, die für die Funktionalität der Website unerlässlich sind. Wir verwenden den lokalen Speicher, um Ihre Spracheinstellung zu speichern. Es werden keine Tracking- oder Marketing-Cookies verwendet."
+	},
+	"userRights": {
+		"heading": "Ihre Rechte",
+		"description": "Gemäß der Datenschutz-Grundverordnung (DSGVO) haben Sie folgende Rechte in Bezug auf Ihre personenbezogenen Daten:",
+		"access": {
+			"heading": "Recht auf Auskunft",
+			"description": "Sie können eine Kopie der personenbezogenen Daten anfordern, die wir über Sie gespeichert haben."
+		},
+		"rectification": {
+			"heading": "Recht auf Berichtigung",
+			"description": "Sie können verlangen, dass wir unrichtige oder unvollständige personenbezogene Daten korrigieren."
+		},
+		"deletion": {
+			"heading": "Recht auf Löschung",
+			"description": "Sie können unter bestimmten Bedingungen verlangen, dass wir Ihre personenbezogenen Daten löschen."
+		},
+		"restriction": {
+			"heading": "Recht auf Einschränkung der Verarbeitung",
+			"description": "Sie können unter bestimmten Bedingungen verlangen, dass wir die Verarbeitung Ihrer personenbezogenen Daten einschränken."
+		},
+		"objection": {
+			"heading": "Widerspruchsrecht",
+			"description": "Sie können unter bestimmten Bedingungen der Verarbeitung Ihrer personenbezogenen Daten durch uns widersprechen."
+		},
+		"portability": {
+			"heading": "Recht auf Datenübertragbarkeit",
+			"description": "Sie können verlangen, dass wir Ihre personenbezogenen Daten an eine andere Organisation oder direkt an Sie übermitteln."
+		}
+	},
+	"changes": {
+		"heading": "Änderungen dieser Datenschutzerklärung",
+		"description": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren, um Änderungen unserer Praktiken oder aus anderen betrieblichen, rechtlichen oder regulatorischen Gründen widerzuspiegeln. Die aktuelle Version ist stets auf dieser Website verfügbar."
+	},
+	"contact": {
+		"heading": "Kontakt",
+		"description": "Wenn Sie Fragen zu dieser Datenschutzerklärung oder unseren Datenpraktiken haben, kontaktieren Sie uns bitte:"
+	},
+	"lastUpdated": "Zuletzt aktualisiert"
+}
