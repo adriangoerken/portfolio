@@ -13,6 +13,7 @@ const NavBar = () => {
 	const isHomepage = location.pathname === '/';
 
 	const navLinks = [
+		{ name: '', href: '#hero' },
 		{ name: 'Profil', href: '#summary' },
 		{ name: 'Erfahrung', href: '#experience' },
 		{ name: 'Fähigkeiten', href: '#skills' },

@@ -23,10 +23,10 @@ const DesktopNavigation = ({
 					key={link.name}
 					href={link.href}
 					onClick={(e) => onLinkClick(e, link.href)}
-					className={`transition-colors hover:text-blue-400 ${
+					className={`transition-colors hover:text-blue-400 hover:border-b-blue-400 ${
 						activeSection === link.href.substring(1) && isHomepage
-							? 'text-blue-400 font-medium'
-							: 'text-gray-300'
+							? 'text-blue-400 font-medium border-b-blue-400 border-b-2'
+							: 'text-gray-300 border-transparent border-b-2'
 					}`}
 				>
 					{link.name}
