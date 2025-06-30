@@ -19,8 +19,8 @@ const ContactSection = () => {
 			label: t(
 				'contact:subSections.contactInfo.primaryContacts.email.label'
 			),
-			value: 'adrian.goerken@proton.me',
-			href: 'mailto:adrian.goerken@proton.me',
+			value: 'kontakt@adriangoerken.de',
+			href: 'mailto:kontakt@adriangoerken.de',
 			isPrimary: true,
 		},
 		{
