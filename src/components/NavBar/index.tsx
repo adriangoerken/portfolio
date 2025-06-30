@@ -37,7 +37,7 @@ const NavBar = () => {
 	};
 
 	return (
-		<nav className="bg-custom-gray-dark shadow-lg sticky top-0 z-50 py-4">
+		<nav className="bg-black shadow-lg sticky top-0 z-50 py-4">
 			<Container>
 				<div className="flex justify-between items-center">
 					<NavBrand onHomeClick={handleBrandClick} />

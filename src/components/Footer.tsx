@@ -65,7 +65,7 @@ const CopyrightSection = () => {
 
 const Footer = () => {
 	return (
-		<footer className="bg-custom-gray-dark py-8">
+		<footer className="bg-black py-8">
 			<Container>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
 					<BrandingSection />
