@@ -71,6 +71,7 @@ const CopyrightSection = () => {
 };
 
 const Footer = () => {
+	// TODO: Implement lighthouse scores with html etc. Maybe even dynamic or fixed values from final check
 	return (
 		<footer className="bg-black py-8">
 			<Container>

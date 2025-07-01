@@ -27,6 +27,7 @@ const SkillBadge = ({ tech, startDate }: SkillBadgeProps) => {
 
 	return (
 		<div
+			role="img"
 			aria-label={`${tech}: ${yearsOfExperience} ${
 				yearsOfExperience === 1
 					? t('skills:techAriaSingular')

@@ -33,7 +33,7 @@ const Button = (props: ButtonProps) => {
 	const variantClasses = {
 		primary:
 			'bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg',
-		secondary: 'border-2 border-blue-600 text-blue-600 hover:bg-gray-800',
+		secondary: 'border-2 border-blue-600 text-white hover:bg-gray-800',
 	};
 
 	const combinedClasses = `${baseClasses} ${flexClasses} ${widthClasses} ${variantClasses[variant]} ${className}`;
