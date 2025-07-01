@@ -13,7 +13,10 @@ const HeroTextContent = () => {
 			</span>
 
 			{/* Headline */}
-			<h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+			<h1
+				id="hero-heading"
+				className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white"
+			>
 				{t('hero:textContent.headline')}
 			</h1>
 
