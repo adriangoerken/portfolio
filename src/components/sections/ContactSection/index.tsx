@@ -15,7 +15,11 @@ const ContactSection = () => {
 	// Primary contact methods most relevant for recruiters
 	const primaryContacts = [
 		{
-			icon: <FaEnvelope className="text-blue-500" />,
+			icon: (
+				<span aria-hidden="true">
+					<FaEnvelope className="text-blue-500" />
+				</span>
+			),
 			label: t(
 				'contact:subSections.contactInfo.primaryContacts.email.label'
 			),
@@ -24,7 +28,11 @@ const ContactSection = () => {
 			isPrimary: true,
 		},
 		{
-			icon: <FaPhone className="text-green-500" />,
+			icon: (
+				<span aria-hidden="true">
+					<FaPhone className="text-green-500" />
+				</span>
+			),
 			label: t(
 				'contact:subSections.contactInfo.primaryContacts.phone.label'
 			),
@@ -37,19 +45,31 @@ const ContactSection = () => {
 	// Professional networks
 	const professionalNetworks = [
 		{
-			icon: <FaLinkedin className="text-blue-700" />,
+			icon: (
+				<span aria-hidden="true">
+					<FaLinkedin className="text-blue-700" />
+				</span>
+			),
 			label: 'LinkedIn',
 			value: 'adrian-goerken-202064353',
 			href: 'https://www.linkedin.com/in/adrian-goerken-202064353',
 		},
 		{
-			icon: <FaXing className="text-green-700" />,
+			icon: (
+				<span aria-hidden="true">
+					<FaXing className="text-green-700" />
+				</span>
+			),
 			label: 'Xing',
 			value: 'Adrian_Goerken',
 			href: 'https://www.xing.com/profile/Adrian_Goerken',
 		},
 		{
-			icon: <FaGithub className="text-gray-400" />,
+			icon: (
+				<span aria-hidden="true">
+					<FaGithub className="text-gray-400" />
+				</span>
+			),
 			label: 'GitHub',
 			value: 'adriangoerken',
 			href: 'https://github.com/adriangoerken',
@@ -59,13 +79,21 @@ const ContactSection = () => {
 	// Social networks (less relevant for recruiters, but good for completeness)
 	const socialNetworks = [
 		{
-			icon: <SiBluesky className="text-blue-400" />,
+			icon: (
+				<span aria-hidden="true">
+					<SiBluesky className="text-blue-400" />
+				</span>
+			),
 			label: 'Bluesky',
 			value: 'adriangoerken.de',
 			href: 'https://bsky.app/profile/adriangoerken.de',
 		},
 		{
-			icon: <SiMastodon className="text-purple-500" />,
+			icon: (
+				<span aria-hidden="true">
+					<SiMastodon className="text-purple-500" />
+				</span>
+			),
 			label: 'Mastodon',
 			value: '@adrian_goerken',
 			href: 'https://mastodon.social/@adrian_goerken',

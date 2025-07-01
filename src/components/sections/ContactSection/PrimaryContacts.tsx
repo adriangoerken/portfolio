@@ -6,9 +6,9 @@ type PrimaryContactProps = {
 
 const PrimaryContacts = ({ primaryContacts }: PrimaryContactProps) => {
 	return (
-		<div className="space-y-4">
+		<ul className="space-y-4">
 			{primaryContacts.map((contact, index) => (
-				<div
+				<li
 					key={index}
 					className={`flex items-center gap-4 ${
 						contact.isPrimary
@@ -21,14 +21,15 @@ const PrimaryContacts = ({ primaryContacts }: PrimaryContactProps) => {
 						<p className="text-sm text-gray-400">{contact.label}</p>
 						<a
 							href={contact.href}
+							aria-label={`${contact.label}: ${contact.value}`}
 							className="text-white hover:text-blue-400 transition-colors"
 						>
 							{contact.value}
 						</a>
 					</div>
-				</div>
+				</li>
 			))}
-		</div>
+		</ul>
 	);
 };
 

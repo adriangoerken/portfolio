@@ -11,21 +11,25 @@ const SocialNetworks = ({ socialNetworks }: SocialNetworksProps) => {
 			<h4 className="text-lg font-medium mb-3 text-blue-400">
 				{t('contact:subSections.contactInfo.socialNetworks.heading')}
 			</h4>
-			<div className="space-y-3">
+			<ul className="space-y-3">
 				{socialNetworks.map((network, index) => (
-					<div key={index} className="flex items-center gap-4">
+					<li key={index} className="flex items-center gap-4">
 						<div className="text-xl">{network.icon}</div>
 						<a
 							href={network.href}
 							target="_blank"
 							rel="noopener noreferrer"
+							aria-label={`${t(
+								'contact:subSections.contactInfo.aria',
+								{ label: network.label }
+							)}`}
 							className="text-white hover:text-blue-400 transition-colors"
 						>
 							{network.label}
 						</a>
-					</div>
+					</li>
 				))}
-			</div>
+			</ul>
 		</div>
 	);
 };

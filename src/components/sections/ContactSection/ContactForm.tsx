@@ -29,7 +29,11 @@ const ContactForm = () => {
 				{t('contact:subSections.contactForm.heading')}
 			</h3>
 
-			<form action={formAction} className="space-y-4">
+			<form
+				action={formAction}
+				className="space-y-4"
+				aria-describedby="form-disclaimer"
+			>
 				<Textfield
 					id="name"
 					name="name"
@@ -49,10 +53,11 @@ const ContactForm = () => {
 					{t('contact:subSections.contactForm.submitButton')}
 				</Button>
 
-				<p className="text-xs text-gray-400 mt-2">
+				<p id="form-disclaimer" className="text-xs text-gray-400 mt-2">
 					{t('contact:subSections.contactForm.disclaimer')}
 				</p>
 			</form>
+			<div aria-live="polite" className="sr-only"></div>
 		</motion.div>
 	);
 };

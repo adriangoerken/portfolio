@@ -13,7 +13,8 @@
 			},
 			"socialNetworks": {
 				"heading": "Social Networks"
-			}
+			},
+			"aria": "Visit my {{label}} profile"
 		},
 		"contactForm": {
 			"heading": "Send Message",

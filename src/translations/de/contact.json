@@ -13,7 +13,8 @@
 			},
 			"socialNetworks": {
 				"heading": "Soziale Netzwerke"
-			}
+			},
+			"aria": "Besuchen Sie mein {{label}} Profil"
 		},
 		"contactForm": {
 			"heading": "Nachricht senden",
