@@ -15,10 +15,7 @@ const AchievementsList = ({ achievements, isEven }: AchievementsListProps) => {
 				}`}
 			>
 				{achievements.map((achievement) => (
-					<li
-						key={achievement}
-						className={`${!isEven && 'md:list-none'}`}
-					>
+					<li key={achievement} className="md:list-none">
 						{t(achievement)}
 					</li>
 				))}

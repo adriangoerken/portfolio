@@ -29,8 +29,7 @@ const IndexPage = () => {
 			</AnimatedSectionWrapper>
 
 			{/* 																
-				TODO: Simple lang switcher in nav with auto detection and saving to localStorage
-				TODO: List bullets for projects on right side of timeline
+				TODO: Simple lang switcher in nav with auto detection and saving to localStorage				
 				
 				Scannable content: Use bullet points, headings, and short paragraphs to make content skimmable
 				
