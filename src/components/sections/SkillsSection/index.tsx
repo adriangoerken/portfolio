@@ -1,4 +1,4 @@
-import { getSkillsByCategory } from '../../../config/skillsData';
+import { getSkillsByCategory } from '../../../data/skillsData';
 import { FaCode, FaServer, FaDatabase } from 'react-icons/fa';
 import SectionHeading from '../../ui/SectionHeading';
 import { t } from 'i18next';

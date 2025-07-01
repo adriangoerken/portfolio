@@ -1,6 +1,6 @@
 import SectionHeading from '../../ui/SectionHeading';
 import { t } from 'i18next';
-import { projects } from '../../../config/projectsData';
+import { projects } from '../../../data/projectsData';
 import ProjectCard from './ProjectCard';
 
 const ProjectsSection = () => {

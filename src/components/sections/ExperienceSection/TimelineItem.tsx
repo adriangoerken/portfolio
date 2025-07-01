@@ -1,5 +1,8 @@
-import { Experience } from '../../types/experience';
+import { t } from 'i18next';
+import { Experience } from '../../../types/experience';
 import { motion } from 'framer-motion';
+import AchievementsList from './AchievementList';
+import TechnologyBadges from './TechnologieBadges';
 
 type TimelineItemProps = {
 	experience: Experience;
@@ -8,7 +11,7 @@ type TimelineItemProps = {
 
 const TimelineItem = ({ experience, isEven }: TimelineItemProps) => {
 	return (
-		<div className="flex flex-col md:flex-row items-start">
+		<li className="flex flex-col md:flex-row items-start">
 			{/* Timeline node and content alignment */}
 			<motion.div
 				className={`w-full md:w-1/2 mb-8 md:mb-0 ${
@@ -28,50 +31,33 @@ const TimelineItem = ({ experience, isEven }: TimelineItemProps) => {
 
 				{/* Role and company */}
 				<h3 className="text-xl font-bold text-white mb-2">
-					{experience.title}
+					{t(experience.title)}
 				</h3>
 				<h4 className="text-lg font-medium text-gray-300 mb-4">
-					{experience.company}, {experience.location}
+					{t(experience.company)}, {t(experience.location)}
 				</h4>
 
 				{/* Achievements */}
-				<ul
-					className={`list-disc ml-5 mb-4 text-gray-300 space-y-2 ${
-						!isEven && 'md:ml-auto md:mr-5 md:text-right'
-					}`}
-				>
-					{experience.achievements.map((achievement, index) => (
-						<li
-							key={index}
-							className={`${!isEven && 'md:list-none'}`}
-						>
-							{achievement}
-						</li>
-					))}
-				</ul>
+				<AchievementsList
+					achievements={experience.achievements}
+					isEven={isEven}
+				/>
 
 				{/* Technologies */}
-				<div
-					className={`flex flex-wrap gap-2 ${
-						!isEven && 'md:justify-end'
-					}`}
-				>
-					{experience.technologies.map((tech, index) => (
-						<span
-							key={index}
-							className="px-3 py-1 bg-elevation-100 text-white text-sm rounded-full"
-						>
-							{tech}
-						</span>
-					))}
-				</div>
+				<TechnologyBadges
+					technologies={experience.technologies}
+					isEven={isEven}
+				/>
 			</motion.div>
 
 			{/* Timeline node (visible only on medium screens and up) */}
-			<div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+			<div
+				aria-hidden="true"
+				className="hidden md:block absolute left-1/2 transform -translate-x-1/2"
+			>
 				<div className="w-6 h-6 rounded-full bg-blue-600 border-4 border-custom-gray shadow-lg"></div>
 			</div>
-		</div>
+		</li>
 	);
 };
 

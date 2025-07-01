@@ -1,5 +1,7 @@
 {
 	"heading": "Work Experience",
+	"techHeading": "Technologies",
+	"achievementsHeading": "Achievements",
 	"experiences": {
 		"1": {
 			"title": "Fullstack Web Developer",
