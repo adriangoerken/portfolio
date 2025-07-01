@@ -1,6 +1,6 @@
 import { t } from 'i18next';
 import { FaCode, FaLightbulb, FaUserFriends } from 'react-icons/fa';
-import HighlightCard from '../../ui/HighlightCard';
+import HighlightCard from './HighlightCard';
 
 const SummaryHighlights = () => {
 	const highlights = [
@@ -25,17 +25,18 @@ const SummaryHighlights = () => {
 	];
 
 	return (
-		<div className="grid md:grid-cols-3 gap-6 mt-8">
+		<ul className="grid md:grid-cols-3 gap-6 mt-8">
 			{highlights.map((highlight) => (
-				<HighlightCard
-					key={highlight.title}
-					icon={highlight.icon}
-					color={highlight.color}
-					title={highlight.title}
-					description={highlight.description}
-				/>
+				<li key={highlight.title}>
+					<HighlightCard
+						icon={highlight.icon}
+						color={highlight.color}
+						title={highlight.title}
+						description={highlight.description}
+					/>
+				</li>
 			))}
-		</div>
+		</ul>
 	);
 };
 

@@ -15,12 +15,9 @@ const HighlightCard = ({
 }: HighlightCardProps) => {
 	return (
 		<div
-			className="group flex flex-col items-center p-6 bg-custom-gray rounded-lg shadow-lg 
+			className="group h-full flex flex-col items-center p-6 bg-custom-gray rounded-lg shadow-lg 
                                          transition-all duration-300 ease-in-out hover:transform hover:scale-105 
                                          hover:shadow-xl focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-opacity-50"
-			tabIndex={0}
-			role="article"
-			aria-label={`${title}: ${description}`}
 		>
 			<div
 				className={`${color} text-4xl mb-4 group-hover:scale-110 transition-transform duration-300`}
