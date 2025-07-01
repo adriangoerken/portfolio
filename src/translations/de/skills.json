@@ -15,5 +15,7 @@
 			"description": "Design und Optimierung von Datenbankstrukturen für effiziente Datenspeicherung und -abruf."
 		}
 	},
-	"toolsHeading": "Methoden & Tools"
+	"toolsHeading": "Methoden & Tools",
+	"techAriaSingular": "Jahr Erfahrung",
+	"techAriaPlural": "Jahre Erfahrung"
 }

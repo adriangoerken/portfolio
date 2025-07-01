@@ -89,3 +89,17 @@ export const getSkillsByCategory = () => {
 		database: databaseSkills,
 	};
 };
+
+export const tools = [
+	'Git',
+	'SCRUM',
+	'Agile',
+	'VS Code',
+	'PhpStorm',
+	'PL/SQL Developer',
+	'XAMPP',
+	'Postman',
+	'Beekeeper Studio',
+	'FileZilla',
+	'Linux',
+];

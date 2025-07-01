@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import SkillBadge from '../../ui/SkillBadge';
+import SkillBadge from './SkillBadge';
 
 type Skill = {
 	tech: string;
@@ -7,7 +7,6 @@ type Skill = {
 		year: number;
 		month: number;
 	};
-	width: string;
 };
 
 type SkillCategoryProps = {
@@ -32,22 +31,24 @@ const SkillCategory = ({
 			transition={{ duration: 0.5 }}
 		>
 			<div className="flex items-center gap-3 mb-4">
-				<div className="text-blue-500 text-xl">{icon}</div>
+				<div aria-hidden="true" className="text-blue-500 text-xl">
+					{icon}
+				</div>
 				<h3 className="text-xl font-semibold text-white">{title}</h3>
 			</div>
 
 			<p className="text-gray-300 mb-6">{description}</p>
 
-			<div className="flex flex-wrap gap-3">
+			<ul className="flex flex-wrap gap-3">
 				{skills.map((skill) => (
-					<SkillBadge
-						key={skill.tech}
-						tech={skill.tech}
-						startDate={skill.startDate}
-						category={title}
-					/>
+					<li key={skill.tech}>
+						<SkillBadge
+							tech={skill.tech}
+							startDate={skill.startDate}
+						/>
+					</li>
 				))}
-			</div>
+			</ul>
 		</motion.div>
 	);
 };

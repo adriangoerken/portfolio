@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import { useState, useEffect } from 'react';
 
 type SkillBadgeProps = {
@@ -6,7 +7,6 @@ type SkillBadgeProps = {
 		year: number;
 		month: number;
 	};
-	category: string;
 };
 
 const SkillBadge = ({ tech, startDate }: SkillBadgeProps) => {
@@ -25,10 +25,22 @@ const SkillBadge = ({ tech, startDate }: SkillBadgeProps) => {
 	}, [startDate]);
 
 	return (
-		<div className="group relative">
+		<div
+			aria-label={`${tech}: ${yearsOfExperience} ${
+				yearsOfExperience === 1
+					? t('skills:techAriaSingular')
+					: t('skills:techAriaPlural')
+			}`}
+			className="group relative"
+		>
 			<div className="flex items-center gap-2 px-4 py-2 bg-elevation-100 rounded-lg hover:bg-blue-900 transition-colors duration-300">
-				<span className="font-medium text-white">{tech}</span>
-				<span className="text-xs px-2 py-1 bg-blue-900 group-hover:bg-blue-700 text-blue-200 rounded-full transition-colors duration-300">
+				<span aria-hidden="true" className="font-medium text-white">
+					{tech}
+				</span>
+				<span
+					aria-hidden="true"
+					className="text-xs px-2 py-1 bg-blue-900 group-hover:bg-blue-700 text-blue-200 rounded-full transition-colors duration-300"
+				>
 					{yearsOfExperience}
 					{yearsOfExperience === 1 ? ' Jahr' : ' Jahre'}
 				</span>

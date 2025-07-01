@@ -15,5 +15,7 @@
 			"description": "Design and optimization of database structures for efficient data storage and retrieval."
 		}
 	},
-	"toolsHeading": "Methods & Tools"
+	"toolsHeading": "Methods & Tools",
+	"techAriaSingular": "year experience",
+	"techAriaPlural": "years experience"
 }
