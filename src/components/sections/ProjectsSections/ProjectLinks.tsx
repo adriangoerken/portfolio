@@ -4,9 +4,14 @@ import { t } from 'i18next';
 type ProjectLinksProps = {
 	repoUrl?: string;
 	demoUrl?: string;
+	projectTitle: string;
 };
 
-const ProjectLinks = ({ repoUrl, demoUrl }: ProjectLinksProps) => {
+const ProjectLinks = ({
+	repoUrl,
+	demoUrl,
+	projectTitle,
+}: ProjectLinksProps) => {
 	return (
 		<div className="flex gap-4 mt-4">
 			{repoUrl && (
@@ -14,6 +19,9 @@ const ProjectLinks = ({ repoUrl, demoUrl }: ProjectLinksProps) => {
 					href={repoUrl}
 					target="_blank"
 					rel="noopener noreferrer"
+					aria-label={`${t('projects:projectLinks.aria', {
+						type: projectTitle,
+					})}`}
 					className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-md transition-colors"
 				>
 					<FaGithub />
@@ -25,6 +33,9 @@ const ProjectLinks = ({ repoUrl, demoUrl }: ProjectLinksProps) => {
 					href={demoUrl}
 					target="_blank"
 					rel="noopener noreferrer"
+					aria-label={`${t('projects:projectLinks.aria', {
+						type: projectTitle,
+					})}`}
 					className="flex items-center gap-2 px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-md transition-colors"
 				>
 					<FaExternalLinkAlt />

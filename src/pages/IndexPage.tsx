@@ -31,6 +31,8 @@ const IndexPage = () => {
 			{/* 								
 				TODO: Refactor (break down large components into smaller ones, comments, spaces between min-sections etc.).				
 				Responsive design: Ensure perfect viewing on mobile devices as many recruiters check portfolios on phones
+				TODO: Proper image size for projects
+				TODO: Simple lang switcher in nav with auto detection and saving to localStorage
 				
 				Scannable content: Use bullet points, headings, and short paragraphs to make content skimmable
 				

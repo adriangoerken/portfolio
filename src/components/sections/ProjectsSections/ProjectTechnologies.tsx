@@ -11,9 +11,9 @@ const ProjectTechnologies = ({ technologies }: ProjectTechnologiesProps) => {
 				{t('projects:projectTechnologies.heading')}
 			</h4>
 			<div className="flex flex-wrap gap-2">
-				{technologies.map((tech, index) => (
+				{technologies.map((tech) => (
 					<span
-						key={index}
+						key={tech}
 						className="px-2 py-1 bg-elevation-100 text-sm rounded-md"
 					>
 						{tech}

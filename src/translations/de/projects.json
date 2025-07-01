@@ -15,7 +15,8 @@
 	},
 	"projectLinks": {
 		"code": "Code",
-		"demo": "Demo"
+		"demo": "Demo",
+		"aria": "Link zu {{type}}"
 	},
 	"projects": {
 		"1": {

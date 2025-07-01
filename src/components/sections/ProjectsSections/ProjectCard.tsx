@@ -12,7 +12,7 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
 	return (
-		<motion.div
+		<motion.article
 			className="bg-custom-gray rounded-lg overflow-hidden shadow-lg border border-elevation-100"
 			initial={{ opacity: 0, y: 20 }}
 			whileInView={{ opacity: 1, y: 0 }}
@@ -40,9 +40,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 				<ProjectLinks
 					repoUrl={project.repoUrl}
 					demoUrl={project.demoUrl}
+					projectTitle={t(project.title)}
 				/>
 			</div>
-		</motion.div>
+		</motion.article>
 	);
 };
 
