@@ -12,6 +12,7 @@ const HeroImage = () => {
 				<img
 					src={portrait}
 					alt={t('hero:imageAlt')}
+					loading="eager"
 					className="w-full h-full object-cover"
 				/>
 			</div>
