@@ -22,6 +22,7 @@ const NavBar = () => {
 		{ name: t('navbar:navLinks.contact'), href: '#contact' },
 	];
 
+	// Section highlighting in the nav except for hero section
 	const { activeSection, handleSmoothScroll } = useActiveSection(
 		navLinks,
 		isHomepage
@@ -38,7 +39,10 @@ const NavBar = () => {
 	};
 
 	return (
-		<nav className="bg-black shadow-lg sticky top-0 z-50 py-4">
+		<nav
+			className="bg-black shadow-lg sticky top-0 z-50 py-4"
+			aria-label="main"
+		>
 			<Container>
 				<div className="flex justify-between items-center">
 					<NavBrand onHomeClick={handleBrandClick} />
@@ -54,10 +58,12 @@ const NavBar = () => {
 					<button
 						className="md:hidden text-white focus:outline-none"
 						onClick={() => setIsOpen(!isOpen)}
+						aria-controls="mobile-menu"
+						aria-expanded={isOpen}
 						aria-label={
 							isOpen
 								? t('navbar:btnMobileCloseAria')
-								: t('navbar:btnMobileCloseAria')
+								: t('navbar:btnMobileOpenAria')
 						}
 					>
 						{isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -66,6 +72,7 @@ const NavBar = () => {
 
 				{isOpen && (
 					<MobileNavigation
+						key="mobile-nav"
 						navLinks={navLinks}
 						activeSection={activeSection}
 						isHomepage={isHomepage}

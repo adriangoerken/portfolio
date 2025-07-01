@@ -1,7 +1,5 @@
-type NavLink = {
-	name: string;
-	href: string;
-};
+import { NavLink } from '../../types/navbar';
+import NavLinks from './NavLinks';
 
 type DesktopNavigationProps = {
 	navLinks: NavLink[];
@@ -16,23 +14,25 @@ const DesktopNavigation = ({
 	isHomepage,
 	onLinkClick,
 }: DesktopNavigationProps) => {
+	const getLinkClassName = (link: NavLink) => {
+		const isActive = activeSection === link.href.substring(1) && isHomepage;
+		return `transition-colors hover:text-blue-400 hover:border-b-blue-400 ${
+			isActive
+				? 'text-blue-400 font-medium border-b-blue-400 border-b-2'
+				: 'text-gray-300 border-transparent border-b-2'
+		}`;
+	};
+
 	return (
-		<div className="hidden md:flex space-x-6">
-			{navLinks.map((link) => (
-				<a
-					key={link.name}
-					href={link.href}
-					onClick={(e) => onLinkClick(e, link.href)}
-					className={`transition-colors hover:text-blue-400 hover:border-b-blue-400 ${
-						activeSection === link.href.substring(1) && isHomepage
-							? 'text-blue-400 font-medium border-b-blue-400 border-b-2'
-							: 'text-gray-300 border-transparent border-b-2'
-					}`}
-				>
-					{link.name}
-				</a>
-			))}
-		</div>
+		<ul className="hidden md:flex space-x-6">
+			<NavLinks
+				navLinks={navLinks}
+				onLinkClick={onLinkClick}
+				getLinkClassName={getLinkClassName}
+				activeSection={activeSection}
+				isHomepage={isHomepage}
+			/>
+		</ul>
 	);
 };
 
