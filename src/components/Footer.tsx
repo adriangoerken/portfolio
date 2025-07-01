@@ -3,7 +3,7 @@ import Container from './layout/Container';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import SocialLink from './ui/SocialLink';
 import { useScrollToSection } from '../hooks/useScrollToSection';
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const BrandingSection = () => {
 	const { scrollToTop } = useScrollToSection();
@@ -21,22 +21,26 @@ const BrandingSection = () => {
 	);
 };
 
-const LinksSection = () => (
-	<div className="flex flex-col md:flex-row gap-6 md:gap-12 justify-center items-center">
-		<Link
-			to="/imprint"
-			className="text-gray-300 hover:text-blue-400 transition-colors"
-		>
-			{t('footer:links.imprint')}
-		</Link>
-		<Link
-			to="/privacy-policy"
-			className="text-gray-300 hover:text-blue-400 transition-colors"
-		>
-			{t('footer:links.privacyPolicy')}
-		</Link>
-	</div>
-);
+const LinksSection = () => {
+	const { t } = useTranslation();
+
+	return (
+		<div className="flex flex-col md:flex-row gap-6 md:gap-12 justify-center items-center">
+			<Link
+				to="/imprint"
+				className="text-gray-300 hover:text-blue-400 transition-colors"
+			>
+				{t('footer:links.imprint')}
+			</Link>
+			<Link
+				to="/privacy-policy"
+				className="text-gray-300 hover:text-blue-400 transition-colors"
+			>
+				{t('footer:links.privacyPolicy')}
+			</Link>
+		</div>
+	);
+};
 
 const SocialLinksSection = () => (
 	<div className="flex justify-center md:justify-end gap-4">
@@ -56,7 +60,9 @@ const SocialLinksSection = () => (
 );
 
 const CopyrightSection = () => {
+	const { t } = useTranslation();
 	const currentYear = new Date().getFullYear();
+
 	return (
 		<div className="mt-8 pt-6 border-t border-gray-800 text-center text-gray-400 text-sm">
 			© {currentYear} Adrian Goerken. {t('footer:copyright')}

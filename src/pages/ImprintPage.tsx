@@ -1,7 +1,9 @@
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 import Container from '../components/layout/Container';
 
 const ImprintPage = () => {
+	const { t } = useTranslation();
+
 	return (
 		<section className="py-16 bg-custom-gray">
 			<Container>

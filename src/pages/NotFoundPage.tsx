@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import Container from '../components/layout/Container';
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const NotFoundPage = () => {
+	const { t } = useTranslation();
+
 	return (
 		<Container className="flex flex-grow justify-center">
 			<section className="text-center flex flex-col justify-center items center h96">

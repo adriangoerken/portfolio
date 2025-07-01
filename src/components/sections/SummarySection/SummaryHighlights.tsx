@@ -1,8 +1,10 @@
-import { t } from 'i18next';
 import { FaCode, FaLightbulb, FaUserFriends } from 'react-icons/fa';
 import HighlightCard from './HighlightCard';
+import { useTranslation } from 'react-i18next';
 
 const SummaryHighlights = () => {
+	const { t } = useTranslation();
+
 	const highlights = [
 		{
 			icon: FaLightbulb,

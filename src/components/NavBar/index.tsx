@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { t } from 'i18next';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Container from '../layout/Container';
 import NavBrand from './NavBrand';
 import DesktopNavigation from './DesktopNavigation';
 import MobileNavigation from './MobileNavigation';
 import useActiveSection from '../../hooks/useActiveSection';
+import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
 const NavBar = () => {
+	const { t } = useTranslation();
 	const [isOpen, setIsOpen] = useState(false);
 	const location = useLocation();
 	const isHomepage = location.pathname === '/';
@@ -47,27 +49,39 @@ const NavBar = () => {
 				<div className="flex justify-between items-center">
 					<NavBrand onHomeClick={handleBrandClick} />
 
-					<DesktopNavigation
-						navLinks={navLinks}
-						activeSection={activeSection}
-						isHomepage={isHomepage}
-						onLinkClick={handleSmoothScroll}
-					/>
+					<div className="hidden md:flex items-center">
+						<DesktopNavigation
+							navLinks={navLinks}
+							activeSection={activeSection}
+							isHomepage={isHomepage}
+							onLinkClick={handleSmoothScroll}
+						/>
+						<div className="ml-6">
+							<LanguageSwitcher />
+						</div>
+					</div>
 
-					{/* Mobile Menu Button */}
-					<button
-						className="md:hidden text-white focus:outline-none"
-						onClick={() => setIsOpen(!isOpen)}
-						aria-controls="mobile-menu"
-						aria-expanded={isOpen}
-						aria-label={
-							isOpen
-								? t('navbar:btnMobileCloseAria')
-								: t('navbar:btnMobileOpenAria')
-						}
-					>
-						{isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-					</button>
+					{/* Mobile Menu Button and Language Switcher */}
+					<div className="flex items-center gap-4 md:hidden">
+						<LanguageSwitcher />
+						<button
+							className="text-white focus:outline-none"
+							onClick={() => setIsOpen(!isOpen)}
+							aria-controls="mobile-menu"
+							aria-expanded={isOpen}
+							aria-label={
+								isOpen
+									? t('navbar:btnMobileCloseAria')
+									: t('navbar:btnMobileOpenAria')
+							}
+						>
+							{isOpen ? (
+								<FaTimes size={24} />
+							) : (
+								<FaBars size={24} />
+							)}
+						</button>
+					</div>
 				</div>
 
 				{isOpen && (

@@ -27,24 +27,6 @@ const IndexPage = () => {
 			<AnimatedSectionWrapper id="contact" bgColor="elevation-100">
 				<ContactSection />
 			</AnimatedSectionWrapper>
-
-			{/* 																
-				TODO: Simple lang switcher in nav with auto detection and saving to localStorage				
-				
-				Scannable content: Use bullet points, headings, and short paragraphs to make content skimmable
-				
-				Technology integration:
-				Consider adding a resume download button
-				Keep the language toggle since you support multiple languages
-				
-				Navigation improvements:
-				Consider sticky navigation with section highlights
-				Add a "back to top" button for longer scrolling
-				
-				Performance optimization:
-				Continue using your ImageLoader component for progressive loading
-				Consider implementing lazy loading for project images
-				 */}
 		</>
 	);
 };

@@ -1,8 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import SectionHeading from '../../ui/SectionHeading';
-import { t } from 'i18next';
 import ExperienceTimeline from './ExperienceTimeline';
 
 const ExperienceSection = () => {
+	const { t } = useTranslation();
+
 	return (
 		<div aria-labelledby="experience-heading">
 			<SectionHeading id="experience-heading">

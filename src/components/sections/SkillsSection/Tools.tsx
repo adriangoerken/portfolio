@@ -1,8 +1,10 @@
 import { FaTools } from 'react-icons/fa';
-import { t } from 'i18next';
 import { tools } from '../../../data/skillsData';
+import { useTranslation } from 'react-i18next';
 
 const Tools = () => {
+	const { t } = useTranslation();
+
 	return (
 		<div className="mt-12 rounded-lg">
 			<h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">

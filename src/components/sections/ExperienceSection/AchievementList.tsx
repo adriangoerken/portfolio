@@ -1,4 +1,4 @@
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 type AchievementsListProps = {
 	achievements: string[];
@@ -6,6 +6,7 @@ type AchievementsListProps = {
 };
 
 const AchievementsList = ({ achievements, isEven }: AchievementsListProps) => {
+	const { t } = useTranslation();
 	return (
 		<>
 			<h5 className="sr-only">{t('experience:achievementsHeading')}</h5>

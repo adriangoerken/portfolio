@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { t } from 'i18next';
 import PrimaryContacts from './PrimaryContacts';
 import { NetworkContact, PrimaryContact } from '../../../types/contact';
 import ProfessionalNetworks from './ProfessionalNetworks';
 import SocialNetworks from './SocialNetworks';
+import { useTranslation } from 'react-i18next';
 
 type ContactInfoCardProps = {
 	primaryContacts: PrimaryContact[];
@@ -16,6 +16,7 @@ const ContactInfoCard = ({
 	professionalNetworks,
 	socialNetworks,
 }: ContactInfoCardProps) => {
+	const { t } = useTranslation();
 	return (
 		<motion.div
 			className="bg-custom-gray p-6 rounded-lg shadow-lg border border-elevation-100"

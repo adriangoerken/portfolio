@@ -1,10 +1,12 @@
 import SectionHeading from '../../ui/SectionHeading';
-import { t } from 'i18next';
 import { projects } from '../../../data/projectsData';
 import ProjectCard from './ProjectCard';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ProjectsSection = () => {
+	const { t } = useTranslation();
+
 	const sortedProjects = useMemo(() => {
 		// Create a shallow copy to avoid mutating the original array, then sort.
 		return [...projects].sort((a, b) =>

@@ -1,9 +1,10 @@
-import { t } from 'i18next';
 import Button from '../../ui/Button';
 import { FaDownload } from 'react-icons/fa';
 import { useScrollToSection } from '../../../hooks/useScrollToSection';
+import { useTranslation } from 'react-i18next';
 
 const HeroTextContent = () => {
+	const { t } = useTranslation();
 	const { scrollToSection } = useScrollToSection();
 
 	return (

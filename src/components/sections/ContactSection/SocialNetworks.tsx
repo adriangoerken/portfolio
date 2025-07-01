@@ -1,11 +1,13 @@
+import { useTranslation } from 'react-i18next';
 import { NetworkContact } from '../../../types/contact';
-import { t } from 'i18next';
 
 type SocialNetworksProps = {
 	socialNetworks: NetworkContact[];
 };
 
 const SocialNetworks = ({ socialNetworks }: SocialNetworksProps) => {
+	const { t } = useTranslation();
+
 	return (
 		<div>
 			<h4 className="text-lg font-medium mb-3 text-blue-400">

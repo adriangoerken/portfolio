@@ -1,16 +1,18 @@
 import { Project } from '../../../types/project';
 import { motion } from 'framer-motion';
-import { t } from 'i18next';
 import ProjectImage from './ProjectImage';
 import ProjectDetails from './ProjectDetails';
 import ProjectTechnologies from './ProjectTechnologies';
 import ProjectLinks from './ProjectLinks';
+import { useTranslation } from 'react-i18next';
 
 type ProjectCardProps = {
 	project: Project;
 };
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
+	const { t } = useTranslation();
+
 	return (
 		<motion.article
 			className="bg-custom-gray rounded-lg overflow-hidden shadow-lg border border-elevation-100"

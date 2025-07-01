@@ -7,11 +7,12 @@ import {
 } from 'react-icons/fa';
 import { SiMastodon, SiBluesky } from 'react-icons/si';
 import SectionHeading from '../../ui/SectionHeading';
-import { t } from 'i18next';
 import ContactForm from './ContactForm';
 import ContactInfoCard from './ContactInfoCard';
+import { useTranslation } from 'react-i18next';
 
 const ContactSection = () => {
+	const { t } = useTranslation();
 	// Primary contact methods most relevant for recruiters
 	const primaryContacts = [
 		{

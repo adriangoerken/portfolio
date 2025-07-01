@@ -1,5 +1,5 @@
+import { useTranslation } from 'react-i18next';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { t } from 'i18next';
 
 type ProjectLinksProps = {
 	repoUrl?: string;
@@ -12,6 +12,8 @@ const ProjectLinks = ({
 	demoUrl,
 	projectTitle,
 }: ProjectLinksProps) => {
+	const { t } = useTranslation();
+
 	return (
 		<div className="flex gap-4 mt-4">
 			{repoUrl && (

@@ -1,12 +1,14 @@
 import { getSkillsByCategory } from '../../../data/skillsData';
 import { FaCode, FaServer, FaDatabase } from 'react-icons/fa';
 import SectionHeading from '../../ui/SectionHeading';
-import { t } from 'i18next';
 import SkillCategory from './SkillCategory';
 import Tools from './Tools';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const SkillsSection = () => {
+	const { t } = useTranslation();
+
 	const skillCategories = useMemo(
 		() => [
 			{

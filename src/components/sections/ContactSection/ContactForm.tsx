@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion';
-import { t } from 'i18next';
 import Textfield from '../../ui/Textfield';
 import Textarea from '../../ui/Textarea';
 import Button from '../../ui/Button';
 import { toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
 
 const ContactForm = () => {
+	const { t } = useTranslation();
+
 	const formAction = (formData: FormData) => {
 		console.log(
 			'From Data: ',

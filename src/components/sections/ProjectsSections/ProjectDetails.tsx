@@ -1,4 +1,4 @@
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 type ProjectDetailsProps = {
 	problem: string;
@@ -11,6 +11,8 @@ const ProjectDetails = ({
 	contribution,
 	outcomes,
 }: ProjectDetailsProps) => {
+	const { t } = useTranslation();
+
 	return (
 		<div className="mb-4 space-y-3">
 			<div>

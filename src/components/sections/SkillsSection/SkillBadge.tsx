@@ -1,5 +1,5 @@
-import { t } from 'i18next';
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 type SkillBadgeProps = {
 	tech: string;
@@ -10,6 +10,7 @@ type SkillBadgeProps = {
 };
 
 const SkillBadge = ({ tech, startDate }: SkillBadgeProps) => {
+	const { t } = useTranslation();
 	const [yearsOfExperience, setYearsOfExperience] = useState<number>(0);
 
 	useEffect(() => {

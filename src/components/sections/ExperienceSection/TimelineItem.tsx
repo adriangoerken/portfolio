@@ -1,8 +1,8 @@
-import { t } from 'i18next';
 import { Experience } from '../../../types/experience';
 import { motion } from 'framer-motion';
 import AchievementsList from './AchievementList';
 import TechnologyBadges from './TechnologieBadges';
+import { useTranslation } from 'react-i18next';
 
 type TimelineItemProps = {
 	experience: Experience;
@@ -10,6 +10,8 @@ type TimelineItemProps = {
 };
 
 const TimelineItem = ({ experience, isEven }: TimelineItemProps) => {
+	const { t } = useTranslation();
+
 	return (
 		<li className="flex flex-col md:flex-row items-start">
 			{/* Timeline node and content alignment */}

@@ -1,4 +1,4 @@
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 type TechnologyBadgesProps = {
 	technologies: string[];
@@ -6,6 +6,8 @@ type TechnologyBadgesProps = {
 };
 
 const TechnologyBadges = ({ technologies, isEven }: TechnologyBadgesProps) => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<h5 className="sr-only">{t('experience:techHeading')}</h5>

@@ -31,7 +31,8 @@ import imprint_de from './translations/de/imprint.json';
 import privacypolicy_en from './translations/en/privacypolicy.json';
 import privacypolicy_de from './translations/de/privacypolicy.json';
 
-const initialLanguage = getLanguage().substring(0, 2);
+const savedLanguage = localStorage.getItem('language');
+const initialLanguage = savedLanguage || getLanguage().substring(0, 2);
 
 i18next.init({
 	lng: initialLanguage,

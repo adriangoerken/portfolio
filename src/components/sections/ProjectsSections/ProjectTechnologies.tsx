@@ -1,10 +1,12 @@
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 type ProjectTechnologiesProps = {
 	technologies: string[];
 };
 
 const ProjectTechnologies = ({ technologies }: ProjectTechnologiesProps) => {
+	const { t } = useTranslation();
+
 	return (
 		<div className="mb-6">
 			<h4 className="text-blue-400 text-sm font-medium mb-2">

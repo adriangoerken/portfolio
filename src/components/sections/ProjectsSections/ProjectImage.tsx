@@ -1,4 +1,4 @@
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 type ProjectImageProps = {
 	imageUrl: string;
@@ -7,6 +7,8 @@ type ProjectImageProps = {
 };
 
 const ProjectImage = ({ imageUrl, title, isDemo }: ProjectImageProps) => {
+	const { t } = useTranslation();
+
 	return (
 		<div className="relative aspect-[16/9] bg-elevation-200 flex items-center justify-center overflow-hidden">
 			{
