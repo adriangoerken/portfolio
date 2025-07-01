@@ -4,8 +4,14 @@ import { useScrollToSection } from '../../../hooks/useScrollToSection';
 import { useTranslation } from 'react-i18next';
 
 const HeroTextContent = () => {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 	const { scrollToSection } = useScrollToSection();
+
+	// Determine which resume file to use based on the current language
+	const resumeFile =
+		i18n.language === 'de'
+			? '/adrian_goerken_lebenslauf.pdf'
+			: '/adrian_goerken_resume.pdf';
 
 	return (
 		<div className="w-full md:w-3/5 text-center md:text-left">
@@ -39,7 +45,7 @@ const HeroTextContent = () => {
 				</Button>
 				<Button
 					as="link"
-					href="/adrian_goerken_lebenslauf.pdf"
+					href={resumeFile}
 					variant="secondary"
 					target="_blank"
 				>
