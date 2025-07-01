@@ -28,8 +28,7 @@ const IndexPage = () => {
 				<ContactSection />
 			</AnimatedSectionWrapper>
 
-			{/* 												
-				TODO: Proper image size for projects
+			{/* 																
 				TODO: Simple lang switcher in nav with auto detection and saving to localStorage
 				TODO: List bullets for projects on right side of timeline
 				

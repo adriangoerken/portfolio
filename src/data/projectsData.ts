@@ -1,3 +1,5 @@
+import thumbnail_portfolio from '../assets/images/thumbnail_portfolio.webp';
+
 export const projects = [
 	{
 		id: 1,
@@ -13,7 +15,7 @@ export const projects = [
 			'i18next',
 		],
 		outcomes: 'projects:projects.1.outcomes',
-		imageUrl: 'https://picsum.photos/1920/1080',
+		imageUrl: thumbnail_portfolio,
 		demoUrl: '',
 		repoUrl: 'https://github.com/adriangoerken/portfolio',
 		isDemo: false,

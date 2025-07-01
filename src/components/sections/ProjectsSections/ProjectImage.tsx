@@ -8,7 +8,7 @@ type ProjectImageProps = {
 
 const ProjectImage = ({ imageUrl, title, isDemo }: ProjectImageProps) => {
 	return (
-		<div className="relative h-96 bg-elevation-200 flex items-center justify-center overflow-hidden">
+		<div className="relative aspect-[16/9] bg-elevation-200 flex items-center justify-center overflow-hidden">
 			{
 				<img
 					src={imageUrl}
