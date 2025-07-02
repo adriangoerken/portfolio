@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import Container from '../components/atoms/Container';
+import Container from '../components/layout/Container';
 import { useTranslation } from 'react-i18next';
 
 const NotFoundPage = () => {
-	const [t] = useTranslation('global');
+	const { t } = useTranslation();
 
 	return (
 		<Container className="flex flex-grow justify-center">

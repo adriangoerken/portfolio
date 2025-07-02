@@ -1,75 +1,78 @@
-import SectionCard from '../components/molecules/SectionCard';
-import Container from '../components/atoms/Container';
 import { useTranslation } from 'react-i18next';
+import Container from '../components/layout/Container';
 
 const ImprintPage = () => {
-	const [t] = useTranslation('global');
-	const [street, city, country] = t(
-		'ImprintPage.section1.description.address'
-	).split(',');
+	const { t } = useTranslation();
 
 	return (
-		<section>
+		<section className="py-16 bg-custom-gray">
 			<Container>
-				<h1 className="text-3xl font-bold mb-8">
-					{t('ImprintPage.headerTitle')}
+				<h1 className="text-3xl font-bold mb-6">
+					{t('imprint:title')}
 				</h1>
-				<p className="text-lg mb-6">{t('ImprintPage.introText')}</p>
 
-				<div className="space-y-6">
-					{/* Section 1: Provider */}
-					<SectionCard title={t('ImprintPage.section1.title')}>
-						<div className="grid gap-2">
-							<p className="font-medium">
-								{t(
-									'ImprintPage.section1.description.companyName'
-								)}
-							</p>
-							<address className="not-italic">
-								<p>
-									{street}
-									<br />
-									{city}
-									<br />
-									{country}
-								</p>
-							</address>
-							<div className="space-y-1">
-								<p>
-									{t(
-										'ImprintPage.section1.description.email'
-									)}
-								</p>
-								<p>
-									{t(
-										'ImprintPage.section1.description.phone'
-									)}
-								</p>
-								<p>
-									{t(
-										'ImprintPage.section1.description.website'
-									)}
-								</p>
-							</div>
-						</div>
-					</SectionCard>
-
-					{/* Section 2: Disclaimer */}
-					<SectionCard title={t('ImprintPage.section2.title')}>
-						<p>{t('ImprintPage.section2.description')}</p>
-					</SectionCard>
-
-					{/* Section 3: Contact */}
-					<SectionCard title={t('ImprintPage.section3.title')}>
-						<h2 className="text-2xl font-semibold mb-4 border-b pb-2"></h2>
-						<p className="mb-4">
-							{t('ImprintPage.section3.description')}
-						</p>
+				<div className="bg-elevation-100 rounded-lg p-8 shadow-lg">
+					<div className="mb-8">
+						<h2 className="text-xl font-semibold mb-4 text-white">
+							{t('imprint:contactInfo.heading')}
+						</h2>
 						<div className="space-y-2">
-							<p>{t('ImprintPage.section3.contactInfo.email')}</p>
-							<p>{t('ImprintPage.section3.contactInfo.phone')}</p>
+							<p>Adrian Goerken</p>
+							<p>Wollgrasweg 3</p>
+							<p>26676 Barßel</p>
+							<p>{t('imprint:contactInfo.address.country')}</p>
 						</div>
-					</SectionCard>
+					</div>
+
+					<div className="mb-8">
+						<h2 className="text-xl font-semibold mb-4 text-white">
+							{t('imprint:contactInfo.contact')}
+						</h2>
+						<div className="space-y-2">
+							<p>
+								{t('imprint:contactInfo.email')}:
+								<a
+									href="mailto:kontakt@adriangoerken.de"
+									className="text-blue-400 hover:underline"
+								>
+									&ensp;kontakt@adriangoerken.de
+								</a>
+							</p>
+							<p>
+								{t('imprint:contactInfo.phone')}:
+								<a
+									href="tel:+4915203304956"
+									className="text-blue-400 hover:underline"
+								>
+									&ensp;+49 152 0330 4956
+								</a>
+							</p>
+						</div>
+					</div>
+
+					<div className="mb-8">
+						<h2 className="text-xl font-semibold mb-4 text-white">
+							{t('imprint:liability.heading')}
+						</h2>
+						<p className="mb-4">
+							{t('imprint:liability.contentResponsibility')}
+						</p>
+						<p>{t('imprint:liability.externalLinks')}</p>
+					</div>
+
+					<div className="mb-8">
+						<h2 className="text-xl font-semibold mb-4 text-white">
+							{t('imprint:copyright.heading')}
+						</h2>
+						<p>{t('imprint:copyright.notice')}</p>
+					</div>
+
+					<div>
+						<h2 className="text-xl font-semibold mb-4 text-white">
+							{t('imprint:dataProtectionOfficer.heading')}
+						</h2>
+						<p>{t('imprint:dataProtectionOfficer.note')}</p>
+					</div>
 				</div>
 			</Container>
 		</section>

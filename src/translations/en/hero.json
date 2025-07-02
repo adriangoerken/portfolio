@@ -1,0 +1,16 @@
+{
+	"imageAlt": "Professional portrait of Adrian Goerken",
+	"socialLinks": {
+		"githubAria": "GitHub profile of Adrian Goerken",
+		"linkedInAria": "LinkedIn profile of Adrian Goerken"
+	},
+	"textContent": {
+		"badge": "#OpenToWork",
+		"headline": "Frontend Developer with 7 Years of Experience",
+		"valueProposition": "I translate business requirements into scalable, maintainable code. Specialized in reducing complexity and delivering projects that exceed expectations.",
+		"ctaButtons": {
+			"projects": "Projects",
+			"downloadResume": "Resume"
+		}
+	}
+}

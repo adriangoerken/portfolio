@@ -1,0 +1,12 @@
+{
+	"navLinks": {
+		"home": "Start",
+		"profile": "Profil",
+		"experience": "Erfahrung",
+		"skills": "Fähigkeiten",
+		"projects": "Projekte",
+		"contact": "Kontakt"
+	},
+	"btnMobileOpenAria": "Navigation öffnen",
+	"btnMobileCloseAria": "Navigation schließen"
+}

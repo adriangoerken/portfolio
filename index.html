@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 	<head>
 		<!-- Primary Meta Tags -->
-		<title>Adrian Goerken | Web Developer</title>
+		<title>Adrian Goerken | Webentwickler</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta
@@ -27,7 +27,7 @@
 		/>
 		<meta
 			property="og:image"
-			content="https://adriangoerken.de/images/og-image.jpg"
+			content="https://adriangoerken.de/images/og-image.webp"
 		/>
 
 		<!-- Twitter -->
@@ -43,13 +43,13 @@
 		/>
 		<meta
 			property="twitter:image"
-			content="https://adriangoerken.de/images/og-image.jpg"
+			content="https://adriangoerken.de/images/og-image.webp"
 		/>
 
 		<!-- Additional SEO tags -->
 		<meta
 			name="keywords"
-			content="full-stack developer, web development, React, TypeScript, PHP, MySQL, software engineer"
+			content="webentwickler, full-stack developer, web development, React, TypeScript, PHP, MySQL, software engineer"
 		/>
 		<meta name="author" content="Adrian Goerken" />
 		<meta name="robots" content="index, follow" />
@@ -72,16 +72,30 @@
 					"https://bsky.app/profile/adriangoerken.de",
 					"https://mastodon.social/@adrian_goerken"
 				],
-				"description": "Full-stack developer specializing in React, TypeScript, PHP, and MySQL.",
-				"image": "https://adriangoerken.de/images/og-image.jpg"
+				"description": "Fullstack Webentwickler spezialisiert auf React, TypeScript, PHP, and MySQL.",
+				"image": "https://adriangoerken.de/images/og-image.webp"
 			}
 		</script>
+
+		<!-- Add these in the <head> section -->
+		<link
+			rel="preload"
+			href="/fonts/Poppins/poppins-v22-latin-700.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/src/assets/images/portrait.webp"
+			as="image"
+		/>
 
 		<!-- Favicon -->
 		<link rel="icon" type="icon" href="/images/favicon/favicon.ico" />
 	</head>
 	<body class="bg-custom-gray text-gray-300 min-h-screen">
 		<div id="root"></div>
-		<script type="module" src="/src/main.tsx"></script>
+		<script type="module" src="/src/main.tsx" async></script>
 	</body>
 </html>

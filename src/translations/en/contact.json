@@ -1,0 +1,31 @@
+{
+	"heading": "Contact",
+	"description": "I look forward to hearing from you and am open to new challenges. Email is the fastest way to reach me.",
+	"subSections": {
+		"contactInfo": {
+			"heading": "Contact Information",
+			"primaryContacts": {
+				"email": { "label": "Email" },
+				"phone": { "label": "Phone" }
+			},
+			"professionalNetworks": {
+				"heading": "Professional Networks"
+			},
+			"socialNetworks": {
+				"heading": "Social Networks"
+			},
+			"aria": "Visit my {{label}} profile"
+		},
+		"contactForm": {
+			"heading": "Send Message",
+			"labels": {
+				"name": "Name",
+				"email": "Email",
+				"message": "Message"
+			},
+			"submitButton": "Send",
+			"disclaimer": "* This contact form is currently just a design element and is not yet functional. Please use the contact information provided to send a message.",
+			"disclaimerToast": "This contact form is not yet functional. Please use the contact information provided."
+		}
+	}
+}

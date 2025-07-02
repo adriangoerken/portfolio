@@ -1,0 +1,25 @@
+{
+	"title": "Impressum",
+	"contactInfo": {
+		"heading": "Angaben gemäß § 5 TMG",
+		"address": {
+			"country": "Deutschland"
+		},
+		"contact": "Kontakt",
+		"email": "E-Mail",
+		"phone": "Telefon"
+	},
+	"liability": {
+		"heading": "Haftungsausschluss",
+		"contentResponsibility": "Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.",
+		"externalLinks": "Meine Verantwortung für verlinkte externe Webseiten ist auf die Prüfung des Inhalts auf mögliche Rechtsverstöße zum Zeitpunkt der Verlinkung beschränkt. Sollte ich von Rechtsverstößen Kenntnis erlangen, werde ich derartige Links umgehend entfernen."
+	},
+	"copyright": {
+		"heading": "Urheberrecht",
+		"notice": "Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet."
+	},
+	"dataProtectionOfficer": {
+		"heading": "Datenschutzbeauftragter",
+		"note": "Aufgrund der Art und des Umfangs dieser Website ist die Benennung eines Datenschutzbeauftragten nicht erforderlich."
+	}
+}

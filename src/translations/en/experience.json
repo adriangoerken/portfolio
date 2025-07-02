@@ -1,0 +1,36 @@
+{
+	"heading": "Work Experience",
+	"techHeading": "Technologies",
+	"achievementsHeading": "Achievements",
+	"experiences": {
+		"1": {
+			"title": "Fullstack Web Developer",
+			"company": "KBU Logistik AG",
+			"location": "Bremen",
+			"achievements": {
+				"1": "Development of a web-based application for handheld terminals for navigation and order processing in the warehouse, integrated with the company's warehouse management software",
+				"2": "Development of web-based dashboards for real-time visualization of warehouse data",
+				"3": "Development of database applications in PLSQL/Oracle for the backend"
+			}
+		},
+		"2": {
+			"title": "Internship as Junior PHP Developer",
+			"company": "EARSandEYES",
+			"location": "Hamburg",
+			"achievements": {
+				"1": "Programming of a sample blog using PHP, HTML, JavaScript and CSS",
+				"2": "Solving various programming tasks in PHP to deepen my knowledge and improve my problem-solving skills"
+			}
+		},
+		"3": {
+			"title": "Apprenticeship as Software Developer",
+			"company": "Theodor-Schäfer-Berufsbildungswerk",
+			"location": "Husum",
+			"achievements": {
+				"1": "Acquisition of solid knowledge in HTML, CSS, PHP, JavaScript and relational databases such as MySQL",
+				"2": "Acquisition of basic knowledge in agile software development using SCRUM",
+				"3": "Final grade: 2.3"
+			}
+		}
+	}
+}

@@ -1,8 +1,11 @@
 User-agent: *
 Allow: /
 
-# Disallow crawling of private directories
+# Disallow crawling of private directories and files
 Disallow: /private/
+Disallow: /adrian_goerken_lebenslauf.pdf
+Disallow: /adrian_goerken_resume.pdf
+Disallow: /lighthouse_desktop.html
 
 # Allow indexing of the main site
 Allow: /index.html
@@ -11,9 +14,9 @@ Allow: /index.html
 Sitemap: https://adriangoerken.de/sitemap.xml
 
 User-agent: Googlebot
-Allow: /images/og-image.jpg
+Allow: /images/og-image.webp
 Allow: /images/favicon/favicon.ico
 
 User-agent: Bingbot
-Allow: /images/og-image.jpg
+Allow: /images/og-image.webp
 Allow: /images/favicon/favicon.ico

@@ -1,63 +1,62 @@
-import { useRef, useState } from 'react';
-import Container from '../components/atoms/Container';
-import Header from '../components/organisms/Header';
-import HeroSection from '../components/organisms/HeroSection';
-import PortfolioSection from '../components/organisms/PortfolioSection';
-import SkillsSection from '../components/organisms/SkillsSection';
-import ContactSection from '../components/organisms/ContactSection';
+import { Suspense, lazy } from 'react';
+import AnimatedSectionWrapper from '../components/layout/AnimatedSectionWrapper';
+import HeroSection from '../components/sections/HeroSection';
+import SummarySection from '../components/sections/SummarySection';
+
+const ExperienceSection = lazy(
+	() => import('../components/sections/ExperienceSection')
+);
+const SkillsSection = lazy(
+	() => import('../components/sections/SkillsSection')
+);
+const ProjectsSection = lazy(
+	() => import('../components/sections/ProjectsSections')
+);
+const ContactSection = lazy(
+	() => import('../components/sections/ContactSection')
+);
+
+const SectionLoader = () => (
+	<div className="flex justify-center items-center py-12">
+		<div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+	</div>
+);
 
 const IndexPage = () => {
-	const [headerHeight, setHeaderHeight] = useState(0);
-	const sectionHeroRef = useRef<HTMLElement>(null);
-	const sectionProjectsRef = useRef<HTMLElement>(null);
-	const sectionSkillsRef = useRef<HTMLElement>(null);
-	const sectionExperienceRef = useRef<HTMLElement>(null);
-	const sectionTestimonialsRef = useRef<HTMLElement>(null);
-	const sectionContactRef = useRef<HTMLElement>(null);
-
-	// Change section
-	const scrollToSection = (
-		elementRef: React.RefObject<HTMLElement>
-	): void => {
-		if (elementRef.current) {
-			const elementPosition = elementRef.current.offsetTop - headerHeight;
-			window.scrollTo({
-				top: elementPosition,
-				behavior: 'smooth',
-			});
-		}
-	};
-
 	return (
-		<section>
-			{/* Header */}
-			<Header
-				scrollToSection={scrollToSection}
-				setHeaderHeight={setHeaderHeight}
-				sectionRefs={{
-					sectionHeroRef,
-					sectionProjectsRef,
-					sectionSkillsRef,
-					sectionExperienceRef,
-					sectionTestimonialsRef,
-					sectionContactRef,
-				}}
-			/>
-			<Container className="pt-0">
-				{/* Content sections */}
-				<HeroSection
-					sectionHeroRef={sectionHeroRef}
-					sectionProjectsRef={sectionProjectsRef}
-					scrollToSection={scrollToSection}
-				/>
-				<hr />
-				<PortfolioSection sectionProjectsRef={sectionProjectsRef} />
-				<hr />
-				<SkillsSection sectionSkillsRef={sectionSkillsRef} />
-				<hr />
-				<ContactSection sectionContactRef={sectionContactRef} />
-			</Container>
-		</section>
+		<>
+			<AnimatedSectionWrapper id="hero">
+				<HeroSection />
+			</AnimatedSectionWrapper>
+
+			<AnimatedSectionWrapper id="summary" bgColor="elevation-100">
+				<SummarySection />
+			</AnimatedSectionWrapper>
+
+			<Suspense fallback={<SectionLoader />}>
+				<AnimatedSectionWrapper id="experience">
+					<ExperienceSection />
+				</AnimatedSectionWrapper>
+			</Suspense>
+
+			<Suspense fallback={<SectionLoader />}>
+				<AnimatedSectionWrapper id="skills" bgColor="elevation-100">
+					<SkillsSection />
+				</AnimatedSectionWrapper>
+			</Suspense>
+
+			<Suspense fallback={<SectionLoader />}>
+				<AnimatedSectionWrapper id="projects">
+					<ProjectsSection />
+				</AnimatedSectionWrapper>
+			</Suspense>
+
+			<Suspense fallback={<SectionLoader />}>
+				<AnimatedSectionWrapper id="contact" bgColor="elevation-100">
+					<ContactSection />
+				</AnimatedSectionWrapper>
+			</Suspense>
+		</>
 	);
 };
 

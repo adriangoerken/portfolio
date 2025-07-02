@@ -1,6 +1,3 @@
-import { TFunction } from 'i18next';
-import { StartDate, SupportedLanguages } from '../lib/type';
-
 interface ExtendedNavigator extends Navigator {
 	userLanguage?: string;
 	browserLanguage?: string;
@@ -16,32 +13,15 @@ export const getLanguage = () => {
 	);
 };
 
-export const getExperienceYears = (
-	startDate: StartDate,
-	t: TFunction<'global'>
-) => {
-	const currentDate = new Date();
-	const startYear = startDate.year;
-	const startMonth = startDate.month;
+export const getScrollOffset = () => {
+	// Get actual navbar height dynamically
+	const navbar = document.querySelector('nav');
 
-	const years = currentDate.getFullYear() - startYear;
-	const months = currentDate.getMonth() + 1 - startMonth; // getMonth() returns 0-11
+	// Get the actual height + add a small buffer for visual spacing (10px)
+	const navbarHeight = navbar
+		? navbar.getBoundingClientRect().height + 10
+		: 80;
 
-	let totalYears = years;
-
-	if (months < 0) {
-		totalYears -= 1;
-	}
-
-	if (totalYears === 0) {
-		return t('SkillsSection.Skill.year_zero');
-	}
-
-	return `${t('SkillsSection.Skill.year', {
-		count: totalYears === 0 ? 1 : totalYears,
-	})}`;
-};
-
-export const getSupportedLanguage = (language: string): SupportedLanguages => {
-	return language === 'en' || language === 'de' ? language : 'en';
+	// Return the calculated height or fallback to a reasonable default
+	return navbarHeight;
 };
