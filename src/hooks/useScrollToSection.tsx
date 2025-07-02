@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom';
+import { getScrollOffset } from '../utils/utils';
 
 export const useScrollToSection = () => {
 	const location = useLocation();
@@ -25,7 +26,7 @@ export const useScrollToSection = () => {
 			const targetSection = document.getElementById(sectionId);
 			if (targetSection) {
 				window.scrollTo({
-					top: targetSection.offsetTop - 80, // Offset for navbar height
+					top: targetSection.offsetTop - getScrollOffset(),
 					behavior: 'smooth',
 				});
 			}

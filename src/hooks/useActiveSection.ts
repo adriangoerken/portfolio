@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getScrollOffset } from '../utils/utils';
 
 type NavLink = {
 	name: string;
@@ -21,7 +22,7 @@ const useActiveSection = (navLinks: NavLink[], isHomepage: boolean) => {
 
 		if (element) {
 			window.scrollTo({
-				top: element.offsetTop - 80, // Offset for navbar height
+				top: element.offsetTop - getScrollOffset(),
 				behavior: 'smooth',
 			});
 			setActiveSection(targetId);

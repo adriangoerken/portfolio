@@ -12,3 +12,16 @@ export const getLanguage = () => {
 		'en-US'
 	);
 };
+
+export const getScrollOffset = () => {
+	// Get actual navbar height dynamically
+	const navbar = document.querySelector('nav');
+
+	// Get the actual height + add a small buffer for visual spacing (10px)
+	const navbarHeight = navbar
+		? navbar.getBoundingClientRect().height + 10
+		: 80;
+
+	// Return the calculated height or fallback to a reasonable default
+	return navbarHeight;
+};
