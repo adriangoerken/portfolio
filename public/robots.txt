@@ -14,9 +14,9 @@ Allow: /index.html
 Sitemap: https://adriangoerken.de/sitemap.xml
 
 User-agent: Googlebot
-Allow: /images/og-image.jpg
+Allow: /images/og-image.webp
 Allow: /images/favicon/favicon.ico
 
 User-agent: Bingbot
-Allow: /images/og-image.jpg
+Allow: /images/og-image.webp
 Allow: /images/favicon/favicon.ico
