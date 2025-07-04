@@ -2,5 +2,6 @@
 	"NotFoundPage": {
 		"message": "404 Nicht gefunden",
 		"btnBack": "Zurück"
-	}
+	},
+	"documentTitle": "Adrian Goerken | Webentwickler"
 }

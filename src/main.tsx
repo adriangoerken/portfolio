@@ -68,7 +68,18 @@ i18next.init({
 	},
 });
 
+// Set initial language and title
+document.documentElement.lang = i18next.language;
+document.title = i18next.t('documentTitle');
+
+// Update language and title on language change
+i18next.on('languageChanged', (lng) => {
+	document.documentElement.lang = lng;
+	document.title = i18next.t('documentTitle');
+});
+
 const rootElement = document.getElementById('root');
+
 if (rootElement) {
 	createRoot(rootElement).render(
 		<StrictMode>
