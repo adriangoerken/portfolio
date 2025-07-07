@@ -8,9 +8,9 @@ const MainLayout = () => {
 	return (
 		<div className="flex flex-col min-h-screen">
 			<NavBar />
-			<div className="flex flex-col flex-grow">
+			<main className="flex flex-col flex-grow">
 				<Outlet />
-			</div>
+			</main>
 			<Footer />
 			<ToastContainer theme="colored" />
 		</div>
