@@ -12,7 +12,11 @@ const MainLayout = () => {
 				<Outlet />
 			</main>
 			<Footer />
-			<ToastContainer theme="colored" />
+			<ToastContainer
+				role="alert"
+				aria-live="assertive"
+				theme="colored"
+			/>
 		</div>
 	);
 };
