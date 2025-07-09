@@ -8,7 +8,7 @@ const Textfield = ({ id, name, label }: TextfieldProps) => {
 	return (
 		<div>
 			<label
-				htmlFor={name}
+				htmlFor={id}
 				className="block text-sm font-medium text-gray-400 mb-1"
 			>
 				{label}
