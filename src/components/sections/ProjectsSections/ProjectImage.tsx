@@ -21,7 +21,7 @@ const ProjectImage = ({ imageUrl, title, isDemo }: ProjectImageProps) => {
 
 			{/* Demo Badge */}
 			{isDemo && (
-				<div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+				<div className="absolute top-4 right-4 bg-blue-600-aaa text-white px-3 py-1 rounded-full text-sm font-medium">
 					{t('projects:projectImage.badge')}
 				</div>
 			)}

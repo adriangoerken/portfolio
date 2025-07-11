@@ -23,7 +23,7 @@ const ProjectLinks = ({
 					rel="noopener noreferrer"
 					aria-label={`${t('projects:projectLinks.aria', {
 						type: projectTitle,
-					})}`}
+					})} ${t('ariaNewTab')}`}
 					className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-md transition-colors"
 				>
 					<FaGithub />
@@ -37,8 +37,8 @@ const ProjectLinks = ({
 					rel="noopener noreferrer"
 					aria-label={`${t('projects:projectLinks.aria', {
 						type: projectTitle,
-					})}`}
-					className="flex items-center gap-2 px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-md transition-colors"
+					})} ${t('ariaNewTab')}`}
+					className="flex items-center gap-2 px-4 py-2 bg-blue-700 hover:bg-blue-600-aaa text-white rounded-md transition-colors"
 				>
 					<FaExternalLinkAlt />
 					{t('projects:projectLinks.demo')}

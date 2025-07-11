@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next';
+
 const LighthouseBanner = () => {
+	const { t } = useTranslation();
 	const metrics = [
 		{ name: 'Performance', score: 100, color: '#0cce6b' },
 		{ name: 'Accessibility', score: 100, color: '#0cce6b' },
@@ -11,6 +14,7 @@ const LighthouseBanner = () => {
 				<a
 					href="/lighthouse_desktop.html"
 					target="_blank"
+					aria-label={`Google Lighthouse Report ${t('ariaNewTab')}`}
 					className="hover:cursor-pointer"
 				>
 					<h2 className="text-white text-sm font-medium mb-4">

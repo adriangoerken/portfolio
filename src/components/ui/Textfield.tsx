@@ -1,10 +1,13 @@
+import { Autocomplete } from '../../types/contact';
+
 type TextfieldProps = {
 	id: string;
 	name: string;
 	label: string;
+	autocomplete: Autocomplete;
 };
 
-const Textfield = ({ id, name, label }: TextfieldProps) => {
+const Textfield = ({ id, name, label, autocomplete }: TextfieldProps) => {
 	return (
 		<div>
 			<label
@@ -17,7 +20,8 @@ const Textfield = ({ id, name, label }: TextfieldProps) => {
 				type="text"
 				id={id}
 				name={name}
-				className="w-full px-4 py-2 bg-elevation-100 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
+				autoComplete={autocomplete}
+				className="w-full px-4 py-2 bg-elevation-100 border border-blue-600-aaa rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
 				required
 			/>
 		</div>

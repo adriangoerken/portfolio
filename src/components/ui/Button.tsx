@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 type ButtonBaseProps = {
 	variant: 'primary' | 'secondary';
 	children: ReactNode;
+	ariaLabel?: string;
 	className?: string;
 	fullWidth?: boolean;
 };
@@ -25,15 +26,16 @@ type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps;
 
 const Button = (props: ButtonProps) => {
 	const { variant, children, className = '', fullWidth = false } = props;
+	const ariaAttrs = props.ariaLabel ? { 'aria-label': props.ariaLabel } : {};
 
-	const baseClasses = 'px-8 py-3 font-medium rounded-lg transition-all';
+	const baseClasses = 'px-8 py-3 font-bold rounded-lg transition-all';
 	const flexClasses = 'flex items-center gap-2';
 	const widthClasses = fullWidth ? 'w-full justify-center' : '';
 
 	const variantClasses = {
 		primary:
-			'bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg',
-		secondary: 'border-2 border-blue-600 text-white hover:bg-gray-800',
+			'bg-blue-600-aaa hover:bg-blue-700 text-white shadow-md hover:shadow-lg',
+		secondary: 'border-2 border-blue-600-aaa text-white hover:bg-gray-800',
 	};
 
 	const combinedClasses = `${baseClasses} ${flexClasses} ${widthClasses} ${variantClasses[variant]} ${className}`;
@@ -44,7 +46,8 @@ const Button = (props: ButtonProps) => {
 				href={props.href}
 				target={props.target}
 				download={props.download}
-				onClick={props.onClick} // Pass the onClick handler
+				onClick={props.onClick}
+				{...ariaAttrs}
 				className={combinedClasses}
 			>
 				{children}
@@ -56,6 +59,7 @@ const Button = (props: ButtonProps) => {
 		<button
 			type={props.type || 'submit'}
 			onClick={props.onClick}
+			{...ariaAttrs}
 			className={combinedClasses}
 		>
 			{children}

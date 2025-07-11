@@ -13,7 +13,7 @@ const SocialLinksSection = () => (
 			href="https://www.linkedin.com/in/adrian-goerken-202064353"
 			ariaLabel="LinkedIn Profil"
 			icon={<FaLinkedin size={18} />}
-			className="bg-blue-700 hover:bg-blue-600"
+			className="bg-blue-700 hover:bg-blue-600-aaa"
 		/>
 	</div>
 );

@@ -17,7 +17,7 @@ const Textarea = ({ id, name, label }: TextareaProps) => {
 				id={id}
 				name={name}
 				rows={5}
-				className="w-full px-4 py-2 bg-elevation-100 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
+				className="w-full px-4 py-2 bg-elevation-100 border border-blue-600-aaa rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
 				required
 			></textarea>
 		</div>

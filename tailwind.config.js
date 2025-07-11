@@ -9,6 +9,7 @@ export default {
 			colors: {
 				'custom-gray': '#121212',
 				'custom-gray-dark': '#0D0D0D',
+				'blue-600-aaa': '#1e48c7',
 				'elevation-100': '#1D1D1D',
 				'elevation-200': '#1E1E1E',
 				'elevation-300': '#1F1F1F',

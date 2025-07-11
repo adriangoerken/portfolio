@@ -48,6 +48,9 @@ const HeroTextContent = () => {
 					href={resumeFile}
 					variant="secondary"
 					target="_blank"
+					ariaLabel={`${t(
+						'hero:textContent.ctaButtons.downloadResume'
+					)} ${t('ariaNewTab')}`}
 				>
 					{t('hero:textContent.ctaButtons.downloadResume')}
 					<FaDownload size={16} />

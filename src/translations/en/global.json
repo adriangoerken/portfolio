@@ -3,5 +3,6 @@
 		"message": "404 Not Found",
 		"btnBack": "Go Back"
 	},
-	"documentTitle": "Adrian Goerken | Web Developer"
+	"documentTitle": "Adrian Goerken | Web Developer",
+	"ariaNewTab": "(opens in new tab)"
 }

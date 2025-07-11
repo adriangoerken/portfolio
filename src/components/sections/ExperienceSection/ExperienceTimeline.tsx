@@ -7,7 +7,7 @@ const ExperienceTimeline = () => {
 			{/* Vertical line */}
 			<div
 				aria-hidden="true"
-				className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-blue-600 hidden md:block"
+				className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-blue-600-aaa hidden md:block"
 			></div>
 
 			<ol className="space-y-12">

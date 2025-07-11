@@ -28,7 +28,7 @@ const ProfessionalNetworks = ({
 							aria-label={`${t(
 								'contact:subSections.contactInfo.aria',
 								{ label: network.label }
-							)}`}
+							)} ${t('ariaNewTab')}`}
 							className="text-white hover:text-blue-400 transition-colors"
 						>
 							{network.label}

@@ -57,7 +57,7 @@ const TimelineItem = ({ experience, isEven }: TimelineItemProps) => {
 				aria-hidden="true"
 				className="hidden md:block absolute left-1/2 transform -translate-x-1/2"
 			>
-				<div className="w-6 h-6 rounded-full bg-blue-600 border-4 border-custom-gray shadow-lg"></div>
+				<div className="w-6 h-6 rounded-full bg-blue-600-aaa border-4 border-custom-gray shadow-lg"></div>
 			</div>
 		</li>
 	);

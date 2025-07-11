@@ -30,7 +30,7 @@ const HeroImage = () => {
 					href="https://www.linkedin.com/in/adrian-goerken-202064353"
 					ariaLabel={t('hero:socialLinks.linkedInAria')}
 					icon={<FaLinkedin size={20} />}
-					className="bg-blue-700 hover:bg-blue-600"
+					className="bg-blue-700 hover:bg-blue-600-aaa"
 				/>
 			</div>
 		</div>

@@ -40,11 +40,13 @@ const ContactForm = () => {
 					id="name"
 					name="name"
 					label={t('contact:subSections.contactForm.labels.name')}
+					autocomplete="name"
 				/>
 				<Textfield
 					id="email"
 					name="email"
 					label={t('contact:subSections.contactForm.labels.email')}
+					autocomplete="email"
 				/>
 				<Textarea
 					id="message"
