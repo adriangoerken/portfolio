@@ -18,7 +18,9 @@ const PrimaryContacts = ({ primaryContacts }: PrimaryContactProps) => {
 				>
 					<div className="text-xl">{contact.icon}</div>
 					<div>
-						<p className="text-sm text-gray-400">{contact.label}</p>
+						<p className="text-start text-sm text-gray-400">
+							{contact.label}
+						</p>
 						<a
 							href={contact.href}
 							aria-label={`${contact.label}: ${contact.value}`}
