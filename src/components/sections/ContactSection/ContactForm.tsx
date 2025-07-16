@@ -2,22 +2,17 @@ import { motion } from 'framer-motion';
 import Textfield from '../../ui/Textfield';
 import Textarea from '../../ui/Textarea';
 import Button from '../../ui/Button';
-import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
+import { useActionState } from 'react';
+import { contactFormAction } from '../../../utils/actions';
+import { BeatLoader } from 'react-spinners';
 
 const ContactForm = () => {
 	const { t } = useTranslation();
-
-	const formAction = (formData: FormData) => {
-		console.log(
-			'From Data: ',
-			formData.get('name'),
-			formData.get('email'),
-			formData.get('message')
-		);
-
-		toast.error(t('contact:subSections.contactForm.disclaimerToast'));
-	};
+	const [state, formAction, isPending] = useActionState(
+		contactFormAction,
+		undefined
+	);
 
 	return (
 		<motion.div
@@ -53,15 +48,30 @@ const ContactForm = () => {
 					name="message"
 					label={t('contact:subSections.contactForm.labels.message')}
 				/>
-				<Button variant="primary" type="submit" fullWidth={true}>
-					{t('contact:subSections.contactForm.submitButton')}
+				<Button
+					variant="primary"
+					type="submit"
+					fullWidth={true}
+					disabled={isPending}
+					ariaBusy={isPending}
+				>
+					{isPending ? (
+						<BeatLoader color="white" />
+					) : (
+						t('contact:subSections.contactForm.submitButton')
+					)}
 				</Button>
-
-				<p id="form-disclaimer" className="text-xs text-gray-400 mt-2">
-					{t('contact:subSections.contactForm.disclaimer')}
-				</p>
+				{state?.message && (
+					<p
+						aria-live="assertive"
+						className={
+							state.success ? 'text-green-500' : 'text-red-500'
+						}
+					>
+						{state.message}
+					</p>
+				)}
 			</form>
-			<div aria-live="polite" className="sr-only"></div>
 		</motion.div>
 	);
 };

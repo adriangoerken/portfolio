@@ -24,8 +24,8 @@
 				"message": "Nachricht"
 			},
 			"submitButton": "Senden",
-			"disclaimer": "* Dieses Kontaktformular ist aktuell nur ein Designelement und funktioniert noch nicht. Bitte nutzen Sie die angegebenen Kontaktdaten für eine Nachricht.",
-			"disclaimerToast": "Dieses Kontaktformular funktioniert aktuell noch nicht. Bitte die angegebenen Kontaktdaten nutzen."
+			"errorMessage": "Etwas ist schief gelaufen. Bitte erneut versuchen.",
+			"successMessage": "Nachricht erfolgreich gesendet!"
 		}
 	}
 }

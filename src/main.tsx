@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import i18next from 'i18next';
 import { I18nextProvider } from 'react-i18next';
 import { BrowserRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import './index.css';
 
@@ -78,15 +79,19 @@ i18next.on('languageChanged', (lng) => {
 	document.title = i18next.t('documentTitle');
 });
 
+const queryClient = new QueryClient();
+
 const rootElement = document.getElementById('root');
 
 if (rootElement) {
 	createRoot(rootElement).render(
 		<StrictMode>
 			<I18nextProvider i18n={i18next}>
-				<BrowserRouter>
-					<App />
-				</BrowserRouter>
+				<QueryClientProvider client={queryClient}>
+					<BrowserRouter>
+						<App />
+					</BrowserRouter>
+				</QueryClientProvider>
 			</I18nextProvider>
 		</StrictMode>
 	);

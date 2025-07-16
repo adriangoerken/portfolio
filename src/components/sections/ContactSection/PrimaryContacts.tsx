@@ -13,7 +13,7 @@ const PrimaryContacts = ({ primaryContacts }: PrimaryContactProps) => {
 					className={`flex items-center gap-4 ${
 						contact.isPrimary
 							? 'p-3 bg-elevation-100 rounded-lg'
-							: ''
+							: 'px-3'
 					}`}
 				>
 					<div className="text-xl">{contact.icon}</div>

@@ -24,8 +24,8 @@
 				"message": "Message"
 			},
 			"submitButton": "Send",
-			"disclaimer": "* This contact form is currently just a design element and is not yet functional. Please use the contact information provided to send a message.",
-			"disclaimerToast": "This contact form is not yet functional. Please use the contact information provided."
+			"errorMessage": "Something went wrong. Please try again.",
+			"successMessage": "Message sent successfully!"
 		}
 	}
 }

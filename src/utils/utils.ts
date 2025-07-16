@@ -25,3 +25,8 @@ export const getScrollOffset = () => {
 	// Return the calculated height or fallback to a reasonable default
 	return navbarHeight;
 };
+
+export const validateEmail = (email: string) => {
+	const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+	return emailRegex.test(email);
+};

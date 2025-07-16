@@ -12,6 +12,8 @@ type ButtonAsButtonProps = ButtonBaseProps & {
 	as?: 'button';
 	type?: 'button' | 'submit' | 'reset';
 	onClick?: () => void;
+	disabled?: boolean;
+	ariaBusy?: boolean;
 };
 
 type ButtonAsLinkProps = ButtonBaseProps & {
@@ -28,7 +30,8 @@ const Button = (props: ButtonProps) => {
 	const { variant, children, className = '', fullWidth = false } = props;
 	const ariaAttrs = props.ariaLabel ? { 'aria-label': props.ariaLabel } : {};
 
-	const baseClasses = 'px-8 py-3 font-bold rounded-lg transition-all';
+	const baseClasses =
+		'px-8 py-3 font-bold rounded-lg transition-all h-[48px]';
 	const flexClasses = 'flex items-center gap-2';
 	const widthClasses = fullWidth ? 'w-full justify-center' : '';
 
@@ -60,6 +63,8 @@ const Button = (props: ButtonProps) => {
 			type={props.type || 'submit'}
 			onClick={props.onClick}
 			{...ariaAttrs}
+			disabled={props.disabled}
+			aria-busy={props.ariaBusy}
 			className={combinedClasses}
 		>
 			{children}
