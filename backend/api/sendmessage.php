@@ -15,31 +15,36 @@ if (file_exists($envFile)) {
     }
 }
 
-/// Security headers
-header('Content-Type: application/json');
-header('X-Content-Type-Options: nosniff');
-header('X-Frame-Options: DENY');
-header('X-XSS-Protection: 1; mode=block');
-
-// CORS headers - restrict to your domain in production
+// CORS and access control - restrict to your domain in production
 $allowedOrigins = [
     'https://adriangoerken.de',
-    'https://www.adriangoerken.de',    
+    'https://www.adriangoerken.de',
 ];
 
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-if (in_array($origin, $allowedOrigins)) {
-    header("Access-Control-Allow-Origin: $origin");
-} else {
-    header('Access-Control-Allow-Origin: null');
+
+// Block if origin is not allowed
+if (!in_array($origin, $allowedOrigins)) {
+    header('Content-Type: application/json');
+    http_response_code(403);
+    echo json_encode(['error' => 'Access denied: Origin not allowed.']);
+    exit;
 }
 
+// Set CORS headers for allowed origin
+header("Access-Control-Allow-Origin: $origin");
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
-header('Access-Control-Max-Age: 86400'); // 24 hours
+header('Access-Control-Max-Age: 86400'); // cache preflight for 24h
 
-// Handle preflight requests
-if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+// Security headers
+header('X-Content-Type-Options: nosniff');
+header('X-Frame-Options: DENY');
+header('X-XSS-Protection: 1; mode=block');
+header('Content-Type: application/json');
+
+// Handle preflight request
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit(0);
 }
 
@@ -59,17 +64,23 @@ if (!isset($_SESSION['submissions'])) {
     $_SESSION['submissions'] = [];
 }
 
-// Clean old submissions
+// Remove timestamps outside the time window
 $_SESSION['submissions'] = array_filter($_SESSION['submissions'], function($timestamp) use ($timeWindow) {
     return (time() - $timestamp) < $timeWindow;
 });
 
-// Check rate limit
+// Enforce rate limit
 if (count($_SESSION['submissions']) >= $rateLimit) {
-    http_response_code(429);
-    echo json_encode(['success' => false, 'error' => 'Rate limit exceeded. Please try again later.']);
+    http_response_code(429); // Too Many Requests
+    echo json_encode([
+        'success' => false,
+        'error' => 'Rate limit exceeded. Please try again later.'
+    ]);
     exit;
 }
+
+// Track this submission
+$_SESSION['submissions'][] = time();
 
 // Database configuration
 $dbHost = getenv('DB_HOST');
