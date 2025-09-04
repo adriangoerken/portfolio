@@ -8,7 +8,7 @@ const HeroImage = () => {
 
 	return (
 		<div className="w-full md:w-2/5">
-			<div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-700 shadow-lg mx-auto">
+			<div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-700 shadow-lg mx-auto">
 				<img
 					src={portrait}
 					alt={t('hero:imageAlt')}
