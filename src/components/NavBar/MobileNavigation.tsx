@@ -6,6 +6,7 @@ type MobileNavigationProps = {
 	activeSection: string;
 	isHomepage: boolean;
 	onLinkClick: (e: React.MouseEvent<HTMLAnchorElement>, href: string) => void;
+	onClose: () => void;
 };
 
 const MobileNavigation = ({
@@ -13,29 +14,42 @@ const MobileNavigation = ({
 	activeSection,
 	isHomepage,
 	onLinkClick,
+	onClose,
 }: MobileNavigationProps) => {
 	const getLinkClassName = (link: NavLink) => {
 		const isActive = activeSection === link.href.substring(1) && isHomepage;
-		return `block py-2 px-4 transition-colors hover:bg-elevation-100 rounded-md ${
+		return `block py-2 px-4 text-lg transition-colors hover:bg-elevation-100 rounded-md ${
 			isActive ? 'text-blue-400 font-medium' : 'text-gray-300'
 		}`;
 	};
 
 	return (
-		<div
-			id="mobile-menu"
-			className="md:hidden mt-4 py-4 border-t border-gray-800 animate-fadeIn"
-		>
-			<ul className="flex flex-col space-y-4">
-				<NavLinks
-					navLinks={navLinks}
-					onLinkClick={onLinkClick}
-					getLinkClassName={getLinkClassName}
-					activeSection={activeSection}
-					isHomepage={isHomepage}
-				/>
-			</ul>
-		</div>
+		<>
+			{/* Navigation menu */}
+			<div
+				id="mobile-menu"
+				className="absolute top-full left-0 right-0 bg-black border-t border-gray-800 shadow-lg z-40 animate-fadeIn md:hidden"
+			>
+				<div className="px-4 py-4">
+					<ul className="flex flex-col items-center space-y-4">
+						<NavLinks
+							navLinks={navLinks}
+							onLinkClick={onLinkClick}
+							getLinkClassName={getLinkClassName}
+							activeSection={activeSection}
+							isHomepage={isHomepage}
+						/>
+					</ul>
+				</div>
+			</div>
+
+			{/* Overlay covering the content */}
+			<div
+				className="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 animate-fadeIn md:hidden"
+				style={{ top: '64px' }}
+				onClick={onClose}
+			/>
+		</>
 	);
 };
 

@@ -20,18 +20,20 @@ const NavLinks = ({
 			{navLinks.map((link) => {
 				const isActive =
 					activeSection === link.href.substring(1) && isHomepage;
-				return (
-					<li key={link.name}>
-						<a
-							href={link.href}
-							onClick={(e) => onLinkClick(e, link.href)}
-							className={getLinkClassName(link, isActive)}
-							aria-current={isActive ? 'page' : undefined}
-						>
-							{link.name}
-						</a>
-					</li>
-				);
+				if (link.name !== 'Start' && link.name !== 'Home') {
+					return (
+						<li key={link.name}>
+							<a
+								href={link.href}
+								onClick={(e) => onLinkClick(e, link.href)}
+								className={getLinkClassName(link, isActive)}
+								aria-current={isActive ? 'page' : undefined}
+							>
+								{link.name}
+							</a>
+						</li>
+					);
+				}
 			})}
 		</>
 	);

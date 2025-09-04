@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Container from '../layout/Container';
@@ -14,6 +14,7 @@ const NavBar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const location = useLocation();
 	const isHomepage = location.pathname === '/';
+	const navRef = useRef<HTMLElement>(null);
 
 	const navLinks = [
 		{ name: t('navbar:navLinks.home'), href: '#hero' },
@@ -42,7 +43,8 @@ const NavBar = () => {
 
 	return (
 		<nav
-			className="bg-black shadow-lg sticky top-0 z-50 py-4"
+			ref={navRef}
+			className="sticky top-0 bg-black shadow-lg z-50 py-4"
 			aria-label="main"
 		>
 			<Container>
@@ -83,20 +85,21 @@ const NavBar = () => {
 						</button>
 					</div>
 				</div>
-
-				{isOpen && (
-					<MobileNavigation
-						key="mobile-nav"
-						navLinks={navLinks}
-						activeSection={activeSection}
-						isHomepage={isHomepage}
-						onLinkClick={(e, href) => {
-							handleSmoothScroll(e, href);
-							setIsOpen(false);
-						}}
-					/>
-				)}
 			</Container>
+
+			{isOpen && (
+				<MobileNavigation
+					key="mobile-nav"
+					navLinks={navLinks}
+					activeSection={activeSection}
+					isHomepage={isHomepage}
+					onLinkClick={(e, href) => {
+						handleSmoothScroll(e, href);
+						setIsOpen(false);
+					}}
+					onClose={() => setIsOpen(false)}
+				/>
+			)}
 		</nav>
 	);
 };
