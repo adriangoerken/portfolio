@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import AnimatedSectionWrapper from '../components/layout/AnimatedSectionWrapper';
 import HeroSection from '../components/sections/HeroSection';
 import SummarySection from '../components/sections/SummarySection';

@@ -38,6 +38,17 @@ const useActiveSection = (navLinks: NavLink[], isHomepage: boolean) => {
 			// Get all section IDs from navLinks
 			const sectionIds = navLinks.map((link) => link.href.substring(1));
 
+			// Check if all sections exist before setting up observer
+			const allSectionsExist = sectionIds.every((id) =>
+				document.getElementById(id)
+			);
+
+			if (!allSectionsExist) {
+				// Retry after a longer delay
+				setTimeout(setupObserver, 200);
+				return;
+			}
+
 			// Create a map to store intersection ratios with proper typing
 			const intersectionRatios: Record<string, number> = {};
 			sectionIds.forEach((id) => {
