@@ -1,3 +1,5 @@
+import { TFunction } from 'i18next';
+
 interface ExtendedNavigator extends Navigator {
 	userLanguage?: string;
 	browserLanguage?: string;
@@ -29,4 +31,9 @@ export const getScrollOffset = () => {
 export const validateEmail = (email: string) => {
 	const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 	return emailRegex.test(email);
+};
+
+export const translateIfKey = (t: TFunction, value: string) => {
+	const translated = t(value);
+	return translated !== value ? translated : value;
 };

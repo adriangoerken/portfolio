@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { translateIfKey } from '../../../utils/utils';
 
 type TechnologyBadgesProps = {
 	technologies: string[];
@@ -21,7 +22,7 @@ const TechnologyBadges = ({ technologies, isEven }: TechnologyBadgesProps) => {
 						key={tech}
 						className="px-3 py-1 bg-elevation-100 text-white text-sm rounded-full"
 					>
-						{tech}
+						{translateIfKey(t, tech)}
 					</span>
 				))}
 			</div>

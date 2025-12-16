@@ -10,8 +10,8 @@ const HeroTextContent = () => {
 	// Determine which resume file to use based on the current language
 	const resumeFile =
 		i18n.language === 'de'
-			? '/adrian_goerken_lebenslauf.pdf'
-			: '/adrian_goerken_resume.pdf';
+			? '/Adrian_Goerken_Lebenslauf.pdf'
+			: '/Adrian_Goerken_Resume.pdf';
 
 	return (
 		<div className="w-full md:w-3/5 text-center md:text-left">

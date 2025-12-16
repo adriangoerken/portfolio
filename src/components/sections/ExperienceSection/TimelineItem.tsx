@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import AchievementsList from './AchievementList';
 import TechnologyBadges from './TechnologieBadges';
 import { useTranslation } from 'react-i18next';
+import { translateIfKey } from '../../../utils/utils';
 
 type TimelineItemProps = {
 	experience: Experience;
@@ -28,7 +29,7 @@ const TimelineItem = ({ experience, isEven }: TimelineItemProps) => {
 			>
 				{/* Date badge */}
 				<div className="inline-block px-4 py-2 bg-blue-900 text-blue-200 rounded-full text-sm font-medium mb-4">
-					{experience.period}
+					{translateIfKey(t, experience.period)}
 				</div>
 
 				{/* Role and company */}

@@ -2,6 +2,11 @@
 	"heading": "Work Experience",
 	"techHeading": "Technologies",
 	"achievementsHeading": "Achievements",
+	"technologies": {
+		"ethicalHacking": "Ethical Hacking",
+		"agileDevelopment": "Agile Development",
+		"vulnerabilityAnalysis": "Vulnerability Analysis"
+	},
 	"experiences": {
 		"1": {
 			"title": "Fullstack Web Developer",
@@ -30,6 +35,27 @@
 				"1": "Acquisition of solid knowledge in HTML, CSS, PHP, JavaScript and relational databases such as MySQL",
 				"2": "Acquisition of basic knowledge in agile software development using SCRUM",
 				"3": "Final grade: 2.3"
+			}
+		},
+		"4": {
+			"period": "11/2024 - today",
+			"title": "Berufliche Neuorientierung",
+			"company": "Selbstständige Weiterbildung",
+			"location": "Remote",
+			"achievements": {
+				"1": "Intensive Vertiefung moderner Frontend-Technologien (React, TypeScript, Tailwind CSS) durch eigenständige Projekte",
+				"2": "Vorbereitung auf neue berufliche Herausforderungen im Bereich Fullstack-Entwicklung"
+			}
+		},
+		"5": {
+			"title": "Professional Development: IT Security DevSecOps Development",
+			"company": "IU Internationale Hochschule",
+			"location": "Professional Certificate Program (Online, University Level)",
+
+			"achievements": {
+				"1": "Implementation of security principles (Security-by-Design) in agile software development processes (Shift-Left).",
+				"2": "Practical execution of system and web penetration testing (pentesting) and system hardening.",
+				"3": "Application of agile methodologies (Scrum) and automation of IT security processes in CI/CD contexts."
 			}
 		}
 	}
